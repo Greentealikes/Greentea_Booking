@@ -1,4 +1,27 @@
-<!doctype html>
+<?php
+/* Smarty version 3.1.34-dev-7, created on 2020-02-05 14:05:51
+  from 'D:\xampp\htdocs\Greentea_Booking-master\templates\portfolio.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.34-dev-7',
+  'unifunc' => 'content_5e3abdaf080719_17967664',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    'f29ceeb27e08a51f400bd33005ff0cb8cfda0627' => 
+    array (
+      0 => 'D:\\xampp\\htdocs\\Greentea_Booking-master\\templates\\portfolio.tpl',
+      1 => 1580907949,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_5e3abdaf080719_17967664 (Smarty_Internal_Template $_smarty_tpl) {
+?><!doctype html>
 <html lang="en">
 
 <head>
@@ -8,19 +31,29 @@
 
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,900|Source+Serif+Pro&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="<{$xoImgUrl}>fonts/icomoon/style.css">
+  <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+fonts/icomoon/style.css">
 
-  <link rel="stylesheet" href="<{$xoImgUrl}>css/bootstrap.min.css">
-  <link rel="stylesheet" href="<{$xoImgUrl}>css/bootstrap-datepicker.css">
-  <link rel="stylesheet" href="<{$xoImgUrl}>css/jquery.fancybox.min.css">
-  <link rel="stylesheet" href="<{$xoImgUrl}>css/owl.carousel.min.css">
-  <link rel="stylesheet" href="<{$xoImgUrl}>css/owl.theme.default.min.css">
-  <link rel="stylesheet" href="<{$xoImgUrl}>fonts/flaticon/font/flaticon.css">
-  <link rel="stylesheet" href="<{$xoImgUrl}>css/aos.css">
-  <link rel="stylesheet" href="<{$xoImgUrl}>booking/booking_style.css">
+  <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+css/bootstrap.min.css">
+  <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+css/bootstrap-datepicker.css">
+  <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+css/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+css/owl.carousel.min.css">
+  <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+fonts/flaticon/font/flaticon.css">
+  <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+css/aos.css">
+  <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+booking/booking_style.css">
 
   <!-- MAIN CSS -->
-  <link rel="stylesheet" href="<{$xoImgUrl}>css/style.css">
+  <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+css/style.css">
 
 </head>
 
@@ -68,12 +101,12 @@
                   <li><a href="switch.php?pageid=3" class="nav-link">Services</a></li>
                   <li><a href="switch.php?pageid=4" class="nav-link">Blog</a></li>
                   <li><a href="switch.php?pageid=5" class="nav-link">Contact</a></li>
-                   <{if $smarty.session.admin}>
+                   <?php if ($_SESSION['admin']) {?>
 		                   <li><a href="user.php" class="nav-link">管理員</a></li>
                        <li><a href="logout.php" id="userout" class="nav-link">Logout</a></li>
-	                <{else}>
+	                <?php } else { ?>
 		                   <li><a href="user.php" id="userin" class="nav-link">Login</a></li>
-	                <{/if}>
+	                <?php }?>
             </nav>
           </div>
 
@@ -131,29 +164,35 @@
     <div class="container-fluid portfolio-wrap bg-light pt-0 site-section">
       <div class="row align-items-end mb-4">
         <div class="col-md-3">
-          <a href="portfolio-single.html" class="portfolio-item"><img src="<{$xoImgUrl}>images/img_1.jpg" alt="Image"
+          <a href="portfolio-single.html" class="portfolio-item"><img src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+images/img_1.jpg" alt="Image"
               class="img-fluid"></a>
         </div>
         <div class="col-md-6">
-          <a href="portfolio-single.html" class="portfolio-item"><img src="<{$xoImgUrl}>images/img_2.jpg" alt="Image"
+          <a href="portfolio-single.html" class="portfolio-item"><img src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+images/img_2.jpg" alt="Image"
               class="img-fluid"></a>
         </div>
         <div class="col-md-3">
-          <a href="portfolio-single.html" class="portfolio-item"><img src="<{$xoImgUrl}>images/img_3.jpg" alt="Image"
+          <a href="portfolio-single.html" class="portfolio-item"><img src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+images/img_3.jpg" alt="Image"
               class="img-fluid"></a>
         </div>
       </div>
       <div class="row align-items-start">
         <div class="col-md-4">
-          <a href="portfolio-single.html" class="portfolio-item"><img src="<{$xoImgUrl}>images/img_2.jpg" alt="Image"
+          <a href="portfolio-single.html" class="portfolio-item"><img src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+images/img_2.jpg" alt="Image"
               class="img-fluid"></a>
         </div>
         <div class="col-md-4">
-          <a href="portfolio-single.html" class="portfolio-item"><img src="<{$xoImgUrl}>images/hero_1.jpg" alt="Image"
+          <a href="portfolio-single.html" class="portfolio-item"><img src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+images/hero_1.jpg" alt="Image"
               class="img-fluid"></a>
         </div>
         <div class="col-md-4">
-          <a href="portfolio-single.html" class="portfolio-item"><img src="<{$xoImgUrl}>images/hero_3.jpg" alt="Image"
+          <a href="portfolio-single.html" class="portfolio-item"><img src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+images/hero_3.jpg" alt="Image"
               class="img-fluid"></a>
         </div>
       </div>
@@ -172,16 +211,20 @@
         </div>
         <div class="row">
           <div class="col-md-3">
-            <img src="<{$xoImgUrl}>images/client_google.png" alt="Image" class="img-fluid">
+            <img src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+images/client_google.png" alt="Image" class="img-fluid">
           </div>
           <div class="col-md-3">
-            <img src="<{$xoImgUrl}>images/client_invision.png" alt="Image" class="img-fluid">
+            <img src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+images/client_invision.png" alt="Image" class="img-fluid">
           </div>
           <div class="col-md-3">
-            <img src="<{$xoImgUrl}>images/client_nike.png" alt="Image" class="img-fluid">
+            <img src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+images/client_nike.png" alt="Image" class="img-fluid">
           </div>
           <div class="col-md-3">
-            <img src="<{$xoImgUrl}>images/client_microsoft.png" alt="Image" class="img-fluid">
+            <img src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+images/client_microsoft.png" alt="Image" class="img-fluid">
           </div>
         </div>
       </div>
@@ -244,7 +287,9 @@
             <p>
               <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
               Copyright &copy;
-              <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made
+              <?php echo '<script'; ?>
+>document.write(new Date().getFullYear());<?php echo '</script'; ?>
+> All rights reserved | This template is made
               with <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="https://colorlib.com"
                 target="_blank">Colorlib</a>
               <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
@@ -258,24 +303,70 @@
 
   </div>
 
-  <script src="<{$xoImgUrl}>js/jquery-3.3.1.min.js"></script>
-  <script src="<{$xoImgUrl}>js/jquery-migrate-3.0.0.js"></script>
-  <script src="<{$xoImgUrl}>js/popper.min.js"></script>
-  <script src="<{$xoImgUrl}>js/bootstrap.min.js"></script>
-  <script src="<{$xoImgUrl}>js/owl.carousel.min.js"></script>
-  <script src="<{$xoImgUrl}>js/jquery.sticky.js"></script>
-  <script src="<{$xoImgUrl}>js/jquery.waypoints.min.js"></script>
-  <script src="<{$xoImgUrl}>js/jquery.animateNumber.min.js"></script>
-  <script src="<{$xoImgUrl}>js/jquery.fancybox.min.js"></script>
-  <script src="<{$xoImgUrl}>js/jquery.stellar.min.js"></script>
-  <script src="<{$xoImgUrl}>js/jquery.easing.1.3.js"></script>
-  <script src="<{$xoImgUrl}>js/bootstrap-datepicker.min.js"></script>
-  <script src="<{$xoImgUrl}>js/isotope.pkgd.min.js"></script>
-  <script src="<{$xoImgUrl}>js/aos.js"></script>
+  <?php echo '<script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+js/jquery-3.3.1.min.js"><?php echo '</script'; ?>
+>
+  <?php echo '<script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+js/jquery-migrate-3.0.0.js"><?php echo '</script'; ?>
+>
+  <?php echo '<script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+js/popper.min.js"><?php echo '</script'; ?>
+>
+  <?php echo '<script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+js/bootstrap.min.js"><?php echo '</script'; ?>
+>
+  <?php echo '<script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+js/owl.carousel.min.js"><?php echo '</script'; ?>
+>
+  <?php echo '<script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+js/jquery.sticky.js"><?php echo '</script'; ?>
+>
+  <?php echo '<script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+js/jquery.waypoints.min.js"><?php echo '</script'; ?>
+>
+  <?php echo '<script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+js/jquery.animateNumber.min.js"><?php echo '</script'; ?>
+>
+  <?php echo '<script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+js/jquery.fancybox.min.js"><?php echo '</script'; ?>
+>
+  <?php echo '<script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+js/jquery.stellar.min.js"><?php echo '</script'; ?>
+>
+  <?php echo '<script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+js/jquery.easing.1.3.js"><?php echo '</script'; ?>
+>
+  <?php echo '<script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+js/bootstrap-datepicker.min.js"><?php echo '</script'; ?>
+>
+  <?php echo '<script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+js/isotope.pkgd.min.js"><?php echo '</script'; ?>
+>
+  <?php echo '<script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+js/aos.js"><?php echo '</script'; ?>
+>
 
 
-  <script src="<{$xoImgUrl}>js/typed.js"></script>
-  <script>
+  <?php echo '<script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+js/typed.js"><?php echo '</script'; ?>
+>
+  <?php echo '<script'; ?>
+>
     !function ($) {
       var typed = new Typed('.typed-words', {
         strings: ["Business", " Startups", " Organization", " Company"],
@@ -287,11 +378,16 @@
         showCursor: true
       })
     };
-  </script>
+  <?php echo '</script'; ?>
+>
 
 
-  <script src="<{$xoImgUrl}>js/main.js"></script>
+  <?php echo '<script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+js/main.js"><?php echo '</script'; ?>
+>
 
 </body>
 
-</html>
+</html><?php }
+}
