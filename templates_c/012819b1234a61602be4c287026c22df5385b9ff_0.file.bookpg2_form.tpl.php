@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-02-10 04:47:06
+/* Smarty version 3.1.34-dev-7, created on 2020-02-10 08:50:10
   from 'D:\xampp\htdocs\Greentea_Booking-master\templates\tpl\bookpg2_form.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e40d23a259ac8_96807258',
+  'unifunc' => 'content_5e410b32ed55b1_30023319',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '012819b1234a61602be4c287026c22df5385b9ff' => 
     array (
       0 => 'D:\\xampp\\htdocs\\Greentea_Booking-master\\templates\\tpl\\bookpg2_form.tpl',
-      1 => 1581306425,
+      1 => 1581320997,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e40d23a259ac8_96807258 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e410b32ed55b1_30023319 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!doctype html>
 <html lang="en">
 
@@ -106,14 +106,14 @@ css/bookstyle.css">
                   </div>
               </div>
           </header>
-
           <div class = "logoimage">               
               <img src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
 images/logoimg.jpg" alt="Image" class="img-fluid"></a>
-          </div>   
-            <div class="site-section ">
+          </div>    
+
+          <div class="site-section ">
               <div class="site-bottom">製作中</div>
-          </div>   
+          </div>     
 
           <div class="site-section">
                <div class="row">
@@ -136,37 +136,83 @@ images/logoimg.jpg" alt="Image" class="img-fluid"></a>
                       </div>
                    </div>  
                   <div class = "col-9">   
-                      <form action="user.php" method="post" id="myForm" class="mb-20" enctype="multipart/form-data">
+                      <form action="datamanage.php" method="post" id="myForm" class="mb-20" enctype="multipart/form-data">
                           <div class="book-container alert alert-warning  ">
                             <div class = "book-body">
                               <div class = "row">
                                   <div class="col-sm-12 book-header">
-                                  2.房型選擇
+                                  1.客房查詢
                                   </div>
-                                 
+                                  <div class="col-sm-12 book-header">
+                                  <h4>心在哪裡，就在哪裡－ 民宿等你來發掘！</h4>
+                                  </div>
                               </div>
                               
                               <div class="row">   
-                                 
+                                  <!--入住時間-->              
+                                  <div class="col-sm-6">
+                                    <div class="form-group">
+                                      <label>入住時間<span class="text-danger">*</span></label>
+                                      <input type="date" class="form-control" id="date" name="datein">
+                                    </div>
+                                  </div>  
                                          
-                                 
+                                  <!--退房時間-->              
+                                  <div class="col-sm-6">
+                                    <div class="form-group">
+                                      <label>退房時間<span class="text-danger">*</span class="text-danger"></label>
+                                      <input type="date" class="form-control" id="date" name="dateout">
+                                    </div>
+                                  </div>         
                                         
-                                
+                                  <!--人數-->              
+                                  <div class="col-sm-6">
+                                    <div class="form-group">
+                                      <label>人數<span class="text-danger">*</span class="text-danger"></label>
+                                          <div class="form-group">   
+                                              <select class="form-control" name="peonum" id="exampleFormControlSelect1">
+                                              <option>1</option>
+                                              <option>2</option>
+                                              <option>3</option>
+                                              <option>4</option>
+                                              <option>5</option>
+                                              </select>
+                                          </div>
+                                    </div>
+                                  </div> 
+                                  
+                                  <!--房型-->
+                                  <div class="col-sm-6">
+                                    <div class="form-group">
+                                      <label>房型<span class="text-danger">*</span class="text-danger"></label>
+                                          <div class="form-group">   
+                                              <select class="form-control" name="rotype" id="exampleFormControlSelect1">
+                                              <option>單人套房-(1人)</option>
+                                              <option>經典雙人-(2人)</option>
+                                              <option>古典雙人-(2人)</option>
+                                              <option>家庭四人-(4人)</option>
+                                              <option>旅遊-(10人以上)</option>
+                                              </select>
+                                          </div>
+                                    </div>
+                                  </div> 
+                                </div>
 
-                                
-                              </div>
-
-                              <div class="text-right pb-20">
+                                <div class="text-right pb-20">
                                   <input type="hidden" name="op" value="reg">
                                   <button type="submit" class="btn btn-primary ">下一步</button>
                                   <p></p>
-                              </div>
+                                </div>
                                
                           </div>
                       </form>
                    </div>
                </div>
           </div>
+
+          
+
+       
 
     <div class="footer site-section bg-light">
       <div class="container">

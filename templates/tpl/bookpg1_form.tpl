@@ -73,23 +73,23 @@
                   </div>
               </div>
           </header>
+
           <div class = "logoimage">               
               <img src="<{$xoImgUrl}>images/logoimg.jpg" alt="Image" class="img-fluid"></a>
-          </div>    
-
-          <div class="site-section ">
+          </div>   
+            <div class="site-section ">
               <div class="site-bottom">製作中</div>
-          </div>     
+          </div>   
 
           <div class="site-section">
                <div class="row">
                   <div class = "col-3">   
                      <div class="list-group" id="list-tab" role="tablist">
                            <a href = "switch.php?pageid=2&bookpage=1">
-                            <li class="list-group-item btn-hold"><stong>客房查詢</stong></li>
+                            <li class="list-group-item btn-hold"><stong>線上預訂說明</stong></li>
                           </a>
                           <a href = "switch.php?pageid=2&bookpage=2">
-                            <li class="list-group-item"><stong>房型選擇</stong></li>
+                            <li class="list-group-item "><stong>房型選擇</stong></li>
                           </a>
 
                           <a href = "switch.php?pageid=2&bookpage=3">
@@ -102,83 +102,34 @@
                       </div>
                    </div>  
                   <div class = "col-9">   
-                      <form action="datamanage.php" method="post" id="myForm" class="mb-20" enctype="multipart/form-data">
+                      <form action="user.php" method="post" id="myForm" class="mb-20" enctype="multipart/form-data">
                           <div class="book-container alert alert-warning  ">
                             <div class = "book-body">
                               <div class = "row">
                                   <div class="col-sm-12 book-header">
-                                  1.客房查詢
+                                      線上預訂說明
                                   </div>
-                                  <div class="col-sm-12 book-header">
-                                  <h4>心在哪裡，就在哪裡－ 民宿等你來發掘！</h4>
+                                  <div class = "col-sm-12 text-center book-description">
+                                      <div>歡迎透過下列表單向民宿管家確認住宿日期及房型。</div>
+                                      <div>填寫表單後不代表預約成功，民宿管家將再透過電話或email與您聯絡</div>
+                                      <div>若24小時內未接到我們的聯絡電話，請主動與我們聯絡，不便之處敬請見諒!</div> 
+                                      <div>成功預約後，請於3日內完成訂金匯款，完成匯款後請透過電話告知 09xx-xxx-xxx 。</div>
                                   </div>
+                                   
                               </div>
-                              
-                              <div class="row">   
-                                  <!--入住時間-->              
-                                  <div class="col-sm-6">
-                                    <div class="form-group">
-                                      <label>入住時間<span class="text-danger">*</span></label>
-                                      <input type="date" class="form-control" id="date" name="datein">
-                                    </div>
-                                  </div>  
-                                         
-                                  <!--退房時間-->              
-                                  <div class="col-sm-6">
-                                    <div class="form-group">
-                                      <label>退房時間<span class="text-danger">*</span class="text-danger"></label>
-                                      <input type="date" class="form-control" id="date" name="dateout">
-                                    </div>
-                                  </div>         
-                                        
-                                  <!--人數-->              
-                                  <div class="col-sm-6">
-                                    <div class="form-group">
-                                      <label>人數<span class="text-danger">*</span class="text-danger"></label>
-                                          <div class="form-group">   
-                                              <select class="form-control" name="peonum" id="exampleFormControlSelect1">
-                                              <option>1</option>
-                                              <option>2</option>
-                                              <option>3</option>
-                                              <option>4</option>
-                                              <option>5</option>
-                                              </select>
-                                          </div>
-                                    </div>
-                                  </div> 
-                                  
-                                  <!--房型-->
-                                  <div class="col-sm-6">
-                                    <div class="form-group">
-                                      <label>房型<span class="text-danger">*</span class="text-danger"></label>
-                                          <div class="form-group">   
-                                              <select class="form-control" name="rotype" id="exampleFormControlSelect1">
-                                              <option>單人套房-(1人)</option>
-                                              <option>經典雙人-(2人)</option>
-                                              <option>古典雙人-(2人)</option>
-                                              <option>家庭四人-(4人)</option>
-                                              <option>旅遊-(10人以上)</option>
-                                              </select>
-                                          </div>
-                                    </div>
-                                  </div> 
-                                </div>
-
-                                <div class="text-right pb-20">
+                              <div class="text-center pb-20">
+                                  <p></p>
                                   <input type="hidden" name="op" value="reg">
                                   <button type="submit" class="btn btn-primary ">下一步</button>
                                   <p></p>
-                                </div>
+                              </div>
+                             
                                
                           </div>
                       </form>
                    </div>
                </div>
           </div>
-
-          
-
-       
 
     <div class="footer site-section bg-light">
       <div class="container">
