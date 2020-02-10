@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-02-05 13:43:05
+/* Smarty version 3.1.34-dev-7, created on 2020-02-10 02:06:44
   from 'D:\xampp\htdocs\Greentea_Booking-master\templates\theme.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e3ab859f418d9_34967026',
+  'unifunc' => 'content_5e40aca41f9a03_55754518',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '36abf55a2d1cf73dcfea9471c00c76ab7c12d0ef' => 
     array (
       0 => 'D:\\xampp\\htdocs\\Greentea_Booking-master\\templates\\theme.tpl',
-      1 => 1580893511,
+      1 => 1581041630,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e3ab859f418d9_34967026 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e40aca41f9a03_55754518 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!doctype html>
 <html lang="en">
 
@@ -54,157 +54,153 @@ css/nav_style.css">
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
 css/style.css">
-
   </head>
 
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
-
-    
-    <div class="site-wrap" id="home-section">
-
-      <div class="site-mobile-menu site-navbar-target">
-        <div class="site-mobile-menu-header">
-          <div class="site-mobile-menu-close mt-3">
-            <span class="icon-close2 js-menu-toggle"></span>
-          </div>
-        </div>
-        <div class="site-mobile-menu-body"></div>
-      </div>
-
-
-
-      <header class="site-navbar site-navbar-target" role="banner">
-
-        <div class="container">
-          <div class="row align-items-center position-relative">
-
-            <div class="col-3">
-              <div class="site-logo">
-                <a href="index.php" class="font-weight-bold">Approach</a>
+      <div class="site-wrap" id="home-section">
+          <div class="site-mobile-menu site-navbar-target">
+              <div class="site-mobile-menu-header">
+                  <div class="site-mobile-menu-close mt-3">
+                      <span class="icon-close2 js-menu-toggle"></span>
+                  </div>
               </div>
-            </div>
+              <div class="site-mobile-menu-body"></div>
+          </div>
 
-            <div class="col-9  text-right">
-              
+          <header class="site-navbar site-navbar-target" role="banner">
+              <div class="container">
+                  <div class="row align-items-center position-relative">
+                      <div class="col-3">
+                          <div class="site-logo">
+                              <a href="index.php" class="font-weight-bold">Approach</a>
+                          </div>
+                      </div>
 
-              <span class="d-inline-block d-lg-none"><a href="#" class="text-primary site-menu-toggle js-menu-toggle py-5"><span class="icon-menu h3 text-primary"></span></a></span>
+                      <div class="col-9  text-right">
+                          <span class="d-inline-block d-lg-none">
+                              <a href="#" class="text-primary site-menu-toggle js-menu-toggle py-5">
+                                  <span class="icon-menu h3 text-primary">
+                                  </span>
+                              </a>
+                          </span>
 
-              
-
-              <nav class="site-navigation text-right ml-auto d-none d-lg-block" role="navigation">
-                <ul class="site-menu main-menu js-clone-nav ml-auto ">
-                  <li class="nav_active"><a href="switch.php?pageid=1" class="nav-link">About</a></li>
-                  <li><a href="switch.php?pageid=2" class="nav-link">Portfolio</a></li>
-                  <li><a href="switch.php?pageid=3" class="nav-link">Services</a></li>
-                  <li><a href="switch.php?pageid=4" class="nav-link">Blog</a></li>
-                  <li><a href="switch.php?pageid=5" class="nav-link">Contact</a></li>
+                          <nav class="site-navigation text-right ml-auto d-none d-lg-block" role="navigation">
+                            <ul class="site-menu main-menu js-clone-nav ml-auto ">
+                              <li class="nav_active"><a href="switch.php?pageid=1" class="nav-link">About</a></li>
+                              <li><a href="switch.php?pageid=2" class="nav-link">Portfolio</a></li>
+                              <li><a href="switch.php?pageid=3" class="nav-link">Services</a></li>
+                              <li><a href="switch.php?pageid=4" class="nav-link">Blog</a></li>
+                              <li><a href="switch.php?pageid=5" class="nav-link">Contact</a></li>
                   
-                  <?php if ($_SESSION['admin']) {?>
-		                   <li><a href="user.php" class="nav-link">管理員</a></li>
-                       <li><a href="user.php?op=logout" class="nav-link">Logout</a></li>                     
-	                <?php } else { ?>
-		                   <li><a href="user.php" id="userin" class="nav-link">Login</a></li>                     
-	                <?php }?>
-                 
-                </ul>
-              </nav>
-            </div>
-          </div>
-        </div>
-      </header>
+                          <?php if ($_SESSION['admin']) {?>
+		                          <li><a href="user.php" class="nav-link">管理員</a></li>
+                              <li><a href="user.php?op=logout" class="nav-link">Logout</a></li>                     
+	                        <?php } else { ?>
+		                          <li><a href="user.php" id="userin" class="nav-link">Login</a></li>                     
+	                        <?php }?>
+                            </ul>
+                          </nav>
+                      </div>
+                  </div>
+              </div>
+          </header>
 
-    
-    <div class="site-section-cover">
-      <div class="container">
-        <div class="row align-items-center text-center justify-content-center">
-          <div class="col-lg-10">
-            <h1 class="text-white mb-4">Creativity is a wild mind and a disciplined eye.</h1>
-            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit maxime nemo placeat dolor est.</p>
-            <p><a href="https://vimeo.com/191947042" data-fancybox class="btn-video_38929"><span class="icon-play"></span></a></p>
+          <div class="site-section-cover">
+              <div class="container">
+                  <div class="row align-items-center text-center justify-content-center">
+                      <div class="col-lg-10">
+                          <h1 class="text-white mb-4">Creativity is a wild mind and a disciplined eye.</h1>
+                          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit maxime nemo placeat dolor est.</p>
+                          <p><a href="https://vimeo.com/191947042" data-fancybox class="btn-video_38929">
+                          <span class="icon-play"></span></a></p>
+                      </div>
+                  </div>
+              </div>
           </div>
-        </div>
-      </div>
-    </div>
 
-    <div class="container-fluid portfolio-wrap bg-light pt-0 site-section">
-      <div class="row align-items-end mb-4">
-        <div class="col-md-3">
-          <a href="portfolio-single.html" class="portfolio-item"><img src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+          <div class="container-fluid portfolio-wrap bg-light pt-0 site-section">
+              <div class="row align-items-end mb-4">
+                  <div class="col-md-3">
+                      <a href="portfolio-single.html" class="portfolio-item">
+                      <img src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
 images/img_1.jpg" alt="Image" class="img-fluid"></a>
-        </div>
-        <div class="col-md-6">
-          <a href="portfolio-single.html" class="portfolio-item"><img src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+                  </div>
+                  <div class="col-md-6">
+                      <a href="portfolio-single.html" class="portfolio-item">
+                      <img src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
 images/img_2.jpg" alt="Image" class="img-fluid"></a>
-        </div>
-        <div class="col-md-3">
-          <a href="portfolio-single.html" class="portfolio-item"><img src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+                  s</div>
+                  <div class="col-md-3">
+                      <a href="portfolio-single.html" class="portfolio-item">
+                      <img src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
 images/img_3.jpg" alt="Image" class="img-fluid"></a>
-        </div>
-      </div>
-      <div class="row align-items-start">
-        <div class="col-md-4">
-          <a href="portfolio-single.html" class="portfolio-item"><img src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+                  </div>
+              </div>
+          <div class="row align-items-start">
+              <div class="col-md-4">
+                  <a href="portfolio-single.html" class="portfolio-item">
+                  <img src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
 images/img_2.jpg" alt="Image" class="img-fluid"></a>
-        </div>
-        <div class="col-md-4">
-          <a href="portfolio-single.html" class="portfolio-item"><img src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+              </div>
+              <div class="col-md-4">
+                  <a href="portfolio-single.html" class="portfolio-item">
+                  <img src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
 images/hero_1.jpg" alt="Image" class="img-fluid"></a>
-        </div>
-        <div class="col-md-4">
-          <a href="portfolio-single.html" class="portfolio-item"><img src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+              </div>
+              <div class="col-md-4">
+                  <a href="portfolio-single.html" class="portfolio-item">
+                  <img src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
 images/hero_3.jpg" alt="Image" class="img-fluid"></a>
-        </div>
+              </div>
+          </div>
       </div>
-    </div>
 
-    <div class="site-section">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4">
-            <div class="service-29191">
-              <span class="wrap-icon mb-4 d-block">
-                <span class="icon-desktop_windows"></span>
-              </span>
-              <h3 class="mb-3">Interface Design</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti voluptatem reiciendis minus, a dolores.</p>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="service-29191">
-              <span class="wrap-icon mb-4 d-block">
-                <span class="icon-explore"></span>
-              </span>
-              <h3 class="mb-3">Product Design</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti voluptatem reiciendis minus, a dolores.</p>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="service-29191">
-              <span class="wrap-icon mb-4 d-block">
-                <span class="icon-layers"></span>
-              </span>
-              <h3 class="mb-3">Quality Results</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti voluptatem reiciendis minus, a dolores.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+      <div class="site-section">
+          <div class="container">
+              <div class="row">
+                  <div class="col-md-4">
+                      <div class="service-29191">
+                          <span class="wrap-icon mb-4 d-block">
+                              <span class="icon-desktop_windows"></span>
+                          </span>
+                          <h3 class="mb-3">Interface Design</h3>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti voluptatem reiciendis minus, a dolores.</p>
+                      </div>
+                  </div>
+                  <div class="col-md-4">
+                      <div class="service-29191">
+                          <span class="wrap-icon mb-4 d-block">
+                              <span class="icon-explore"></span>
+                          </span>
+                          <h3 class="mb-3">Product Design</h3>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti voluptatem reiciendis minus, a dolores.</p>
+                      </div>
+                  </div>
 
-    <div class="site-section bg-primary">
-      <div class="container mb-5">
-        <div class="row">
-          <div class="col-md-7">
-            <h2 class="text-white font-weight-bold">Blog Updates</h2>
-            <p class="text-white lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt ducimus facere quam eos tempore beatae non eius, provident.</p>
+                  <div class="col-md-4">
+                      <div class="service-29191">
+                          <span class="wrap-icon mb-4 d-block">
+                              <span class="icon-layers"></span>
+                          </span>
+                          <h3 class="mb-3">Quality Results</h3>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti voluptatem reiciendis minus, a dolores.</p>
+                      </div>
+                  </div>
+              </div>
           </div>
-        </div>
       </div>
+
+      <div class="site-section bg-primary">
+          <div class="container mb-5">
+              <div class="row">
+                  <div class="col-md-7">
+                  <h2 class="text-white font-weight-bold">Blog Updates</h2>
+                  <p class="text-white lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt ducimus facere quam eos tempore beatae non eius, provident.</p>
+              </div>
+          </div>
+      </div>
+      
       <div class="container-fluid">
-        
-        
-
-
         <div class="owl-carousel nonloop-block-13">
           <div class="media-29191">
             <a href="#" class="d-block mb-4"><img src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>

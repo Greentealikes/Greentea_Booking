@@ -2,6 +2,7 @@
     require_once 'head.php';
     
     $switch_id = isset($_GET['pageid'])? $_GET['pageid'] : '0';
+    $_SESSION['bookpage'] = isset($_GET['bookpage'])? $_GET['bookpage'] : '0';
 
     $admin = $_SESSION['admin'];
     switch($switch_id){
@@ -9,7 +10,10 @@
             $smarty->display('about.tpl');
         break;
         case '2':
-            $smarty->display('portfolio.tpl');
+            if($_SESSION['bookpage'])
+                $smarty->display('book_form.tpl');   
+            else    
+                $smarty->display('book_form.tpl');
         break;
         case '3':
             $smarty->display('services.tpl');

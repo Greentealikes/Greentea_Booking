@@ -22,26 +22,18 @@
     <link rel="stylesheet" href="<{$xoImgUrl}>css/style.css">
   </head>
  
-    <style>
-        .form-signin {
-            width: 100%;
-            max-width: 400px;
-            padding: 15px;
-            margin: 0 auto;
-        }      
-    </style>
-     <body>
-        <{if $smarty.session.admin}>
-            <{* 管理員 *}>
-		        <{include file="tpl/admin_form.tpl"}>
-	      <{else}>
-            <{* 訪客 *}>
-            <{if $op == login_form}>
-            		<{include file="tpl/login_form.tpl"}>
-            <{elseif $op == reg_form}>
-                <{include file="tpl/reg_form.tpl"}>
-            <{/if}>
-        <{/if}>
- 
+     <body>   
+        <{if $smarty.session.bookpage == 1 }>
+		    <{include file="tpl/bookpg1_form.tpl"}>
+	    <{elseif $smarty.session.bookpage == 2}>
+		    <{include file="tpl/bookpg2_form.tpl"}>
+        <{elseif $smarty.session.bookpage == 3}>  
+            <{include file="tpl/bookpg3_form.tpl"}> 
+        <{elseif $smarty.session.bookpage == 4}>  
+            <{include file="tpl/bookpg4_form.tpl"}> 
+        <{else}>
+            <{include file="tpl/bookpg1_form.tpl"}>    
+	    <{/if}>
+
   </body>
 </html>

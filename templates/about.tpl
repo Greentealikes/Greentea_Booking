@@ -20,6 +20,7 @@
 
   <!-- MAIN CSS -->
   <link rel="stylesheet" href="<{$xoImgUrl}>css/style.css">
+ 
 
 </head>
 

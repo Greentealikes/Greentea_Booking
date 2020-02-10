@@ -24,12 +24,13 @@
 
 
    $switch_id = isset($_GET['pageid'])? $_GET['pageid'] : '0';
+   $_SESSION['bookpage'] = isset($_GET['bookpage'])? $_GET['bookpage'] : '0';
    
     /*---- 必須引入----*/
     #引入樣板引擎
     require_once _WEB_PATH.'/smarty.php';
     #引入資料庫設定
-    //require_once _WEB_PATH.'/sqlConfig.php';
+    require_once _WEB_PATH.'/sqlConfig.php';
     #引入設定檔
     require_once _WEB_PATH . '/function.php';
    

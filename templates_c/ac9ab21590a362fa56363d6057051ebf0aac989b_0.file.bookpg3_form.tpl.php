@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-02-10 04:45:55
-  from 'D:\xampp\htdocs\Greentea_Booking-master\templates\about.tpl' */
+/* Smarty version 3.1.34-dev-7, created on 2020-02-10 04:47:34
+  from 'D:\xampp\htdocs\Greentea_Booking-master\templates\tpl\bookpg3_form.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e40d1f3a424a1_67009037',
+  'unifunc' => 'content_5e40d2567b7e06_13086948',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '79a5d344aae9422a1f3ac17c44a194784c51d98d' => 
+    'ac9ab21590a362fa56363d6057051ebf0aac989b' => 
     array (
-      0 => 'D:\\xampp\\htdocs\\Greentea_Booking-master\\templates\\about.tpl',
-      1 => 1581306354,
+      0 => 'D:\\xampp\\htdocs\\Greentea_Booking-master\\templates\\tpl\\bookpg3_form.tpl',
+      1 => 1581306451,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e40d1f3a424a1_67009037 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e40d2567b7e06_13086948 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!doctype html>
 <html lang="en">
 
@@ -48,193 +48,124 @@ css/owl.theme.default.min.css">
 fonts/flaticon/font/flaticon.css">
   <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
 css/aos.css">
+ 
 
   <!-- MAIN CSS -->
   <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
 css/style.css">
- 
+  <link rel="stylesheet"  type="text/css" href="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+css/bookstyle.css">
 
 </head>
 
-
-
-
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
-
-
-  <div class="site-wrap" id="home-section">
-
-    <div class="site-mobile-menu site-navbar-target">
-      <div class="site-mobile-menu-header">
-        <div class="site-mobile-menu-close mt-3">
-          <span class="icon-close2 js-menu-toggle"></span>
-        </div>
-      </div>
-      <div class="site-mobile-menu-body"></div>
-    </div>
-
-
-
-    <header class="site-navbar site-navbar-target" role="banner">
-
-      <div class="container">
-        <div class="row align-items-center position-relative">
-
-          <div class="col-3">
-            <div class="site-logo">
-              <a href="switch.php" class="font-weight-bold">Approach</a>
-            </div>
+      <div class="site-wrap" id="home-section">
+          <div class="site-mobile-menu site-navbar-target">
+              <div class="site-mobile-menu-header">
+                  <div class="site-mobile-menu-close mt-3">
+                      <span class="icon-close2 js-menu-toggle"></span>
+                  </div>
+              </div>
+              <div class="site-mobile-menu-body"></div>
           </div>
 
-          <div class="col-9  text-right">
+          <header class="site-navbar site-navbar-target" role="banner">
+              <div class="container">
+                  <div class="row align-items-center position-relative">
+                      <div class="col-3">
+                          <div class="site-logo">
+                              <a href="index.php" class="font-weight-bold">Approach</a>
+                          </div>
+                      </div>
 
+                      <div class="col-9  text-right">
+                          <span class="d-inline-block d-lg-none">
+                              <a href="#" class="text-primary site-menu-toggle js-menu-toggle py-5">
+                                  <span class="icon-menu h3 text-primary">
+                                  </span>
+                              </a>
+                          </span>
 
-            <span class="d-inline-block d-lg-none"><a href="#"
-                class="text-primary site-menu-toggle js-menu-toggle py-5"><span
-                  class="icon-menu h3 text-primary"></span></a></span>
+                          <nav class="site-navigation text-right ml-auto d-none d-lg-block" role="navigation">
+                            <ul class="site-menu main-menu js-clone-nav ml-auto ">
+                              <li class="nav_active"><a href="switch.php?pageid=1" class="nav-link">About</a></li>
+                              <li><a href="switch.php?pageid=2" class="nav-link">Portfolio</a></li>
+                              <li><a href="switch.php?pageid=3" class="nav-link">Services</a></li>
+                              <li><a href="switch.php?pageid=4" class="nav-link">Blog</a></li>
+                              <li><a href="switch.php?pageid=5" class="nav-link">Contact</a></li>
+                  
+                          <?php if ($_SESSION['admin']) {?>
+		                          <li><a href="user.php" class="nav-link">管理員</a></li>
+                              <li><a href="user.php?op=logout" class="nav-link">Logout</a></li>                     
+	                        <?php } else { ?>
+		                          <li><a href="user.php" id="userin" class="nav-link">Login</a></li>                     
+	                        <?php }?>
+                            </ul>
+                          </nav>
+                      </div>
+                  </div>
+              </div>
+          </header>
 
+             <div class = "logoimage">               
+              <img src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+images/logoimg.jpg" alt="Image" class="img-fluid"></a>
+          </div>   
+           <div class="site-section ">
+              <div class="site-bottom">製作中</div>
+          </div>  
 
+          <div class="site-section">
+               <div class="row">
+                  <div class = "col-3">   
+                     <div class="list-group" id="list-tab" role="tablist">
+                           <a href = "switch.php?pageid=2&bookpage=1">
+                            <li class="list-group-item "><stong>客房查詢</stong></li>
+                          </a>
+                          <a href = "switch.php?pageid=2&bookpage=2">
+                            <li class="list-group-item"><stong>房型選擇</stong></li>
+                          </a>
 
-            <nav class="site-navigation text-right ml-auto d-none d-lg-block" role="navigation">
-              <ul class="site-menu main-menu js-clone-nav ml-auto ">
-                  <li><a href="switch.php?pageid=1" class="nav-link">About</a></li>
-                  <li><a href="switch.php?pageid=2" class="nav-link">Portfolio</a></li>
-                  <li><a href="switch.php?pageid=3" class="nav-link">Services</a></li>
-                  <li><a href="switch.php?pageid=4" class="nav-link">Blog</a></li>
-                  <li><a href="switch.php?pageid=5" class="nav-link">Contact</a></li>
-                   <?php if ($_SESSION['admin']) {?>
-		                   <li><a href="user.php" class="nav-link">管理員</a></li>
-                       <li><a href="logout.php" id="userout" class="nav-link">Logout</a></li>
-	                <?php } else { ?>
-		                   <li><a href="user.php" id="userin" class="nav-link">Login</a></li>
-	                <?php }?>
-              </ul>
-            </nav>
+                          <a href = "switch.php?pageid=2&bookpage=3">
+                            <li class="list-group-item btn-hold"><stong>資料填寫</stong></li>
+                          </a>
+
+                          <a href = "switch.php?pageid=2&bookpage=4">
+                            <li class="list-group-item"><stong>最後確認</stong></li>
+                          </a>
+                      </div>
+                   </div>  
+                  <div class = "col-9">   
+                      <form action="user.php" method="post" id="myForm" class="mb-20" enctype="multipart/form-data">
+                          <div class="book-container alert alert-warning  ">
+                            <div class = "book-body">
+                              <div class = "row">
+                                  <div class="col-sm-12 book-header">
+                                  3.資料填寫
+                                  </div>
+                                
+                              </div>
+                              
+                              <div class="row">   
+                                        
+                                  
+
+                                
+                              </div>
+
+                              <div class="text-right pb-20">
+                                  <input type="hidden" name="op" value="reg">
+                                  <button type="submit" class="btn btn-primary ">下一步</button>
+                                  <p></p>
+                              </div>
+                               
+                          </div>
+                      </form>
+                   </div>
+               </div>
           </div>
 
-
-        </div>
-      </div>
-
-    </header>
-
-
-    <div class="site-section-cover">
-      <div class="container">
-        <div class="row align-items-center text-center justify-content-center">
-          <div class="col-lg-6">
-            <h1 class="text-white mb-4">About Us</h1>
-            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit maxime nemo placeat dolor est.</p>
-
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="site-section about-me">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-md-6 mb-5 mb-md-0">
-            <img src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
-images/img_5.jpg" alt="Image" class="img-fluid">
-          </div>
-          <div class="col-md-5 ml-auto">
-            <h2 class="text-primary mb-5 font-weight-bold">Who We Are</h2>
-
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem officia nesciunt quas, laudantium ex
-              rem voluptas quod, distinctio eum tenetur. Placeat, quisquam, consequatur. Quam expedita neque nostrum
-              iusto commodi minima!</p>
-            <p>Omnis, aspernatur, incidunt cum quo, nisi harum ea earum suscipit delectus explicabo unde saepe commodi
-              modi fugiat nihil sint nam. Ullam, esse totam mollitia molestias ipsum odio aperiam, officiis nesciunt.
-            </p>
-
-
-            <div class="social_29128 mt-5">
-              <a href="#"><span class="icon-facebook"></span></a>
-              <a href="#"><span class="icon-instagram"></span></a>
-              <a href="#"><span class="icon-twitter"></span></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="site-section">
-      <div class="container">
-        <div class="row mb-5">
-          <div class="col">
-            <h2 class="text-primary font-weight-bold">Our Services</h2>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-4">
-            <div class="service-29191">
-              <span class="wrap-icon mb-4 d-block">
-                <span class="icon-desktop_windows"></span>
-              </span>
-              <h3 class="mb-3">Interface Design</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti voluptatem reiciendis minus, a
-                dolores.</p>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="service-29191">
-              <span class="wrap-icon mb-4 d-block">
-                <span class="icon-explore"></span>
-              </span>
-              <h3 class="mb-3">Product Design</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti voluptatem reiciendis minus, a
-                dolores.</p>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="service-29191">
-              <span class="wrap-icon mb-4 d-block">
-                <span class="icon-layers"></span>
-              </span>
-              <h3 class="mb-3">Quality Results</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti voluptatem reiciendis minus, a
-                dolores.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="site-section bg-light">
-
-      <div class="container">
-        <div class="row mb-5 text-center">
-          <div class="col">
-            <h2 class="text-primary font-weight-bold">Our Clients</h2>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-3">
-            <img src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
-images/client_google.png" alt="Image" class="img-fluid">
-          </div>
-          <div class="col-md-3">
-            <img src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
-images/client_invision.png" alt="Image" class="img-fluid">
-          </div>
-          <div class="col-md-3">
-            <img src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
-images/client_nike.png" alt="Image" class="img-fluid">
-          </div>
-          <div class="col-md-3">
-            <img src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
-images/client_microsoft.png" alt="Image" class="img-fluid">
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="footer site-section bg-white">
+    <div class="footer site-section bg-light">
       <div class="container">
         <div class="row">
           <div class="col-md-3">
@@ -274,7 +205,7 @@ images/client_microsoft.png" alt="Image" class="img-fluid">
       </div>
     </div>
 
-    <div class="site-section">
+    <div class="site-section bg-light">
       <div class="container">
         <div class="row mb-4 text-center">
           <div class="col">
@@ -305,7 +236,7 @@ images/client_microsoft.png" alt="Image" class="img-fluid">
 
 
   </div>
-  <input type = "hidden" value ="login" value="inlog" id="login">
+
   <?php echo '<script'; ?>
  src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
 js/jquery-3.3.1.min.js"><?php echo '</script'; ?>
@@ -362,7 +293,6 @@ js/isotope.pkgd.min.js"><?php echo '</script'; ?>
  src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
 js/aos.js"><?php echo '</script'; ?>
 >
-
 
   <?php echo '<script'; ?>
  src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>

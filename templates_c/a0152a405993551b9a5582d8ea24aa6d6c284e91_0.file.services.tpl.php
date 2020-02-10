@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-02-10 04:45:55
-  from 'D:\xampp\htdocs\Greentea_Booking-master\templates\about.tpl' */
+/* Smarty version 3.1.34-dev-7, created on 2020-02-10 02:14:37
+  from 'D:\xampp\htdocs\Greentea_Booking-master\templates\services.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e40d1f3a424a1_67009037',
+  'unifunc' => 'content_5e40ae7d2daf72_97337414',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '79a5d344aae9422a1f3ac17c44a194784c51d98d' => 
+    'a0152a405993551b9a5582d8ea24aa6d6c284e91' => 
     array (
-      0 => 'D:\\xampp\\htdocs\\Greentea_Booking-master\\templates\\about.tpl',
-      1 => 1581306354,
+      0 => 'D:\\xampp\\htdocs\\Greentea_Booking-master\\templates\\services.tpl',
+      1 => 1580893512,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e40d1f3a424a1_67009037 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e40ae7d2daf72_97337414 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!doctype html>
 <html lang="en">
 
@@ -52,12 +52,8 @@ css/aos.css">
   <!-- MAIN CSS -->
   <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
 css/style.css">
- 
 
 </head>
-
-
-
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
 
@@ -82,7 +78,7 @@ css/style.css">
 
           <div class="col-3">
             <div class="site-logo">
-              <a href="switch.php" class="font-weight-bold">Approach</a>
+              <a href="../index.php" class="font-weight-bold">Approach</a>
             </div>
           </div>
 
@@ -102,7 +98,7 @@ css/style.css">
                   <li><a href="switch.php?pageid=3" class="nav-link">Services</a></li>
                   <li><a href="switch.php?pageid=4" class="nav-link">Blog</a></li>
                   <li><a href="switch.php?pageid=5" class="nav-link">Contact</a></li>
-                   <?php if ($_SESSION['admin']) {?>
+                  <?php if ($_SESSION['admin']) {?>
 		                   <li><a href="user.php" class="nav-link">管理員</a></li>
                        <li><a href="logout.php" id="userout" class="nav-link">Logout</a></li>
 	                <?php } else { ?>
@@ -123,7 +119,7 @@ css/style.css">
       <div class="container">
         <div class="row align-items-center text-center justify-content-center">
           <div class="col-lg-6">
-            <h1 class="text-white mb-4">About Us</h1>
+            <h1 class="text-white mb-4">Our Services</h1>
             <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit maxime nemo placeat dolor est.</p>
 
           </div>
@@ -132,44 +128,10 @@ css/style.css">
     </div>
 
 
-    <div class="site-section about-me">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-md-6 mb-5 mb-md-0">
-            <img src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
-images/img_5.jpg" alt="Image" class="img-fluid">
-          </div>
-          <div class="col-md-5 ml-auto">
-            <h2 class="text-primary mb-5 font-weight-bold">Who We Are</h2>
-
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem officia nesciunt quas, laudantium ex
-              rem voluptas quod, distinctio eum tenetur. Placeat, quisquam, consequatur. Quam expedita neque nostrum
-              iusto commodi minima!</p>
-            <p>Omnis, aspernatur, incidunt cum quo, nisi harum ea earum suscipit delectus explicabo unde saepe commodi
-              modi fugiat nihil sint nam. Ullam, esse totam mollitia molestias ipsum odio aperiam, officiis nesciunt.
-            </p>
-
-
-            <div class="social_29128 mt-5">
-              <a href="#"><span class="icon-facebook"></span></a>
-              <a href="#"><span class="icon-instagram"></span></a>
-              <a href="#"><span class="icon-twitter"></span></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
     <div class="site-section">
       <div class="container">
-        <div class="row mb-5">
-          <div class="col">
-            <h2 class="text-primary font-weight-bold">Our Services</h2>
-          </div>
-        </div>
         <div class="row">
-          <div class="col-md-4">
+          <div class="col-md-4 mb-5">
             <div class="service-29191">
               <span class="wrap-icon mb-4 d-block">
                 <span class="icon-desktop_windows"></span>
@@ -179,7 +141,7 @@ images/img_5.jpg" alt="Image" class="img-fluid">
                 dolores.</p>
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4 mb-5">
             <div class="service-29191">
               <span class="wrap-icon mb-4 d-block">
                 <span class="icon-explore"></span>
@@ -189,7 +151,39 @@ images/img_5.jpg" alt="Image" class="img-fluid">
                 dolores.</p>
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4 mb-5">
+            <div class="service-29191">
+              <span class="wrap-icon mb-4 d-block">
+                <span class="icon-layers"></span>
+              </span>
+              <h3 class="mb-3">Quality Results</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti voluptatem reiciendis minus, a
+                dolores.</p>
+            </div>
+          </div>
+
+
+          <div class="col-md-4 mb-5">
+            <div class="service-29191">
+              <span class="wrap-icon mb-4 d-block">
+                <span class="icon-desktop_windows"></span>
+              </span>
+              <h3 class="mb-3">Interface Design</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti voluptatem reiciendis minus, a
+                dolores.</p>
+            </div>
+          </div>
+          <div class="col-md-4 mb-5">
+            <div class="service-29191">
+              <span class="wrap-icon mb-4 d-block">
+                <span class="icon-explore"></span>
+              </span>
+              <h3 class="mb-3">Product Design</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti voluptatem reiciendis minus, a
+                dolores.</p>
+            </div>
+          </div>
+          <div class="col-md-4 mb-5">
             <div class="service-29191">
               <span class="wrap-icon mb-4 d-block">
                 <span class="icon-layers"></span>
@@ -202,6 +196,7 @@ images/img_5.jpg" alt="Image" class="img-fluid">
         </div>
       </div>
     </div>
+
 
 
     <div class="site-section bg-light">
@@ -305,7 +300,7 @@ images/client_microsoft.png" alt="Image" class="img-fluid">
 
 
   </div>
-  <input type = "hidden" value ="login" value="inlog" id="login">
+
   <?php echo '<script'; ?>
  src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
 js/jquery-3.3.1.min.js"><?php echo '</script'; ?>
