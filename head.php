@@ -21,10 +21,9 @@
         $_SESSION['admin'] = true;
     }
   }
-
-
-   $switch_id = isset($_GET['pageid'])? $_GET['pageid'] : '0';
-   $_SESSION['bookpage'] = isset($_GET['bookpage'])? $_GET['bookpage'] : '0';
+    $switch_id = isset($_GET['pageid'])? $_GET['pageid'] : '0';
+    $_SESSION['bookpage'] = isset($_GET['bookpage'])? $_GET['bookpage'] : '0';
+    
    
     /*---- 必須引入----*/
     #引入樣板引擎

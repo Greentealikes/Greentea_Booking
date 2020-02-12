@@ -26,3 +26,5 @@ $smarty->config_dir = _WEB_PATH . '/configs/';
 #定義模板URL 
 $smarty->assign("xoImgUrl", _WEB_URL . '/templates/'); 
 $smarty->assign("xoAppUrl", _WEB_URL."/");
+$smarty->assign("tableshow", "");
+

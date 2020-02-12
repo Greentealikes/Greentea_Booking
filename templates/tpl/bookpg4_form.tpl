@@ -26,7 +26,7 @@
 </head>
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
-      <div class="site-wrap" id="home-section">
+  <div class="site-wrap" id="home-section">
           <div class="site-mobile-menu site-navbar-target">
               <div class="site-mobile-menu-header">
                   <div class="site-mobile-menu-close mt-3">
@@ -76,56 +76,77 @@
 
            <div class = "logoimage">               
               <img src="<{$xoImgUrl}>images/logoimg.jpg" alt="Image" class="img-fluid"></a>
+           </div>   
+
+          <div class="Marquee-alert">
+            <marquee behavior="behavior" width="100%" loop="2">
+            歡迎來客訪問，如要線上預訂，可線上填單或是直接電話來電09-xxx-xx-xxx
+            </marquee>
           </div>   
-          <div class="site-section ">
-              <div class="site-bottom">製作中</div>
-          </div>  
-
-
           <div class="site-section">
-               <div class="row">
-                  <div class = "col-3">   
-                     <div class="list-group" id="list-tab" role="tablist">
-                           <a href = "switch.php?pageid=2&bookpage=1">
-                            <li class="list-group-item "><stong>客房查詢</stong></li>
-                          </a>
-                          <a href = "switch.php?pageid=2&bookpage=2">
-                            <li class="list-group-item"><stong>房型選擇</stong></li>
-                          </a>
+            <div class="row">
+              <div class = "col-3">   
+                <div class="list-group" id="list-tab" role="tablist">
+                  <a href = "switch.php?pageid=2&bookpage=1">
+                  <li class="list-group-item "><stong>線上系統說明</stong></li>
+                  </a>
+                  
+                  <a href = "switch.php?pageid=2&bookpage=2">
+                  <li class="list-group-item"><stong>填寫表單</stong></li>
+                  </a>
 
-                          <a href = "switch.php?pageid=2&bookpage=3">
-                            <li class="list-group-item "><stong>資料填寫</stong></li>
-                          </a>
+                  <a href = "switch.php?pageid=2&bookpage=3">
+                  <li class="list-group-item "><stong>完成表單</stong></li>
+                  </a>
 
-                          <a href = "switch.php?pageid=2&bookpage=4">
-                            <li class="list-group-item btn-hold"><stong>最後確認</stong></li>
-                          </a>
-                      </div>
-                   </div>  
-                  <div class = "col-9">   
-                      <form action="user.php" method="post" id="myForm" class="mb-20" enctype="multipart/form-data">
-                          <div class="book-container alert alert-warning  ">
-                            <div class = "book-body">
-                              <div class = "row">
-                                  <div class="col-sm-12 book-header">
-                                  4.最後確認
-                                  </div>
-                               
-                              </div>
-                              
-                              <div class="row">   </div>
-                                
-                                 
-                              <div class="text-right pb-20">
-                                <input type="hidden" name="op" value="reg">
-                                  <button type="submit" class="btn btn-primary ">下一步</button>
-                                  <p></p>
-                              </div>
-                               
+                  <a href = "switch.php?pageid=2&bookpage=4">
+                  <li class="list-group-item btn-hold"><stong>查詢表單</stong></li>
+                  </a>
+                </div>
+              </div>  
+              
+              <div class = "col-9">   
+                <form action="userbooking.php" method="post" id="myForm" class="mb-20" enctype="multipart/form-data">
+                  <div class="book-container alert alert-warning  ">
+                    <div class = "title-font">  
+                      <div class="col-sm-12">完成表單</div>
+                        <div class="col-sm-12">
+                          <h4>心在哪裡，就在哪裡－ 民宿等你來發掘！</h4>
+                        </div>
+                      </div>  
+
+                      <div class="row container book-body"> 
+                        <div class="col-sm-5">
+                          <div class="form-group">
+                            <label>姓名<span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="Inquirname" name="Inquirname">
                           </div>
-                      </form>
-                   </div>
-               </div>
+                        </div>
+
+                        <div class="col-sm-5 ">
+                          <div class="form-group">
+                            <label>電子郵件 <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="Inquiremail" name="Inquiremail">
+                          </div>
+                        </div> 
+
+                        <input type="hidden" name="bookbegin" value="visitbook" id="bookbegin">
+                        <div class="col-sm-12">
+                          <{$tableshow}>
+                        </div>
+
+                        <div class="col-sm-12 ">
+                          <div class="pb-20 amplif-gap">
+                            <button type="submit" class="btn btn-primary ">查詢</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+
+              </div>
+            </div>
           </div>
 
     <div class="footer site-section bg-light">
@@ -227,8 +248,6 @@
       })
     };
   </script>
-
-
   <script src="<{$xoImgUrl}>js/main.js"></script>
 
 </body>

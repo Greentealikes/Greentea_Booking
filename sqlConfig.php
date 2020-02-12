@@ -6,7 +6,7 @@ $db_user = "root";
 #資料庫使用者密碼
 $db_password = "csiecsie";
 #資料庫名稱
-$db_name = "web11";
+$db_name = "hotel_usermanage";
 #PHP 5.2.9以後
 $db = new mysqli($db_host, $db_user, $db_password, $db_name); 
 if ($db->connect_error) {

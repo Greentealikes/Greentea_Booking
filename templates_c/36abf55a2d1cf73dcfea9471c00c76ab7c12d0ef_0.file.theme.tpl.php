@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-02-10 02:06:44
+/* Smarty version 3.1.34-dev-7, created on 2020-02-12 09:23:03
   from 'D:\xampp\htdocs\Greentea_Booking-master\templates\theme.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e40aca41f9a03_55754518',
+  'unifunc' => 'content_5e43b5e7e73b25_41807666',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '36abf55a2d1cf73dcfea9471c00c76ab7c12d0ef' => 
     array (
       0 => 'D:\\xampp\\htdocs\\Greentea_Booking-master\\templates\\theme.tpl',
-      1 => 1581041630,
+      1 => 1581495781,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e40aca41f9a03_55754518 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e43b5e7e73b25_41807666 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!doctype html>
 <html lang="en">
 
@@ -117,6 +117,7 @@ css/style.css">
                   </div>
               </div>
           </div>
+           <?php echo $_smarty_tpl->tpl_vars['Tableshow']->value;?>
 
           <div class="container-fluid portfolio-wrap bg-light pt-0 site-section">
               <div class="row align-items-end mb-4">
