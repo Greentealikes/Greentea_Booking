@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="<{$xoImgUrl}>css/owl.theme.default.min.css">
     <link rel="stylesheet" href="<{$xoImgUrl}>fonts/flaticon/font/flaticon.css">
     <link rel="stylesheet" href="<{$xoImgUrl}>css/aos.css">
-    <link rel="stylesheet" href="<{$xoImgUrl}>css/admstyle.css">
+   
 </head>
 
 <body>
@@ -26,16 +26,12 @@
 		    <div class="col-sm-3">
             
                 <div class="card text-white bg-secondary mb-3" style="width: 18rem;">
-                    <div class="card-header ">
-                         管理員
-                    </div>
+                    <div class="card-header ">管理員</div>
                 <div class="list-group">
-                        <a class="list-group-item list-group-item-action list-group-item-dark" href="index.php" id="Back_home">
-                            首頁
-                        </a>         
-                        <a class="list-group-item list-group-item-action list-group-item-dark"href="user.php?op=logout" id="user_out">
-                            登出
-                        </a>
+                    <a class="list-group-item list-group-item-action list-group-item-dark" href="index.php" id="Back_home">首頁</a>         
+                    <a class="list-group-item list-group-item-action list-group-item-dark" href="user.php?op=logout" id="user_out">登出</a>
+                    <a class="list-group-item list-group-item-action list-group-item-dark" 
+                    href="http://127.0.0.1/phpmyadmin/index.php" target="_blank">資料庫管理</a>
 		        </div>
 
 		    </div>

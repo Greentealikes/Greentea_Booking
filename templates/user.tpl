@@ -6,12 +6,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link href="https://fonts.googleapis.com/css?family=Poppins:400,900|Source+Serif+Pro&display=swap" rel="stylesheet">
+    <link href="<{$xoImgUrl}>fonts/googleapis.css" rel="stylesheet">
 
     <link rel="stylesheet" href="<{$xoImgUrl}>fonts/icomoon/style.css">
 
     <link rel="stylesheet" href="<{$xoImgUrl}>css/bootstrap.min.css">
-    <link rel="stylesheet" href="<{$xoImgUrl}>css/bootstrap-datepicker.css">
+    
     <link rel="stylesheet" href="<{$xoImgUrl}>css/jquery.fancybox.min.css">
     <link rel="stylesheet" href="<{$xoImgUrl}>css/owl.carousel.min.css">
     <link rel="stylesheet" href="<{$xoImgUrl}>css/owl.theme.default.min.css">
@@ -20,6 +20,8 @@
 
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="<{$xoImgUrl}>css/style.css">
+    <link rel="stylesheet" href="<{$xoAppUrl}>class/sweetalert2/sweetalert2.min.css"> 
+
   </head>
  
     <style>
@@ -32,16 +34,29 @@
     </style>
      <body>
         <{if $smarty.session.admin}>
-            <{* 管理員 *}>
 		        <{include file="tpl/admin_form.tpl"}>
 	      <{else}>
-            <{* 訪客 *}>
             <{if $op == login_form}>
             		<{include file="tpl/login_form.tpl"}>
             <{elseif $op == reg_form}>
                 <{include file="tpl/reg_form.tpl"}>
             <{/if}>
-        <{/if}>
- 
+        <{/if}> 
   </body>
 </html>
+
+<script src="<{$xoAppUrl}>class/sweetalert2/sweetalert2.min.js"></script>
+
+<{if $redirect}>
+  <script>
+    window.onload = function(){
+      Swal.fire({
+        icon: 'success',
+        title: "<{$message}>",
+        showConfirmButton: false,
+        timer: <{$time}>
+      })
+    }
+  </script>
+<{/if}>
+

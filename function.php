@@ -25,3 +25,9 @@ function system_CleanVars(&$global, $key, $default = '', $type = 'int')
   }
   return $ret;
 }
+
+
+
+
+
+

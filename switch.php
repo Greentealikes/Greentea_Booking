@@ -1,32 +1,21 @@
 <?php
     require_once 'head.php';
+    require_once 'redirect.php';
     
+    #主畫面切換 
     $switch_id = isset($_GET['pageid'])? $_GET['pageid'] : '0';
-    $_SESSION['bookpage'] = isset($_GET['bookpage'])? $_GET['bookpage'] : '0';
 
+    #線上預訂頁切換
+    $switch_bookpage = isset($_GET['bookpage'])? $_GET['bookpage'] : '0';
+    
+    #admin
     $admin = $_SESSION['admin'];
-    switch($switch_id){
-        case '1':
-            $smarty->display('about.tpl');
-        break;
-        case '2':
-            if($_SESSION['bookpage'])
-                $smarty->display('book_form.tpl');   
-            else    
-                $smarty->display('book_form.tpl');
-        break;
-        case '3':
-            $smarty->display('services.tpl');
-        break;
-        case '4':
-            $smarty->display('blog.tpl');
-        break;
-        case '5':
-            $smarty->display('contact.tpl');
-        break;
-        default:
-            $smarty->display('theme.tpl');
-        break;
+   
+    $smarty->assign("pageid", $switch_id);
+    $smarty->assign("bookpage", $switch_bookpage);
 
-    }
+    if(isset($_GET['bookpage']))
+        $smarty->display('book_fom.tpl');
+    else 
+       $smarty->display('theme.tpl');
 ?>

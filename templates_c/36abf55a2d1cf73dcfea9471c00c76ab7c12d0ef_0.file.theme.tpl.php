@@ -1,305 +1,145 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-02-12 09:23:03
+/* Smarty version 3.1.34-dev-7, created on 2020-02-14 09:48:13
   from 'D:\xampp\htdocs\Greentea_Booking-master\templates\theme.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e43b5e7e73b25_41807666',
+  'unifunc' => 'content_5e465ecd8ca1a1_85622643',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '36abf55a2d1cf73dcfea9471c00c76ab7c12d0ef' => 
     array (
       0 => 'D:\\xampp\\htdocs\\Greentea_Booking-master\\templates\\theme.tpl',
-      1 => 1581495781,
+      1 => 1581668247,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
+    'file:index_fom.tpl' => 1,
+    'file:about_fom.tpl' => 1,
+    'file:book_fom.tpl' => 1,
+    'file:services_fom.tpl' => 1,
+    'file:blog_fom.tpl' => 1,
+    'file:contact_fom.tpl' => 1,
+    'file:user.tpl' => 1,
+    'file:tpl/head_js.tpl' => 1,
   ),
 ),false)) {
-function content_5e43b5e7e73b25_41807666 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e465ecd8ca1a1_85622643 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!doctype html>
 <html lang="en">
 
-  <head>
-    <title>Approach &mdash; Website Template by Colorlib</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<head>
+  <title>Approach &mdash; Website Template by Colorlib</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link href="https://fonts.googleapis.com/css?family=Poppins:400,900|Source+Serif+Pro&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,900|Source+Serif+Pro&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+  <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
 fonts/icomoon/style.css">
 
-    <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+  <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
 css/bootstrap.min.css">
-    <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+  <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
 css/bootstrap-datepicker.css">
-    <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+  <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
 css/jquery.fancybox.min.css">
-    <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+  <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
 css/owl.carousel.min.css">
-    <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+  <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
 css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+  <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
 fonts/flaticon/font/flaticon.css">
-    <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+  <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
 css/aos.css">
-    <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
-css/nav_style.css">
-
-    <!-- MAIN CSS -->
-    <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+  <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
 css/style.css">
-  </head>
+  
+  <link rel="stylesheet"  type="text/css" href="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+css/bookstyle.css">
+</head>
 
-  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
-      <div class="site-wrap" id="home-section">
-          <div class="site-mobile-menu site-navbar-target">
-              <div class="site-mobile-menu-header">
-                  <div class="site-mobile-menu-close mt-3">
-                      <span class="icon-close2 js-menu-toggle"></span>
-                  </div>
-              </div>
-              <div class="site-mobile-menu-body"></div>
-          </div>
-
-          <header class="site-navbar site-navbar-target" role="banner">
-              <div class="container">
-                  <div class="row align-items-center position-relative">
-                      <div class="col-3">
-                          <div class="site-logo">
-                              <a href="index.php" class="font-weight-bold">Approach</a>
-                          </div>
-                      </div>
-
-                      <div class="col-9  text-right">
-                          <span class="d-inline-block d-lg-none">
-                              <a href="#" class="text-primary site-menu-toggle js-menu-toggle py-5">
-                                  <span class="icon-menu h3 text-primary">
-                                  </span>
-                              </a>
-                          </span>
-
-                          <nav class="site-navigation text-right ml-auto d-none d-lg-block" role="navigation">
-                            <ul class="site-menu main-menu js-clone-nav ml-auto ">
-                              <li class="nav_active"><a href="switch.php?pageid=1" class="nav-link">About</a></li>
-                              <li><a href="switch.php?pageid=2" class="nav-link">Portfolio</a></li>
-                              <li><a href="switch.php?pageid=3" class="nav-link">Services</a></li>
-                              <li><a href="switch.php?pageid=4" class="nav-link">Blog</a></li>
-                              <li><a href="switch.php?pageid=5" class="nav-link">Contact</a></li>
-                  
-                          <?php if ($_SESSION['admin']) {?>
-		                          <li><a href="user.php" class="nav-link">管理員</a></li>
-                              <li><a href="user.php?op=logout" class="nav-link">Logout</a></li>                     
-	                        <?php } else { ?>
-		                          <li><a href="user.php" id="userin" class="nav-link">Login</a></li>                     
-	                        <?php }?>
-                            </ul>
-                          </nav>
-                      </div>
-                  </div>
-              </div>
-          </header>
-
-          <div class="site-section-cover">
-              <div class="container">
-                  <div class="row align-items-center text-center justify-content-center">
-                      <div class="col-lg-10">
-                          <h1 class="text-white mb-4">Creativity is a wild mind and a disciplined eye.</h1>
-                          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit maxime nemo placeat dolor est.</p>
-                          <p><a href="https://vimeo.com/191947042" data-fancybox class="btn-video_38929">
-                          <span class="icon-play"></span></a></p>
-                      </div>
-                  </div>
-              </div>
-          </div>
-           <?php echo $_smarty_tpl->tpl_vars['Tableshow']->value;?>
-
-          <div class="container-fluid portfolio-wrap bg-light pt-0 site-section">
-              <div class="row align-items-end mb-4">
-                  <div class="col-md-3">
-                      <a href="portfolio-single.html" class="portfolio-item">
-                      <img src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
-images/img_1.jpg" alt="Image" class="img-fluid"></a>
-                  </div>
-                  <div class="col-md-6">
-                      <a href="portfolio-single.html" class="portfolio-item">
-                      <img src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
-images/img_2.jpg" alt="Image" class="img-fluid"></a>
-                  s</div>
-                  <div class="col-md-3">
-                      <a href="portfolio-single.html" class="portfolio-item">
-                      <img src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
-images/img_3.jpg" alt="Image" class="img-fluid"></a>
-                  </div>
-              </div>
-          <div class="row align-items-start">
-              <div class="col-md-4">
-                  <a href="portfolio-single.html" class="portfolio-item">
-                  <img src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
-images/img_2.jpg" alt="Image" class="img-fluid"></a>
-              </div>
-              <div class="col-md-4">
-                  <a href="portfolio-single.html" class="portfolio-item">
-                  <img src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
-images/hero_1.jpg" alt="Image" class="img-fluid"></a>
-              </div>
-              <div class="col-md-4">
-                  <a href="portfolio-single.html" class="portfolio-item">
-                  <img src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
-images/hero_3.jpg" alt="Image" class="img-fluid"></a>
-              </div>
-          </div>
-      </div>
-
-      <div class="site-section">
-          <div class="container">
-              <div class="row">
-                  <div class="col-md-4">
-                      <div class="service-29191">
-                          <span class="wrap-icon mb-4 d-block">
-                              <span class="icon-desktop_windows"></span>
-                          </span>
-                          <h3 class="mb-3">Interface Design</h3>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti voluptatem reiciendis minus, a dolores.</p>
-                      </div>
-                  </div>
-                  <div class="col-md-4">
-                      <div class="service-29191">
-                          <span class="wrap-icon mb-4 d-block">
-                              <span class="icon-explore"></span>
-                          </span>
-                          <h3 class="mb-3">Product Design</h3>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti voluptatem reiciendis minus, a dolores.</p>
-                      </div>
-                  </div>
-
-                  <div class="col-md-4">
-                      <div class="service-29191">
-                          <span class="wrap-icon mb-4 d-block">
-                              <span class="icon-layers"></span>
-                          </span>
-                          <h3 class="mb-3">Quality Results</h3>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti voluptatem reiciendis minus, a dolores.</p>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-
-      <div class="site-section bg-primary">
-          <div class="container mb-5">
-              <div class="row">
-                  <div class="col-md-7">
-                  <h2 class="text-white font-weight-bold">Blog Updates</h2>
-                  <p class="text-white lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt ducimus facere quam eos tempore beatae non eius, provident.</p>
-              </div>
-          </div>
-      </div>
-      
-      <div class="container-fluid">
-        <div class="owl-carousel nonloop-block-13">
-          <div class="media-29191">
-            <a href="#" class="d-block mb-4"><img src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
-images/img_2.jpg" alt="Image" class="img-fluid"></a>
-            <span class="date d-block">October 18, 2019</span>
-            <h3 class="mb-4"><a href="#">Google saying pseudo-telephoto is more important</a></h3>
-            <div class="d-flex vcard-91123 align-items-center">
-              <div class="img mr-3"><img src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
-images/person_1.jpg" alt="Image" class="img-fluid"></div>
-              <div class="name">
-                <span class="d-block">by John Freeman</span>
-                <span>Thinker &amp; Designer</span>
-              </div>
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+  <div class="site-wrap" id="home-section">
+    <div class="site-mobile-menu site-navbar-target">
+        <div class="site-mobile-menu-header">
+            <div class="site-mobile-menu-close mt-3">
+                <span class="icon-close2 js-menu-toggle"></span>
             </div>
-          </div>
-
-
-          <div class="media-29191">
-            <a href="#" class="d-block mb-4"><img src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
-images/img_1.jpg" alt="Image" class="img-fluid"></a>
-            <span class="date d-block">October 18, 2019</span>
-            <h3 class="mb-4"><a href="#">Google saying pseudo-telephoto is more important</a></h3>
-            <div class="d-flex vcard-91123 align-items-center">
-              <div class="img mr-3"><img src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
-images/person_1.jpg" alt="Image" class="img-fluid"></div>
-              <div class="name">
-                <span class="d-block">by John Freeman</span>
-                <span>Thinker &amp; Designer</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="media-29191">
-            <a href="#" class="d-block mb-4"><img src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
-images/img_3.jpg" alt="Image" class="img-fluid"></a>
-            <span class="date d-block">October 18, 2019</span>
-            <h3 class="mb-4"><a href="#">Google saying pseudo-telephoto is more important</a></h3>
-            <div class="d-flex vcard-91123 align-items-center">
-              <div class="img mr-3"><img src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
-images/person_1.jpg" alt="Image" class="img-fluid"></div>
-              <div class="name">
-                <span class="d-block">by John Freeman</span>
-                <span>Thinker &amp; Designer</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="media-29191">
-            <a href="#" class="d-block mb-4"><img src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
-images/img_2.jpg" alt="Image" class="img-fluid"></a>
-            <span class="date d-block">October 18, 2019</span>
-            <h3 class="mb-4"><a href="#">Google saying pseudo-telephoto is more important</a></h3>
-            <div class="d-flex vcard-91123 align-items-center">
-              <div class="img mr-3"><img src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
-images/person_1.jpg" alt="Image" class="img-fluid"></div>
-              <div class="name">
-                <span class="d-block">by John Freeman</span>
-                <span>Thinker &amp; Designer</span>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="media-29191">
-            <a href="#" class="d-block mb-4"><img src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
-images/img_1.jpg" alt="Image" class="img-fluid"></a>
-            <span class="date d-block">October 18, 2019</span>
-            <h3 class="mb-4"><a href="#">Google saying pseudo-telephoto is more important</a></h3>
-            <div class="d-flex vcard-91123 align-items-center">
-              <div class="img mr-3"><img src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
-images/person_1.jpg" alt="Image" class="img-fluid"></div>
-              <div class="name">
-                <span class="d-block">by John Freeman</span>
-                <span>Thinker &amp; Designer</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="media-29191">
-            <a href="#" class="d-block mb-4"><img src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
-images/img_3.jpg" alt="Image" class="img-fluid"></a>
-            <span class="date d-block">October 18, 2019</span>
-            <h3 class="mb-4"><a href="#">Google saying pseudo-telephoto is more important</a></h3>
-            <div class="d-flex vcard-91123 align-items-center">
-              <div class="img mr-3"><img src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
-images/person_1.jpg" alt="Image" class="img-fluid"></div>
-              <div class="name">
-                <span class="d-block">by John Freeman</span>
-                <span>Thinker &amp; Designer</span>
-              </div>
-            </div>
-          </div>
-
         </div>
-
-      </div>
+        <div class="site-mobile-menu-body"></div>
     </div>
 
+    <!-- 導覽頁面 -->
+    <div class = "header fixed-top">
+      <header class="site-navbar site-navbar-target" role="banner">
+        <div class="container">
+          <div class="row align-items-center position-relative">
+            <div class="col-3">
+                <div class="site-logo">
+                    <a href="index.php" class="font-weight-bold">Approach</a>
+                </div>
+            </div>
+
+            <div class="col-9  text-right">
+              <span class="d-inline-block d-lg-none">
+                  <a href="#" class="text-primary site-menu-toggle js-menu-toggle py-5">
+                      <span class="icon-menu h3 text-primary">
+                      </span>
+                  </a>
+              </span>
+
+              <nav class="site-navigation text-right ml-auto d-none d-lg-block" role="navigation">
+                <ul class="site-menu main-menu js-clone-nav ml-auto ">
+                  <li class="nav_active"><a href="switch.php?pageid=1" class="nav-link">關於我們</a></li>
+                  <li><a href="switch.php?pageid=2&bookpage=1" class="nav-link">線上預訂</a></li>
+                  <li><a href="switch.php?pageid=3" class="nav-link">服務</a></li>
+                  <li><a href="switch.php?pageid=4" class="nav-link">周邊活動</a></li>
+                  <li><a href="switch.php?pageid=5" class="nav-link">聯繫我們</a></li>
+      
+              <?php if ($_SESSION['admin']) {?>
+                  <li><a href="user.php" class="nav-link">管理員</a></li>
+                  <li><a href="user.php?op=logout" class="nav-link">Logout</a></li>                     
+              <?php } else { ?>
+                  <li><a href="user.php?pageid=6" id="userin" class="nav-link">Login</a></li>                     
+              <?php }?>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </header>
+    </div>
+
+    <!-- 點選導覽頁面切換內容 -->
+    <?php if ($_smarty_tpl->tpl_vars['pageid']->value == 0) {?>
+      <?php $_smarty_tpl->_subTemplateRender("file:index_fom.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+    <?php } elseif ($_smarty_tpl->tpl_vars['pageid']->value == 1) {?>
+      <?php $_smarty_tpl->_subTemplateRender("file:about_fom.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+    <?php } elseif ($_smarty_tpl->tpl_vars['pageid']->value == 2) {?>
+      <?php $_smarty_tpl->_subTemplateRender("file:book_fom.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+    <?php } elseif ($_smarty_tpl->tpl_vars['pageid']->value == 3) {?>
+      <?php $_smarty_tpl->_subTemplateRender("file:services_fom.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+    <?php } elseif ($_smarty_tpl->tpl_vars['pageid']->value == 4) {?>
+      <?php $_smarty_tpl->_subTemplateRender("file:blog_fom.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+    <?php } elseif ($_smarty_tpl->tpl_vars['pageid']->value == 5) {?>
+      <?php $_smarty_tpl->_subTemplateRender("file:contact_fom.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+    <?php } elseif ($_smarty_tpl->tpl_vars['pageid']->value == 6) {?>
+      <?php $_smarty_tpl->_subTemplateRender("file:user.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+    <?php }?>
+
+    <!-- 頁尾畫面 -->
     <div class="site-section bg-light">
       <div class="container">
         <div class="row">
@@ -322,9 +162,7 @@ images/client_microsoft.png" alt="Image" class="img-fluid">
         </div>
       </div>
     </div>
-    
-    
-    
+      
     <div class="footer site-section bg-white">
       <div class="container">
         <div class="row">
@@ -359,126 +197,49 @@ images/client_microsoft.png" alt="Image" class="img-fluid">
                   <li><a href="#">About Us</a></li>
                 </ul>
               </div>
+              
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="site-section">
-      <div class="container">
-        <div class="row mb-4 text-center">
-          <div class="col">
-            <a href="#"><span class="m-2 icon-facebook"></span></a>
-            <a href="#"><span class="m-2 icon-twitter"></span></a>
-            <a href="#"><span class="m-2 icon-linkedin"></span></a>
-            <a href="#"><span class="m-2 icon-instagram"></span></a>
-            <a href="#"><span class="m-2 icon-skype"></span></a>
-          </div>
+  <div class="site-section">
+    <div class="container">
+      <div class="row mb-4 text-center">
+        <div class="col">
+          <a href="#"><span class="m-2 icon-facebook"></span></a>
+          <a href="#"><span class="m-2 icon-twitter"></span></a>
+          <a href="#"><span class="m-2 icon-linkedin"></span></a>
+          <a href="#"><span class="m-2 icon-instagram"></span></a>
+          <a href="#"><span class="m-2 icon-skype"></span></a>
         </div>
-        <div class="row mt-5 justify-content-center">
-          <div class="col-md-7 text-center">
-            <p>
-            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-            Copyright &copy;<?php echo '<script'; ?>
+      </div>
+      <div class="row mt-5 justify-content-center">
+        <div class="col-md-7 text-center">
+          <p>
+          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+          Copyright &copy;<?php echo '<script'; ?>
 >document.write(new Date().getFullYear());<?php echo '</script'; ?>
 > All rights reserved | This template is made with <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
-            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-            </p>
-          </div>
+          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+          </p>
         </div>
       </div>
     </div>
-
-    
-
-    </div>
-
-    <?php echo '<script'; ?>
- src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
-js/jquery-3.3.1.min.js"><?php echo '</script'; ?>
->
-    <?php echo '<script'; ?>
- src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
-js/jquery-migrate-3.0.0.js"><?php echo '</script'; ?>
->
-    <?php echo '<script'; ?>
- src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
-js/popper.min.js"><?php echo '</script'; ?>
->
-    <?php echo '<script'; ?>
- src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
-js/bootstrap.min.js"><?php echo '</script'; ?>
->
-    <?php echo '<script'; ?>
- src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
-js/owl.carousel.min.js"><?php echo '</script'; ?>
->
-    <?php echo '<script'; ?>
- src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
-js/jquery.sticky.js"><?php echo '</script'; ?>
->
-    <?php echo '<script'; ?>
- src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
-js/jquery.waypoints.min.js"><?php echo '</script'; ?>
->
-    <?php echo '<script'; ?>
- src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
-js/jquery.animateNumber.min.js"><?php echo '</script'; ?>
->
-    <?php echo '<script'; ?>
- src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
-js/jquery.fancybox.min.js"><?php echo '</script'; ?>
->
-    <?php echo '<script'; ?>
- src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
-js/jquery.stellar.min.js"><?php echo '</script'; ?>
->
-    <?php echo '<script'; ?>
- src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
-js/jquery.easing.1.3.js"><?php echo '</script'; ?>
->
-    <?php echo '<script'; ?>
- src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
-js/bootstrap-datepicker.min.js"><?php echo '</script'; ?>
->
-    <?php echo '<script'; ?>
- src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
-js/isotope.pkgd.min.js"><?php echo '</script'; ?>
->
-    <?php echo '<script'; ?>
- src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
-js/aos.js"><?php echo '</script'; ?>
->
-  
-
-    <?php echo '<script'; ?>
- src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
-js/typed.js"><?php echo '</script'; ?>
->
-           
-          !function($){
-            var typed = new Typed('.typed-words', {
-            strings: ["Business"," Startups"," Organization", " Company"],
-            typeSpeed: 80,
-            backSpeed: 80,
-            backDelay: 4000,
-            startDelay: 1000,
-            loop: true,
-            showCursor: true}
-            });
-            <?php echo '</script'; ?>
->
-
-
-    <?php echo '<script'; ?>
- src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
-js/main.js"><?php echo '</script'; ?>
->
+  </div>
 
   </body>
+</html> 
 
-</html>
+<?php $_smarty_tpl->_subTemplateRender("file:tpl/head_js.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+  
+
+
+
+
+
 
 <?php }
 }

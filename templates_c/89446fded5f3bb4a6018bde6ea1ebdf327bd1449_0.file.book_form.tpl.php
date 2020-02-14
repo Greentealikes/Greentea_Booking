@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-02-10 02:03:23
+/* Smarty version 3.1.34-dev-7, created on 2020-02-14 02:06:49
   from 'D:\xampp\htdocs\Greentea_Booking-master\templates\book_form.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e40abdbc958c8_41244310',
+  'unifunc' => 'content_5e45f2a988e529_20621452',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '89446fded5f3bb4a6018bde6ea1ebdf327bd1449' => 
     array (
       0 => 'D:\\xampp\\htdocs\\Greentea_Booking-master\\templates\\book_form.tpl',
-      1 => 1581197782,
+      1 => 1581587733,
       2 => 'file',
     ),
   ),
@@ -24,7 +24,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:tpl/bookpg4_form.tpl' => 1,
   ),
 ),false)) {
-function content_5e40abdbc958c8_41244310 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e45f2a988e529_20621452 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!doctype html>
 <html lang="en">
 
@@ -56,23 +56,25 @@ css/aos.css">
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
 css/style.css">
+     <link rel="stylesheet"  type="text/css" href="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+css/bookstyle.css">
   </head>
  
      <body>   
-        <?php if ($_SESSION['bookpage'] == 1) {?>
-		    <?php $_smarty_tpl->_subTemplateRender("file:tpl/bookpg1_form.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+      <?php if ($_SESSION['bookpage'] == 1) {?>
+		      <?php $_smarty_tpl->_subTemplateRender("file:tpl/bookpg1_form.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 	    <?php } elseif ($_SESSION['bookpage'] == 2) {?>
-		    <?php $_smarty_tpl->_subTemplateRender("file:tpl/bookpg2_form.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+		      <?php $_smarty_tpl->_subTemplateRender("file:tpl/bookpg2_form.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
-        <?php } elseif ($_SESSION['bookpage'] == 3) {?>  
-            <?php $_smarty_tpl->_subTemplateRender("file:tpl/bookpg3_form.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+      <?php } elseif ($_SESSION['bookpage'] == 3) {?>  
+          <?php $_smarty_tpl->_subTemplateRender("file:tpl/bookpg3_form.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?> 
-        <?php } elseif ($_SESSION['bookpage'] == 4) {?>  
-            <?php $_smarty_tpl->_subTemplateRender("file:tpl/bookpg4_form.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+      <?php } elseif ($_SESSION['bookpage'] == 4) {?>  
+          <?php $_smarty_tpl->_subTemplateRender("file:tpl/bookpg4_form.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?> 
-        <?php } else { ?>
-            <?php $_smarty_tpl->_subTemplateRender("file:tpl/bookpg1_form.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, true);
+      <?php } else { ?>
+          <?php $_smarty_tpl->_subTemplateRender("file:tpl/bookpg1_form.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, true);
 ?>    
 	    <?php }?>
 

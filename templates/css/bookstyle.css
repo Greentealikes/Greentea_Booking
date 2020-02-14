@@ -4,7 +4,10 @@
     font-size: 36px;
     text-align: center;
     font-weight: bold;
+}
 
+.header:hover{
+    
 }
 
 .body-font{
@@ -31,6 +34,10 @@
 
 .site-navbar{
     background-color: black;
+}
+
+.site-navbar:hover{
+    background-color: #999;
 }
 
 .site-section-cover{
@@ -64,6 +71,12 @@
   background-color:#999;
   margin-top: 10px;
   margin-bottom: 10px;
+}
+
+.activeno{
+    pointer-events: none;
+    cursor: default;
+    color:black;
 }
 
 

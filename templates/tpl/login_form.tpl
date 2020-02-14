@@ -1,6 +1,5 @@
-  <!doctype html>
+<!doctype html>
 <html lang="en">
-
   <head>
     <title>Approach &mdash; Website Template by Colorlib</title>
     <meta charset="utf-8">
@@ -20,7 +19,9 @@
 
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="<{$xoImgUrl}>css/style.css">
+     <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
   </head>
+
   <body>
   <div class="container mt-5">
     <form class="form-signin" action="user.php" method="post">

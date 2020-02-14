@@ -1,6 +1,7 @@
 <?php
 /* 引入檔頭，每支程都會引入 */
 require_once 'head.php';
+require_once 'redirect.php';
   
 /* 過濾變數，設定預設值 */
 $op = system_CleanVars($_REQUEST, 'op', 'login_form', 'string');
@@ -12,18 +13,20 @@ switch ($op){
     $msg = reg_form();
     break;
   
-  case "login" :
+  case "login" :   
     $msg = login();
+    if($msg == '登入成功')
+      redirect_header("switch.php",$msg, 3000);
+    else
+    redirect_header("user.php", $msg, 3000);     
     exit;
   
   case "logout":
-    $msg = logout(); 
-    header("location:index.php"); 
+    $msg = logout();  
+    redirect_header("user.php", '登出', 3000);
     exit;
   case "reg":
     $msg = reg();
-    //if($msg != '0')
-      //alert("註冊登入成功");
     header("location:index.php"); 
     exit;
 
@@ -36,10 +39,17 @@ switch ($op){
 /*---- 將變數送至樣版----*/
 $smarty->assign("WEB", $WEB);
 $smarty->assign("op", $op);
-  
 $smarty->display('user.tpl');
   
-/*---- op管理員-----*/
+#動畫視窗
+function redirect_header($url, $message, $time) {
+  $_SESSION['redirect'] = true;
+  $_SESSION['message'] = $message;
+  $_SESSION['time'] = $time;
+  header("location:{$url}");
+  exit;
+}
+
 function reg_form(){
   global $smarty;
 }
@@ -53,16 +63,16 @@ function reg(){
   $_POST['name'] = $db->real_escape_string($_POST['name']);
   $_POST['tel'] = $db->real_escape_string($_POST['tel']);
   $_POST['email'] = $db->real_escape_string($_POST['email']);
+  
   #寫入語法
-
   if( $_POST['pass'] !=  $_POST['chk_pass']) 
   {
     die("密碼不一致");
   }
-  else
+  else{
     $_POST['pass'] = password_hash($_POST['chk_pass'], PASSWORD_DEFAULT);
-
-  $sql="INSERT INTO `users` 
+  }
+    $sql="INSERT INTO `users` 
         (`uname`, `pass`, `username`, `tel`, `email`,`kind`,`token`)  
         VALUES 
         ('{$_POST['uname']}', '{$_POST['pass']}', '{$_POST['name']}', '{$_POST['tel']}', '{$_POST['email']}','{0}','{xxxxxx}');
@@ -72,18 +82,19 @@ function reg(){
   $uid = $db->insert_id;
   return $uid;
 }
-
 /*---返回登入表單---*/
 function login_form(){
   global $smarty;
 }
 
+#使用者登出
 function logout(){
   $_SESSION['admin'] = false;
   setcookie('name','',time() - 3600 * 24 * 365);
   setcookie('token','',time() - 3600 * 24 * 365);  
 }
 
+#使用者登入
 function login(){
   global $smarty;
   $name = 'admin';
@@ -98,10 +109,10 @@ function login(){
       setcookie('name',$name,time() +3600 * 24 * 365);
       setcookie('token',$token,time() +3600 * 24 * 365);
     }
-    $smarty->display('user.tpl');
+    return '登入成功';
   }
   else{                                     
-    header("location:user.php");
+    return '登入失敗';
   }
 }
 
