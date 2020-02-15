@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-02-14 07:20:06
+/* Smarty version 3.1.34-dev-7, created on 2020-02-15 08:24:59
   from 'D:\xampp\htdocs\Greentea_Booking-master\templates\tpl\bookpg2_form.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e463c16329239_52291587',
+  'unifunc' => 'content_5e479ccb6e48c2_81393320',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '012819b1234a61602be4c287026c22df5385b9ff' => 
     array (
       0 => 'D:\\xampp\\htdocs\\Greentea_Booking-master\\templates\\tpl\\bookpg2_form.tpl',
-      1 => 1581661092,
+      1 => 1581751466,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e463c16329239_52291587 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e479ccb6e48c2_81393320 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <head>
   <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
@@ -66,7 +66,7 @@ css/bootstrap.min.css">
       </div>  
 
       <div class = "col-9">   
-        <form action="userbooking.php?bookpage=3" method="post" id="myForm" class="mb-20" enctype="multipart/form-data">
+        <form action="Onbooking.php?bookpage=3" method="post" id="myForm" class="mb-20" enctype="multipart/form-data">
           <div class="book-container alert alert-warning ">
             <div class = "title-font">  
               <div class="col-sm-12">填寫表單</div>

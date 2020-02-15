@@ -1,46 +1,39 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-02-13 09:24:28
+/* Smarty version 3.1.34-dev-7, created on 2020-02-15 08:03:44
   from 'D:\xampp\htdocs\Greentea_Booking-master\templates\user.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e4507bc539c98_88371893',
+  'unifunc' => 'content_5e4797d071e893_76613148',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '140c7606a0a49a05903877c00dc203f4611d2310' => 
     array (
       0 => 'D:\\xampp\\htdocs\\Greentea_Booking-master\\templates\\user.tpl',
-      1 => 1581582259,
+      1 => 1581750223,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
-    'file:tpl/admin_form.tpl' => 1,
-    'file:tpl/login_form.tpl' => 1,
-    'file:tpl/reg_form.tpl' => 1,
+    'file:tpl/admin_table_form.tpl' => 1,
   ),
 ),false)) {
-function content_5e4507bc539c98_88371893 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e4797d071e893_76613148 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!doctype html>
 <html lang="en">
-
   <head>
     <title>Approach &mdash; Website Template by Colorlib</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <link href="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
 fonts/googleapis.css" rel="stylesheet">
-
     <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
 fonts/icomoon/style.css">
-
     <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
-css/bootstrap.min.css">
-    
+css/bootstrap.min.css">    
     <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
 css/jquery.fancybox.min.css">
     <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
@@ -67,21 +60,34 @@ class/sweetalert2/sweetalert2.min.css">
             padding: 15px;
             margin: 0 auto;
         }      
-    </style>
-     <body>
-        <?php if ($_SESSION['admin']) {?>
-		        <?php $_smarty_tpl->_subTemplateRender("file:tpl/admin_form.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+    </style>      
+<body>
+
+  <h1 class="text-center mt-4">Greentea 後台</h1>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-9">
+        <?php if ($_smarty_tpl->tpl_vars['WEB']->value['file_name'] == "user.php") {?>
+          <?php $_smarty_tpl->_subTemplateRender("file:tpl/admin_table_form.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
-	      <?php } else { ?>
-            <?php if ($_smarty_tpl->tpl_vars['op']->value == 'login_form') {?>
-            		<?php $_smarty_tpl->_subTemplateRender("file:tpl/login_form.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
-?>
-            <?php } elseif ($_smarty_tpl->tpl_vars['op']->value == 'reg_form') {?>
-                <?php $_smarty_tpl->_subTemplateRender("file:tpl/reg_form.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
-?>
-            <?php }?>
-        <?php }?> 
-  </body>
+        <?php }?>
+      </div>
+      <div class="col-sm-3">
+        <div class="card text-white bg-secondary mb-3" style="width: 18rem;">
+          <div class="card-header ">管理員</div>
+            <div class="list-group">
+              <a class="list-group-item list-group-item-action list-group-item-dark" href="index.php" id="Back_home">首頁</a>         
+              <a class="list-group-item list-group-item-action list-group-item-dark" href="switch.php?op=logout&pageid=6" id="user_out">登出</a>
+              <a class="list-group-item list-group-item-action list-group-item-dark" 
+              href="http://127.0.0.1/phpmyadmin/index.php" target="_blank">資料庫管理</a>
+            </div>
+          </div>
+        </div>
+      </div>     
+    </div>
+  </div>
+</body>
+
 </html>
 
 <?php echo '<script'; ?>

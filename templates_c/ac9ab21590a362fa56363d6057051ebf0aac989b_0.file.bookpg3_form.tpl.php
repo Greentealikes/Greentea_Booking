@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-02-14 07:46:44
+/* Smarty version 3.1.34-dev-7, created on 2020-02-15 08:25:07
   from 'D:\xampp\htdocs\Greentea_Booking-master\templates\tpl\bookpg3_form.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e4642548a21e4_47582653',
+  'unifunc' => 'content_5e479cd38ff380_45333333',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ac9ab21590a362fa56363d6057051ebf0aac989b' => 
     array (
       0 => 'D:\\xampp\\htdocs\\Greentea_Booking-master\\templates\\tpl\\bookpg3_form.tpl',
-      1 => 1581662796,
+      1 => 1581751475,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e4642548a21e4_47582653 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e479cd38ff380_45333333 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
 <div class="site-wrap" id="home-section">
@@ -44,7 +44,7 @@ function content_5e4642548a21e4_47582653 (Smarty_Internal_Template $_smarty_tpl)
       </div>  
 
       <div class = "col-9">   
-        <form action="userbooking.php" method="post" id="myForm" class="mb-20" enctype="multipart/form-data">
+        <form action="Onbooking.php" method="post" id="myForm" class="mb-20" enctype="multipart/form-data">
           <div class="book-container alert alert-warning ">
             <div class = "title-font">  
               <div class="col-sm-12">完成表單</div>

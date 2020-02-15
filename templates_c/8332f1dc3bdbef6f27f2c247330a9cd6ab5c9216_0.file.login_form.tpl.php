@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-02-14 09:13:16
+/* Smarty version 3.1.34-dev-7, created on 2020-02-15 08:45:28
   from 'D:\xampp\htdocs\Greentea_Booking-master\templates\tpl\login_form.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e46569cb990d6_00494419',
+  'unifunc' => 'content_5e47a19866fbf5_06431737',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8332f1dc3bdbef6f27f2c247330a9cd6ab5c9216' => 
     array (
       0 => 'D:\\xampp\\htdocs\\Greentea_Booking-master\\templates\\tpl\\login_form.tpl',
-      1 => 1581667987,
+      1 => 1581752650,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e46569cb990d6_00494419 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e47a19866fbf5_06431737 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!doctype html>
 <html lang="en">
   <head>
@@ -56,7 +56,7 @@ css/style.css">
 
   <body>
   <div class="container mt-5">
-    <form class="form-signin" action="user.php" method="post">
+    <form class="form-signin" action="page_sw.php?op=login" method="post">
         <h1 class="h3 mb-3 font-weight-normal">會員登入</h1>
         <div class="mb-3">
           <label for="name" class="sr-only">帳號</label>
@@ -76,7 +76,7 @@ css/style.css">
                 
         <button class="btn btn-lg btn-primary btn-block" type="submit">會員登入</button>
         <div>
-          您還沒還沒註冊嗎？請 <a href="user.php?op=reg_form">點選此處註冊您的新帳號</a>。
+          您還沒還沒註冊嗎？請 <a href="page_sw.php?op=reg_form&pageid=6">點選此處註冊您的新帳號</a>。
         </div>
     </form>
             

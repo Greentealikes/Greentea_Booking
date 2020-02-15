@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-02-15 08:45:11
-  from 'D:\xampp\htdocs\Greentea_Booking-master\templates\book_fom.tpl' */
+/* Smarty version 3.1.34-dev-7, created on 2020-02-15 08:52:44
+  from 'D:\xampp\htdocs\Greentea_Booking-0215\templates\book_fom.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e47a18716f793_81746755',
+  'unifunc' => 'content_5e47a34c4110d0_14457241',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '5b2081f7599a1fea60ea8a8495e17abd4fb570b0' => 
+    '62f38da4a0c97e7bef0e89ff73718770cc175711' => 
     array (
-      0 => 'D:\\xampp\\htdocs\\Greentea_Booking-master\\templates\\book_fom.tpl',
+      0 => 'D:\\xampp\\htdocs\\Greentea_Booking-0215\\templates\\book_fom.tpl',
       1 => 1581752644,
       2 => 'file',
     ),
@@ -26,7 +26,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_5e47a18716f793_81746755 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e47a34c4110d0_14457241 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!doctype html>
 <html lang="en">
 

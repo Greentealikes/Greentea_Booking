@@ -8,7 +8,7 @@
 
 <div class="container mt-5">
   <h1 class="text-center">註冊表單</h1>
-  <form action="user.php" method="post" id="myreg" class="mb-20" enctype="multipart/form-data">
+  <form action="page_sw.php" method="post" id="myreg" class="mb-20" enctype="multipart/form-data">
   <div class="row"> 
     <div class="col-sm-4">
       <div class="form-group">
@@ -54,7 +54,7 @@
 
     <div class="col-sm-12">
       <div class="text-center pb-20">
-        <input type="hidden" name="op" value="reg">
+        <input type="hidden" name="op" value="reg" id="op">
         <button type="submit" class="btn btn-primary">送出</button>
       </div>
     </div>

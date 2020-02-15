@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-02-15 08:45:25
-  from 'D:\xampp\htdocs\Greentea_Booking-master\templates\blog_fom.tpl' */
+/* Smarty version 3.1.34-dev-7, created on 2020-02-15 08:52:50
+  from 'D:\xampp\htdocs\Greentea_Booking-0215\templates\blog_fom.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e47a195909e78_01061737',
+  'unifunc' => 'content_5e47a352606ce0_04787886',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '8ea24a48a8e0f5df49488c8688234f3080166bf6' => 
+    '533cb47bd3304430c728007766b38b49c48ee01d' => 
     array (
-      0 => 'D:\\xampp\\htdocs\\Greentea_Booking-master\\templates\\blog_fom.tpl',
+      0 => 'D:\\xampp\\htdocs\\Greentea_Booking-0215\\templates\\blog_fom.tpl',
       1 => 1581752646,
       2 => 'file',
     ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e47a195909e78_01061737 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e47a352606ce0_04787886 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div class = "logoimage" style="margin-top:50px;">               
   <img src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>

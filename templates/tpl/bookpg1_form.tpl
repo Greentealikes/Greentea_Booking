@@ -4,24 +4,24 @@
     <div class="row">
       <div class = "col-3">   
         <div class="list-group " id="list-tab" role="tablist">
-          <a href = "switch.php?pageid=2&bookpage=1">
+          <a href = "page_sw.php?pageid=2&bookpage=1">
             <li class="list-group-item btn-hold"><stong>線上系統說明</stong></li>
           </a>
 
-          <a href = "switch.php?pageid=2&bookpage=2" class="activeno">
+          <a href = "page_sw.php?pageid=2&bookpage=2" class="activeno">
             <li class="list-group-item "><stong>填寫表單</stong></li>
           </a>
 
-          <a href = "switch.php?pageid=2&bookpage=3" class="activeno">
+          <a href = "page_sw.php?pageid=2&bookpage=3" class="activeno">
             <li class="list-group-item"><stong>完成表單</stong></li>
           </a>
 
-          <a href = "switch.php?pageid=2&bookpage=4" class="activeno">
+          <a href = "page_sw.php?pageid=2&bookpage=4" class="activeno">
             <li class="list-group-item"><stong>查詢表單</stong></li>
           </a>
 
           <{if $smarty.session.admin}>
-          <a href = "switch.php?pageid=2&bookpage=4">
+          <a href = "page_sw.php?pageid=2&bookpage=4">
             <li class="list-group-item"><stong>刪除表單</stong></li>
           </a> 
           <{/if}>
@@ -30,7 +30,7 @@
 
       <{* 線上預訂畫面內容 *}>
       <div class = "col-9">   
-        <form action="user.php" method="post" id="myForm" class="mb-20" enctype="multipart/form-data">
+        <form action="Onbooking.php" method="post" id="myForm" class="mb-20" enctype="multipart/form-data">
           <div class = "row book-container text-center">
               <div class="col-sm-12 title-font">
                   <span>線上預訂說明</span>
@@ -50,7 +50,7 @@
               <div class = "col-sm-12">
                   <br>
                   <button type="button" class="btn btn-primary" id ="normbtn" 
-                    onclick="location.href='switch.php?pageid=2&bookpage=2'">開始線上填單</button>
+                    onclick="location.href='page_sw.php?pageid=2&bookpage=2'">開始線上填單</button>
               </div>
           </div>
         </form>

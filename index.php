@@ -1,16 +1,15 @@
 <?php
 /* 引入檔頭，每支程都會引入 */
 require_once 'head.php';
-require_once 'redirect.php';
+require_once 'templates/php/redirect.php';
 
-$inlog = system_CleanVars($_REQUEST, 'login', '', 'string');
+//$inlog = system_CleanVars($_REQUEST, 'login', '', 'string');
+//$admin = $_SESSION['admin']? $_SESSION['admin'] : '0';
 
-$admin = $_SESSION['admin']? $_SESSION['admin'] : '0';
 
-header("location:switch.php");
+header("location:page_sw.php");
 
-//echo $_SERVER["QUERY_STRING"];
-/*---- 程式結尾-----*/
+
 
 ?>
 
