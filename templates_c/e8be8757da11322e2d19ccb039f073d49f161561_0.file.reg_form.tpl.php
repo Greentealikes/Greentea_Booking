@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-02-18 09:42:50
+/* Smarty version 3.1.34-dev-7, created on 2020-02-19 07:52:58
   from 'D:\xampp\htdocs\Greentea_Booking-0218\templates\tpl\reg_form.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e4ba38abb1310_46299094',
+  'unifunc' => 'content_5e4cdb4a75b9e0_32552207',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e8be8757da11322e2d19ccb039f073d49f161561' => 
     array (
       0 => 'D:\\xampp\\htdocs\\Greentea_Booking-0218\\templates\\tpl\\reg_form.tpl',
-      1 => 1581752648,
+      1 => 1582095084,
       2 => 'file',
     ),
   ),
@@ -20,10 +20,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e4ba38abb1310_46299094 (Smarty_Internal_Template $_smarty_tpl) {
-?>
-
-<style>
+function content_5e4cdb4a75b9e0_32552207 (Smarty_Internal_Template $_smarty_tpl) {
+?><style>
   .error{
     color:red;
   }

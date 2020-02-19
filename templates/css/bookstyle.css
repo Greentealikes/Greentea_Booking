@@ -33,7 +33,7 @@
 }
 
 .site-navbar{
-    background-color: black;
+    background-color: #887766 ;
 }
 
 .site-navbar:hover{
@@ -64,11 +64,11 @@
 }
 
 .btn-hold{
-    background-color: #119;
+    background-color: #444433;
 }
 
 .book-description{
-  background-color:#999;
+  background-color:#eedddd;
   margin-top: 10px;
   margin-bottom: 10px;
 }

@@ -62,35 +62,20 @@
    $smarty->assign("pageid", $switch_id);
    $smarty->assign("bookpage", $switch_bookpage);
 
-
-  if(isset($_GET['bookpage'])){
-      $smarty->display('book_fom.tpl');
-      exit;
-  }
-  else {
-      $smarty->display('theme.tpl');
-      exit;
-  }
-
-  #動畫視窗
-  function redirect_header($url, $message, $time,$sn) {
-    $_SESSION['redirect'] = true;
-    $_SESSION['message'] = $message;
-    $_SESSION['time'] = $time;
-    $_SESSION['sn'] = $sn;
-    header("location:{$url}");
-    exit;
-  }
+  $smarty->display('theme.tpl');
+  exit;
 
   function reg(){
     global $db;
+
     #過濾變數
-    $_POST['uname'] = $db->real_escape_string($_POST['uname']);
-    $_POST['pass'] = $db->real_escape_string($_POST['pass']);
-    $_POST['chk_pass'] = $db->real_escape_string($_POST['chk_pass']);
-    $_POST['name'] = $db->real_escape_string($_POST['name']);
-    $_POST['tel'] = $db->real_escape_string($_POST['tel']);
-    $_POST['email'] = $db->real_escape_string($_POST['email']);
+    $_POST['uname'] = db_filter($_POST['uname'], '帳號');
+    $_POST['pass'] = db_filter($_POST['pass'], '密碼');
+    $_POST['chk_pass'] = db_filter($_POST['chk_pass'], '確認密碼');
+    $_POST['name'] = db_filter($_POST['name'], '姓名');
+    $_POST['tel'] = db_filter($_POST['tel'], '電話');
+    $_POST['email'] = db_filter($_POST['email'], 'email',FILTER_SANITIZE_EMAIL);
+    
     
     #寫入語法
     if( $_POST['pass'] !=  $_POST['chk_pass']) 
@@ -103,9 +88,9 @@
       $_POST['pass'] = password_hash($_POST['chk_pass'], PASSWORD_DEFAULT);
     }
       $sql="INSERT INTO `users` 
-          (`uname`, `pass`, `username`, `tel`, `email`,`kind`,`token`)  
+          (`uname`, `pass`, `name`, `tel`, `email`,`kind`,`token`)  
           VALUES 
-          ('{$_POST['uname']}', '{$_POST['pass']}', '{$_POST['name']}', '{$_POST['tel']}', '{$_POST['email']}','{0}','{xxxxxx}');
+          ('{$_POST['uname']}', '{$_POST['pass']}', '{$_POST['name']}', '{$_POST['tel']}', '{$_POST['email']}','0','{xxxxxx}');
     ";
     #寫入資料庫
     $db->query($sql) or die($db->error. $sql);

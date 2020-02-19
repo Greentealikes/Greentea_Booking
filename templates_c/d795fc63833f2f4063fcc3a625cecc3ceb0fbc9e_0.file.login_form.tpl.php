@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-02-18 09:36:05
+/* Smarty version 3.1.34-dev-7, created on 2020-02-19 09:12:50
   from 'D:\xampp\htdocs\Greentea_Booking-0218\templates\tpl\login_form.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e4ba1f5bb6f50_94137104',
+  'unifunc' => 'content_5e4cee029c2b43_37294965',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd795fc63833f2f4063fcc3a625cecc3ceb0fbc9e' => 
     array (
       0 => 'D:\\xampp\\htdocs\\Greentea_Booking-0218\\templates\\tpl\\login_form.tpl',
-      1 => 1581752650,
+      1 => 1582096644,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e4ba1f5bb6f50_94137104 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e4cee029c2b43_37294965 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!doctype html>
 <html lang="en">
   <head>
@@ -51,7 +51,8 @@ css/aos.css">
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
 css/style.css">
-     <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    
   </head>
 
   <body>

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-02-18 08:41:50
+/* Smarty version 3.1.34-dev-7, created on 2020-02-19 07:11:23
   from 'D:\xampp\htdocs\Greentea_Booking-0218\templates\head.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e4b953e91ae70_17978982',
+  'unifunc' => 'content_5e4cd18b5be5e3_36112792',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '06fe9ddf53b128353ad90d09c114ff2ef3c9d447' => 
     array (
       0 => 'D:\\xampp\\htdocs\\Greentea_Booking-0218\\templates\\head.tpl',
-      1 => 1582006987,
+      1 => 1582092681,
       2 => 'file',
     ),
   ),
@@ -20,8 +20,51 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e4b953e91ae70_17978982 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e4cd18b5be5e3_36112792 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
+<head>
+    <title>Approach &mdash; Website Template by Colorlib</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,900|Source+Serif+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+fonts/icomoon/style.css">
+    <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+css/owl.carousel.min.css">
+    <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+fonts/flaticon/font/flaticon.css">
+    <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+css/aos.css">
+    <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+css/style.css">
+    
+    <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+css/bookstyle.css">
+    <link href="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  </head>
+  
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">  
+  <div class="site-wrap" id="home-section">
+        <div class="site-mobile-menu site-navbar-target">
+            <div class="site-mobile-menu-header">
+                <div class="site-mobile-menu-close mt-3">
+                    <span class="icon-close2 js-menu-toggle"></span>
+                </div>
+            </div>
+        <div class="site-mobile-menu-body">
+        </div>
+    </div>
+  </div>
  <!-- 導覽頁面 -->
 <div class = "header fixed-top">
     <header class="site-navbar site-navbar-target" role="banner">

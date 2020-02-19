@@ -26,6 +26,99 @@ function system_CleanVars(&$global, $key, $default = '', $type = 'int')
   return $ret;
 }
 
+// ###############################################################################
+// #  轉向函數
+// ###############################################################################
+// function redirect_header($url = "", $time = 3000, $message = '已轉向！！') {
+//   $_SESSION['redirect'] = "\$.jGrowl('{$message}', {  life:{$time} , position: 'center', speed: 'slow' });";
+//   header("location:{$url}");
+//   exit;
+// }
+###############################################################################
+#  取得目前網址
+###############################################################################
+if (!function_exists("getCurrentUrl")) {
+  function getCurrentUrl() {
+    global $_SERVER;
+    $protocol = strpos(strtolower($_SERVER['SERVER_PROTOCOL']), 'https') === FALSE ? 'http' : 'https';
+    $host = $_SERVER['HTTP_HOST'];
+    $script = $_SERVER['SCRIPT_NAME'];
+    $params = $_SERVER['QUERY_STRING'] ? '?' . $_SERVER['QUERY_STRING'] : "";
+  
+    $currentUrl = $protocol . '://' . $host . $script . $params;
+    return $currentUrl;
+  }
+}
+  
+###############################################################################
+#  獲得填報者ip
+###############################################################################
+if (!function_exists("getVisitorsAddr")) {
+  function getVisitorsAddr() {
+    if (!empty($_SERVER["HTTP_CLIENT_IP"])) {
+      $ip = $_SERVER["HTTP_CLIENT_IP"];
+    } elseif (!empty($_SERVER["HTTP_X_FORWARDED_FOR"])) {
+      $ip = $_SERVER["HTTP_X_FORWARDED_FOR"];
+    } else {
+      $ip = $_SERVER["REMOTE_ADDR"];
+    }
+    return $ip;
+  }
+}
+ 
+#####################################################################################
+#  建立目錄
+#####################################################################################
+if (!function_exists("mk_dir")) {
+  function mk_dir($dir = "") {
+    #若無目錄名稱秀出警告訊息
+    if (empty($dir)) {
+      return;
+    }
+  
+    #若目錄不存在的話建立目錄
+    if (!is_dir($dir)) {
+      umask(000);
+      //若建立失敗秀出警告訊息
+      mkdir($dir, 0777);
+    }
+  }
+}
+
+
+//檢查並傳回欲拿到資料使用的變數
+//$title = '' 則非必填
+function db_filter($var, $title = '', $filter = ''){
+  global $db;
+  #寫入資料庫過濾
+  $var = $db->real_escape_string($var);
+
+  if($title){
+    if($var === ""){
+      redirect_header("page_sw.php?op=reg_form", $title . '為必填！',0);
+    }
+  }
+
+  if ($filter) {
+    $var = filter_var($var, $filter);
+    if (!$var) redirect_header("page_sw.php?op=reg_form", "不合法的{$title}", 3000,0);
+  }
+  return $var;
+}
+
+/*############################################
+  轉向函數
+############################################*/
+#動畫視窗
+function redirect_header($url, $message, $time,$sn) {
+  $_SESSION['redirect'] = true;
+  $_SESSION['message'] = $message;
+  $_SESSION['time'] = $time;
+  $_SESSION['sn'] = $sn;
+  header("location:{$url}");
+  exit;
+}
+
 
 
 

@@ -16,7 +16,7 @@
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="<{$xoImgUrl}>css/style.css">
     <link rel="stylesheet" href="<{$xoAppUrl}>class/sweetalert2/sweetalert2.min.css"> 
-
+ <link href="<{$xoImgUrl}>vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   </head>
  
     <style>

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-02-18 08:49:23
+/* Smarty version 3.1.34-dev-7, created on 2020-02-19 06:57:10
   from 'D:\xampp\htdocs\Greentea_Booking-0218\templates\user.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e4b97032d7ee5_97084435',
+  'unifunc' => 'content_5e4cce36da8da2_13087374',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'fa7c62c446632571828c640be37a79441392d57f' => 
     array (
       0 => 'D:\\xampp\\htdocs\\Greentea_Booking-0218\\templates\\user.tpl',
-      1 => 1581752625,
+      1 => 1582091828,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:tpl/admin_table_form.tpl' => 1,
   ),
 ),false)) {
-function content_5e4b97032d7ee5_97084435 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e4cce36da8da2_13087374 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!doctype html>
 <html lang="en">
   <head>
@@ -50,7 +50,8 @@ css/aos.css">
 css/style.css">
     <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['xoAppUrl']->value;?>
 class/sweetalert2/sweetalert2.min.css"> 
-
+ <link href="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   </head>
  
     <style>

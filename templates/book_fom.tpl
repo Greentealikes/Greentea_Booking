@@ -1,69 +1,22 @@
-<!doctype html>
-<html lang="en">
+<div class = "logoimage" style="margin-top:50px;">               
+  <img src="<{$xoImgUrl}>images/logoimg.jpg" alt="Image" class="img-fluid"></a>
+</div>     
 
-<head>
-<title>Approach &mdash; Website Template by Colorlib</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<div class="Marquee-alert">
+  <marquee behavior="behavior" width="100%" loop="2">
+  歡迎來客訪問，如要線上預訂，可線上填單或是直接電話來電09-xxx-xx-xxx
+  </marquee>
+</div> 
 
-<link href="https://fonts.googleapis.com/css?family=Poppins:400,900|Source+Serif+Pro&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="<{$xoImgUrl}>fonts/icomoon/style.css">
-
-<link rel="stylesheet" href="<{$xoImgUrl}>css/bootstrap.min.css">
-<link rel="stylesheet" href="<{$xoImgUrl}>css/bootstrap-datepicker.css">
-<link rel="stylesheet" href="<{$xoImgUrl}>css/jquery.fancybox.min.css">
-<link rel="stylesheet" href="<{$xoImgUrl}>css/owl.carousel.min.css">
-<link rel="stylesheet" href="<{$xoImgUrl}>css/owl.theme.default.min.css">
-<link rel="stylesheet" href="<{$xoImgUrl}>fonts/flaticon/font/flaticon.css">
-<link rel="stylesheet" href="<{$xoImgUrl}>css/aos.css">
-
-
-<!-- MAIN CSS -->
-<link rel="stylesheet" href="<{$xoImgUrl}>css/style.css">
-</head>
-
-<link rel="stylesheet"  type="text/css" href="<{$xoImgUrl}>css/bookstyle.css">
-
-<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
-  <div class="site-wrap" id="home-section">
-    <div class="site-mobile-menu site-navbar-target">
-        <div class="site-mobile-menu-header">
-            <div class="site-mobile-menu-close mt-3">
-                <span class="icon-close2 js-menu-toggle"></span>
-            </div>
-        </div>
-        <div class="site-mobile-menu-body"></div>
-    </div>
-
-  <{*導覽列*}>
-  <{include file="head.tpl"}>
-
-    <div class = "logoimage" style="margin-top:50px;">               
-      <img src="<{$xoImgUrl}>images/logoimg.jpg" alt="Image" class="img-fluid"></a>
-    </div>     
-
-    <div class="Marquee-alert">
-      <marquee behavior="behavior" width="100%" loop="2">
-      歡迎來客訪問，如要線上預訂，可線上填單或是直接電話來電09-xxx-xx-xxx
-      </marquee>
-    </div> 
-
-    <{if $bookpage == 2}>
-      <{include file="tpl/book/bookpg2_form.tpl"}>
-    <{elseif $bookpage == 3}>  
-      <{include file="tpl/book/bookpg3_form.tpl"}> 
-    <{elseif $bookpage == 4}>  
-      <{include file="tpl/book/bookpg4_form.tpl"}> 
-    <{else}>
-      <{include file="tpl/book/bookpg1_form.tpl"}>    
-    <{/if}>
-
-    <{*結尾宣告*}>
-  <{include file="footer.tpl"}>
-  
-</body>
-</html>
+<{if $bookpage == 2}>
+  <{include file="tpl/book/bookpg2_form.tpl"}>
+<{elseif $bookpage == 3}>  
+  <{include file="tpl/book/bookpg3_form.tpl"}> 
+<{elseif $bookpage == 4}>  
+  <{include file="tpl/book/bookpg4_form.tpl"}> 
+<{else}>
+  <{include file="tpl/book/bookpg1_form.tpl"}>    
+<{/if}>
 
 <script src="<{$xoImgUrl}>js/jquery-3.3.1.min.js"></script>
 <script src="<{$xoImgUrl}>js/jquery-migrate-3.0.0.js"></script>
