@@ -16,15 +16,29 @@
     
     <link rel="stylesheet" href="<{$xoAppUrl}>class/sweetalert2/sweetalert2.min.css"> 
     <{if $redirect}>
-        <script>
-        window.onload = function(){
-            Swal.fire({
-            //position: 'top-end',
-            icon: 'success',
-            title: "<{$message}>",
-            showConfirmButton: false,
-            timer: <{$time}>
-            })
-        }
-        </script>
+        <{if $sn == 1}>
+            <script>
+                window.onload = function(){
+                    Swal.fire({
+                    //position: 'top-end',
+                    icon: 'success',
+                    title: "<{$message}>",
+                    showConfirmButton: false,
+                    timer: <{$time}>
+                    })
+                }
+            </script>
+        <{else}>
+            <script>
+                window.onload = function(){
+                    Swal.fire({
+                    //position: 'top-end',
+                    icon: 'error',
+                    title: "<{$message}>",
+                    showConfirmButton: false,
+                    timer: <{$time}>
+                    })
+                }
+            </script>
+        <{/if}>
     <{/if}>

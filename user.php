@@ -1,8 +1,7 @@
 <?php
 /* 引入檔頭，每支程都會引入 */
 require_once 'head.php';
-require_once 'templates/php/redirect.php';
-  
+
 /* 過濾變數，設定預設值 */
 $op = system_CleanVars($_REQUEST, 'op', 'op_list', 'string');
 $sn = system_CleanVars($_REQUEST, 'sn', '', 'int');
@@ -36,7 +35,6 @@ function op_list(){
     $row['email'] = htmlspecialchars($row['email']);//字串    
     $row['kind'] = (int)$row['kind'];//整數
     $rows[] = $row;
-    
   }
 
   $smarty->assign("rows",$rows);  

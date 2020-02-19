@@ -36,7 +36,6 @@
         <div class="site-mobile-menu-body"></div>
     </div>
 
-
   <{*導覽列*}>
   <{include file="head.tpl"}>
 
@@ -50,20 +49,18 @@
       </marquee>
     </div> 
 
-    <{if $bookpage == 1 }>
-      <{include file="tpl/bookpg1_form.tpl"}>
-    <{elseif $bookpage == 2}>
-      <{include file="tpl/bookpg2_form.tpl"}>
+    <{if $bookpage == 2}>
+      <{include file="tpl/book/bookpg2_form.tpl"}>
     <{elseif $bookpage == 3}>  
-      <{include file="tpl/bookpg3_form.tpl"}> 
+      <{include file="tpl/book/bookpg3_form.tpl"}> 
     <{elseif $bookpage == 4}>  
-      <{include file="tpl/bookpg4_form.tpl"}> 
+      <{include file="tpl/book/bookpg4_form.tpl"}> 
     <{else}>
-      <{include file="tpl/bookpg1_form.tpl"}>    
+      <{include file="tpl/book/bookpg1_form.tpl"}>    
     <{/if}>
 
-  <{*結尾宣告*}>
-<{include file="footer.tpl"}>
+    <{*結尾宣告*}>
+  <{include file="footer.tpl"}>
   
 </body>
 </html>
@@ -100,19 +97,7 @@
   <script src="<{$xoImgUrl}>js/main.js"></script>
 
 <link rel="stylesheet" href="<{$xoAppUrl}>class/sweetalert2/sweetalert2.min.css"> 
-<{if $redirect}>
-  <script>
-    window.onload = function(){
-      Swal.fire({
-        //position: 'top-end',
-        icon: 'success',
-        title: "<{$message}>",
-        showConfirmButton: false,
-        timer: <{$time}>
-      })
-    }
-  </script>
-<{/if}>
+
 
   <script src="<{$xoImgUrl}>js/jquery.validate.min.js"></script>
   <script>

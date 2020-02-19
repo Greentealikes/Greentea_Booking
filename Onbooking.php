@@ -1,18 +1,18 @@
 
 <?php
 require_once 'head.php';
-require_once 'redirect.php';
 
-#要進行的行為 
+
+#線上預訂行為狀態 
 $bookbehavior = system_CleanVars($_REQUEST, 'bookbehavior', 'visit', 'string');
 
-#主畫面切換
+#主畫面切換變數
 $switch_id = isset($_GET['pageid'])? $_GET['pageid'] : '0';
 
-#線上預訂頁面切換 
+#線上預訂頁面切換變數 
 $switch_bookpage = isset($_GET['bookpage'])? $_GET['bookpage'] : '0';
 
-#判斷是否為admin
+#判斷是否為登入狀態
 $admin = $_SESSION['admin'];
 
 switch ($bookbehavior){
@@ -23,7 +23,6 @@ switch ($bookbehavior){
         $_POST['dateout'],$_POST['usnum'],$_POST['ustype'],$_POST['usadd']);
         $msg = visitshow($_POST['usname'],$_POST['usphone'],$_POST['usemail'],$_POST['usarea'],$_POST['datein'],
         $_POST['dateout'],$_POST['usnum'],$_POST['ustype'],$_POST['usadd']);
-
         $smarty->assign("tableshow",$msg);
     break;
     #訪客查詢資料
@@ -31,14 +30,12 @@ switch ($bookbehavior){
         $msg = visitorshow();
         $smarty->assign("tableshow",$msg);
     break;
-    default:
+    default:       
     break;  
 }
 
 $smarty->assign("bookpage", $switch_bookpage);
 $smarty->display('book_fom.tpl');
-
-
 
 #新增一筆資料
 function insertusdb($usname,$usphone,$usemail,$usarea,$datein,$dateout,$usnum,$ustype,$usadd){
@@ -48,7 +45,6 @@ function insertusdb($usname,$usphone,$usemail,$usarea,$datein,$dateout,$usnum,$u
     VALUES ('{$usname}',\"$usphone\",\"$usemail\",\"$usarea\",\"$datein\",\"$dateout\",\"$usnum\",\"$ustype\",\"$usadd\")";
     
     $db->query($insert_sql) ;
-
     $uid = $db->insert_id;
     $db->close();
     return $uid;
@@ -108,7 +104,6 @@ function visitorshow(){
     $Inquirname = isset($_POST['Inquirname'])? $_POST['Inquirname'] : 'false';
     $Inquiremail = isset($_POST['Inquiremail'])? $_POST['Inquiremail'] : 'false';
 
-    $rowlength = 0;
     $tableshow = '';    
     $showdb = "SELECT * FROM userdb"; 
     $res = $db->query($showdb) or die($db->error);
@@ -139,12 +134,10 @@ function visitorshow(){
             for($length = 0; $length < 10; $length ++){
                 $tableshow = $tableshow.'<td>'.$row[$length].'</td>';
             }
-
             $tableshow = $tableshow.'</tr> </tbody></table>';      
         }  
       return  $tableshow; 
     }
-
     $result->free();
     $db->close();
 }

@@ -36,17 +36,17 @@
     
     <!-- 點選導覽頁面切換內容 -->
     <{if $pageid == 0 }>
-      <{include file="index_fom.tpl"}>
+      <{include file="tpl/index/index_fom.tpl"}>
     <{elseif $pageid == 1}>
-      <{include file="about_fom.tpl"}>
+      <{include file="tpl/about/about_fom.tpl"}>
     <{elseif $pageid == 2}>
       <{include file="book_fom.tpl"}>
     <{elseif $pageid == 3}>
-      <{include file="services_fom.tpl"}>
+      <{include file="tpl/services/services_fom.tpl"}>
     <{elseif $pageid == 4}>
-      <{include file="blog_fom.tpl"}>
+      <{include file="tpl/blog/blog_fom.tpl"}>
     <{elseif $pageid == 5}>
-      <{include file="contact_fom.tpl"}>
+      <{include file="tpl/contact/contact_fom.tpl"}>
 
     <{elseif $pageid == 6}>
       <{if $smarty.session.admin}>        
