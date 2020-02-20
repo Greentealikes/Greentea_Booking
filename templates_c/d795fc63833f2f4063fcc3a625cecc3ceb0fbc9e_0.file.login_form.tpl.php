@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-02-19 09:12:50
+/* Smarty version 3.1.34-dev-7, created on 2020-02-20 10:07:35
   from 'D:\xampp\htdocs\Greentea_Booking-0218\templates\tpl\login_form.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e4cee029c2b43_37294965',
+  'unifunc' => 'content_5e4e4c576757d7_18736898',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd795fc63833f2f4063fcc3a625cecc3ceb0fbc9e' => 
     array (
       0 => 'D:\\xampp\\htdocs\\Greentea_Booking-0218\\templates\\tpl\\login_form.tpl',
-      1 => 1582096644,
+      1 => 1582167975,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e4cee029c2b43_37294965 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e4e4c576757d7_18736898 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!doctype html>
 <html lang="en">
   <head>
@@ -60,8 +60,8 @@ css/style.css">
     <form class="form-signin" action="page_sw.php?op=login" method="post">
         <h1 class="h3 mb-3 font-weight-normal">會員登入</h1>
         <div class="mb-3">
-          <label for="name" class="sr-only">帳號</label>
-          <input type="text" name="name" id="name" class="form-control" placeholder="請輸入帳號"  required>
+          <label for="uname" class="sr-only">帳號</label>
+          <input type="text" name="uname" id="uname" class="form-control" placeholder="請輸入帳號"  required>
         </div>
         <div class="mb-3">
           <label for="pass" class="sr-only">密碼</label>

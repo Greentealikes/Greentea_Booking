@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-02-19 07:12:05
+/* Smarty version 3.1.34-dev-7, created on 2020-02-20 09:49:11
   from 'D:\xampp\htdocs\Greentea_Booking-0218\templates\theme.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e4cd1b57f3c72_24995998',
+  'unifunc' => 'content_5e4e4807965d60_34770904',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '929d81e0446afb95725e7d7a8f495bf8c9597c8d' => 
     array (
       0 => 'D:\\xampp\\htdocs\\Greentea_Booking-0218\\templates\\theme.tpl',
-      1 => 1582092714,
+      1 => 1582179467,
       2 => 'file',
     ),
   ),
@@ -32,7 +32,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:tpl/head_js.tpl' => 1,
   ),
 ),false)) {
-function content_5e4cd1b57f3c72_24995998 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e4e4807965d60_34770904 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!doctype html>
 <html lang="en">
 
@@ -59,9 +59,9 @@ function content_5e4cd1b57f3c72_24995998 (Smarty_Internal_Template $_smarty_tpl)
     <?php } elseif ($_smarty_tpl->tpl_vars['pageid']->value == 5) {?>
       <?php $_smarty_tpl->_subTemplateRender("file:tpl/contact/contact_fom.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
-
     <?php } elseif ($_smarty_tpl->tpl_vars['pageid']->value == 6) {?>
-      <?php if ($_SESSION['admin']) {?>        
+
+      <?php if ($_SESSION['user']['kind'] === 1) {?>          
         <?php $_smarty_tpl->_subTemplateRender("file:tpl/admin_form.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
       <?php } else { ?>
@@ -78,8 +78,7 @@ function content_5e4cd1b57f3c72_24995998 (Smarty_Internal_Template $_smarty_tpl)
 
   <!-- 頁尾畫面 -->
   <?php $_smarty_tpl->_subTemplateRender("file:footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
-?>
-  
+?>  
 
   </body>
 </html> 

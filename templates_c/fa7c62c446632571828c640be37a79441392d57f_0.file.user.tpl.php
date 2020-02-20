@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-02-19 06:57:10
+/* Smarty version 3.1.34-dev-7, created on 2020-02-20 10:07:43
   from 'D:\xampp\htdocs\Greentea_Booking-0218\templates\user.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e4cce36da8da2_13087374',
+  'unifunc' => 'content_5e4e4c5f283b26_38338842',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'fa7c62c446632571828c640be37a79441392d57f' => 
     array (
       0 => 'D:\\xampp\\htdocs\\Greentea_Booking-0218\\templates\\user.tpl',
-      1 => 1582091828,
+      1 => 1582167181,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:tpl/admin_table_form.tpl' => 1,
   ),
 ),false)) {
-function content_5e4cce36da8da2_13087374 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e4e4c5f283b26_38338842 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!doctype html>
 <html lang="en">
   <head>
@@ -50,21 +50,24 @@ css/aos.css">
 css/style.css">
     <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['xoAppUrl']->value;?>
 class/sweetalert2/sweetalert2.min.css"> 
- <link href="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+    <link href="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
 vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   </head>
  
-    <style>
-        .form-signin {
-            width: 100%;
-            max-width: 400px;
-            padding: 15px;
-            margin: 0 auto;
-        }      
-    </style>      
+ <style>
+.text {
+    font-family:"微软雅黑", "Dosis", sans-serif;
+    font-size: 80px;
+    text-align: center;
+    font-weight: bold;
+    line-height:200px;
+    text-transform:uppercase;
+    position: relative;
+ </style>
+      
 <body>
+  <div contenteditable="true" class="text effect01">Greentea 後台</div> 
 
-  <h1 class="text-center mt-4">Greentea 後台</h1>
   <div class="container">
     <div class="row">
       <div class="col-sm-9">

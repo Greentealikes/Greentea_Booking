@@ -1,26 +1,27 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-02-18 08:54:11
+/* Smarty version 3.1.34-dev-7, created on 2020-02-20 09:53:31
   from 'D:\xampp\htdocs\Greentea_Booking-0218\templates\tpl\book\bookpg3_form.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e4b9823d795d6_74197886',
+  'unifunc' => 'content_5e4e490bcf5e81_23711429',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'bbf17687290e7876238aea332f882dba8687d8b7' => 
     array (
       0 => 'D:\\xampp\\htdocs\\Greentea_Booking-0218\\templates\\tpl\\book\\bookpg3_form.tpl',
-      1 => 1582012090,
+      1 => 1582188810,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
+    'file:tpl/book/front_table.tpl' => 1,
   ),
 ),false)) {
-function content_5e4b9823d795d6_74197886 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e4e490bcf5e81_23711429 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
 <div class="site-wrap" id="home-section">
@@ -53,9 +54,9 @@ function content_5e4b9823d795d6_74197886 (Smarty_Internal_Template $_smarty_tpl)
                 </div>
               </div>
               <div class="row book-body">
-                <div class="col-sm-12">
-                  <?php echo $_smarty_tpl->tpl_vars['tableshow']->value;?>
-
+                <div class="col-sm-12">  
+                  <?php $_smarty_tpl->_subTemplateRender("file:tpl/book/front_table.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>    
                 </div>
               </div>
             <div>

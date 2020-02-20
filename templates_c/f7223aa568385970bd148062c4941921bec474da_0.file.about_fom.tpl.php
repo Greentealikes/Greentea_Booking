@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-02-18 08:43:42
+/* Smarty version 3.1.34-dev-7, created on 2020-02-20 10:07:59
   from 'D:\xampp\htdocs\Greentea_Booking-0218\templates\tpl\about\about_fom.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e4b95ae4485c4_78651037',
+  'unifunc' => 'content_5e4e4c6fef1086_20096403',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'f7223aa568385970bd148062c4941921bec474da' => 
     array (
       0 => 'D:\\xampp\\htdocs\\Greentea_Booking-0218\\templates\\tpl\\about\\about_fom.tpl',
-      1 => 1582011790,
+      1 => 1582164644,
       2 => 'file',
     ),
   ),
@@ -20,12 +20,39 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e4b95ae4485c4_78651037 (Smarty_Internal_Template $_smarty_tpl) {
-?>
-<div class = "logoimage" style="margin-top:50px;">               
-  <img src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
-images/logoimg.jpg" alt="Image" class="img-fluid"></a>
-</div>   
+function content_5e4e4c6fef1086_20096403 (Smarty_Internal_Template $_smarty_tpl) {
+?><div class = "logoimage" style="margin-top:50px;">     
+  <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+<div class="carousel-inner">
+  <div class="carousel-item active">
+    <img src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+images/bn01.jpg" class="d-block w-100" alt="...">
+  </div>
+  <div class="carousel-item">
+    <img src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+images/bn02.jpg" class="d-block w-100" alt="...">
+  </div>
+  <div class="carousel-item">
+    <img src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+images/bn03.jpg" class="d-block w-100" alt="...">
+  </div>
+  <div class="carousel-item">
+    <img src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+images/bn04.jpg" class="d-block w-100" alt="...">
+  </div>
+  <div class="carousel-item">
+    <img src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+images/bn05.jpg" class="d-block w-100" alt="...">
+  </div>
+  <div class="carousel-item">
+    <img src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+images/bn06.jpg" class="d-block w-100" alt="...">
+  </div>
+  <div class="carousel-item">
+    <img src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+images/bn07.jpg" class="d-block w-100" alt="...">
+  </div>
+</div>
 
 <div class="Marquee-alert">
   <marquee behavior="behavior" width="100%" loop="2">
@@ -178,89 +205,5 @@ images/img_3.jpg" alt="Image" class="img-fluid">
 </div>
 
  
-
-<?php echo '<script'; ?>
- src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
-js/jquery-3.3.1.min.js"><?php echo '</script'; ?>
->
-<?php echo '<script'; ?>
- src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
-js/jquery-migrate-3.0.0.js"><?php echo '</script'; ?>
->
-<?php echo '<script'; ?>
- src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
-js/popper.min.js"><?php echo '</script'; ?>
->
-<?php echo '<script'; ?>
- src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
-js/bootstrap.min.js"><?php echo '</script'; ?>
->
-<?php echo '<script'; ?>
- src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
-js/owl.carousel.min.js"><?php echo '</script'; ?>
->
-<?php echo '<script'; ?>
- src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
-js/jquery.sticky.js"><?php echo '</script'; ?>
->
-<?php echo '<script'; ?>
- src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
-js/jquery.waypoints.min.js"><?php echo '</script'; ?>
->
-<?php echo '<script'; ?>
- src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
-js/jquery.animateNumber.min.js"><?php echo '</script'; ?>
->
-<?php echo '<script'; ?>
- src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
-js/jquery.fancybox.min.js"><?php echo '</script'; ?>
->
-<?php echo '<script'; ?>
- src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
-js/jquery.stellar.min.js"><?php echo '</script'; ?>
->
-<?php echo '<script'; ?>
- src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
-js/jquery.easing.1.3.js"><?php echo '</script'; ?>
->
-<?php echo '<script'; ?>
- src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
-js/bootstrap-datepicker.min.js"><?php echo '</script'; ?>
->
-<?php echo '<script'; ?>
- src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
-js/isotope.pkgd.min.js"><?php echo '</script'; ?>
->
-<?php echo '<script'; ?>
- src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
-js/aos.js"><?php echo '</script'; ?>
->
-
-
-<?php echo '<script'; ?>
- src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
-js/typed.js"><?php echo '</script'; ?>
->
-<?php echo '<script'; ?>
->
-  !function ($) {
-    var typed = new Typed('.typed-words', {
-      strings: ["Business", " Startups", " Organization", " Company"],
-      typeSpeed: 80,
-      backSpeed: 80,
-      backDelay: 4000,
-      startDelay: 1000,
-      loop: true,
-      showCursor: true
-    })
-  };
-<?php echo '</script'; ?>
->
-
-<?php echo '<script'; ?>
- src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
-js/main.js"><?php echo '</script'; ?>
->
-
 <?php }
 }

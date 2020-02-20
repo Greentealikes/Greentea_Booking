@@ -16,20 +16,23 @@
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="<{$xoImgUrl}>css/style.css">
     <link rel="stylesheet" href="<{$xoAppUrl}>class/sweetalert2/sweetalert2.min.css"> 
- <link href="<{$xoImgUrl}>vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="<{$xoImgUrl}>vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   </head>
  
-    <style>
-        .form-signin {
-            width: 100%;
-            max-width: 400px;
-            padding: 15px;
-            margin: 0 auto;
-        }      
-    </style>      
+ <style>
+.text {
+    font-family:"微软雅黑", "Dosis", sans-serif;
+    font-size: 80px;
+    text-align: center;
+    font-weight: bold;
+    line-height:200px;
+    text-transform:uppercase;
+    position: relative;
+ </style>
+      
 <body>
+  <div contenteditable="true" class="text effect01">Greentea 後台</div> 
 
-  <h1 class="text-center mt-4">Greentea 後台</h1>
   <div class="container">
     <div class="row">
       <div class="col-sm-9">

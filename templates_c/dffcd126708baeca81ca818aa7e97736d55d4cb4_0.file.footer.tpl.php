@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-02-19 06:32:14
+/* Smarty version 3.1.34-dev-7, created on 2020-02-20 09:49:12
   from 'D:\xampp\htdocs\Greentea_Booking-0218\templates\footer.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e4cc85e8e38e5_89353411',
+  'unifunc' => 'content_5e4e480803c8e4_65260498',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e4cc85e8e38e5_89353411 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e4e480803c8e4_65260498 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="site-section bg-light">
   <div class="container">
     <div class="row">

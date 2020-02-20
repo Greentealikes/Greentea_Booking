@@ -58,9 +58,11 @@
                         <li><a href="page_sw.php?pageid=4" class="nav-link">周邊活動</a></li>
                         <li><a href="page_sw.php?pageid=5" class="nav-link">聯繫我們</a></li>
             
-                    <{if $smarty.session.admin}>
+                    <{if $smarty.session.user.kind === 1}>          
                         <li><a href="user.php" class="nav-link">管理員</a></li>
-                        <li><a href="page_sw.php?op=logout&pageid=6" class="nav-link">Logout</a></li>                     
+                        <li><a href="page_sw.php?op=logout&pageid=6" class="nav-link">Logout</a></li>   
+                    <{elseif  $smarty.session.user.kind === 0}> 
+                        <li><a href="page_sw.php?op=logout&pageid=6" class="nav-link">Logout</a></li>                   
                     <{else}>
                         <li><a href="page_sw.php?op=op_list&pageid=6" id="userin" class="nav-link">Login</a></li>                     
                     <{/if}>
@@ -70,3 +72,4 @@
         </div>
     </header>
 </div>
+

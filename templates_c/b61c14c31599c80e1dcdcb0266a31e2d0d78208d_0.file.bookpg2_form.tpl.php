@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-02-18 08:53:55
+/* Smarty version 3.1.34-dev-7, created on 2020-02-20 10:12:12
   from 'D:\xampp\htdocs\Greentea_Booking-0218\templates\tpl\book\bookpg2_form.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e4b98130310a4_31800671',
+  'unifunc' => 'content_5e4e4d6c3d8d56_85860253',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b61c14c31599c80e1dcdcb0266a31e2d0d78208d' => 
     array (
       0 => 'D:\\xampp\\htdocs\\Greentea_Booking-0218\\templates\\tpl\\book\\bookpg2_form.tpl',
-      1 => 1582012090,
+      1 => 1582185935,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e4b98130310a4_31800671 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e4e4d6c3d8d56_85860253 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <head>
   <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
@@ -66,7 +66,7 @@ css/bootstrap.min.css">
       </div>  
 
       <div class = "col-9">   
-        <form action="Onbooking.php?bookpage=3" method="post" id="myForm" class="mb-20" enctype="multipart/form-data">
+        <form action="Onbooking.php?pageid=3&bookpage=3" method="post" id="myForm" class="mb-20" enctype="multipart/form-data">
           <div class="book-container alert alert-warning ">
             <div class = "title-font">  
               <div class="col-sm-12">填寫表單</div>
@@ -142,7 +142,7 @@ css/bootstrap.min.css">
             <div class="col-sm-12">
               <div class="form-group">
                 <label class="control-label">備註</label>
-                <textarea class="form-control" rows="4" id="usadd" name="usadd"></textarea>
+                <textarea class="form-control" rows="4" id="usadd" value="" name="usadd"></textarea>
               </div>
             </div>
 
@@ -151,7 +151,8 @@ css/bootstrap.min.css">
           </div>
 
           <div class="pb-20 amplif-gap">
-            <input type="hidden" name="bookbehavior" value="visit" id="bookbehavior">
+            <input type="hidden" name="bookbehavior" value="onlineBook" id="bookbehavior">
+           
             <button type="submit" class="btn btn-primary">確認表單</button>
           </div>
 
@@ -159,12 +160,10 @@ css/bootstrap.min.css">
             <button type="reset" class="btn btn-danger">清除表單</button>
             </div>
           </div>
-
         </form>
       </div>
     </div>
   </div>
 </div>
-
 <?php }
 }

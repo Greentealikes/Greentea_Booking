@@ -48,7 +48,7 @@
 
               <input type="hidden" name="bookbehavior" value="visitbook" id="bookbehavior">
               <div class="col-sm-12">
-                <{$tableshow}>
+                <{include file="tpl/book/front_table.tpl"}>    
               </div>
 
               <div class="col-sm-12 ">

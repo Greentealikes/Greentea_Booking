@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-02-18 08:53:43
+/* Smarty version 3.1.34-dev-7, created on 2020-02-20 10:12:09
   from 'D:\xampp\htdocs\Greentea_Booking-0218\templates\tpl\book\bookpg1_form.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e4b9807151975_82182031',
+  'unifunc' => 'content_5e4e4d69cd2e82_86778642',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'fc99fd666400953eab31111f24b03a832a0cd5ec' => 
     array (
       0 => 'D:\\xampp\\htdocs\\Greentea_Booking-0218\\templates\\tpl\\book\\bookpg1_form.tpl',
-      1 => 1582012090,
+      1 => 1582180466,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e4b9807151975_82182031 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e4e4d69cd2e82_86778642 (Smarty_Internal_Template $_smarty_tpl) {
 ?>  
 <div class="site-wrap" id="home-section">
   <div class="site-section">
@@ -43,11 +43,8 @@ function content_5e4b9807151975_82182031 (Smarty_Internal_Template $_smarty_tpl)
             <li class="list-group-item"><stong>查詢表單</stong></li>
           </a>
 
-          <?php if ($_SESSION['admin']) {?>
-          <a href = "page_sw.php?pageid=2&bookpage=4">
-            <li class="list-group-item"><stong>刪除表單</stong></li>
-          </a> 
-          <?php }?>
+        
+         
         </div>
       </div>  
 

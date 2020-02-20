@@ -1,12 +1,5 @@
 <?php
-  require_once 'head.php';
-  
-  
-  #主畫面切換 
-  $switch_id = isset($_GET['pageid'])? $_GET['pageid'] : '0';
-
-  #線上預訂頁切換
-  $switch_bookpage = isset($_GET['bookpage'])? $_GET['bookpage'] : '0';
+  require_once 'head.php';   
 
   #登入狀態
   $op = system_CleanVars($_REQUEST, 'op', 'op_list', 'string');
@@ -15,9 +8,6 @@
   $sn = system_CleanVars($_REQUEST, 'sn', '', 'int');
   $sn_success = 1;
   $sn_error = 0;
-
-  #引入$_SESSION['amdin'] 初始設定為false
-  $admin = $_SESSION['admin'];
    
   #op判斷
   switch ($op){
@@ -25,10 +15,10 @@
       $msg = login();
       if($msg == '登入成功'){
           $sn = $sn_success;
-          redirect_header("page_sw.php",$msg, 3000, $sn);
+          redirect_header("index.php",$msg, 3000, $sn);
       }
       else{     
-        $sn = $sn_error;  
+        $sn = $sn_error;              
         redirect_header("page_sw.php", $msg, 3000, $sn);     
       }
       exit;
@@ -57,13 +47,12 @@
     }
 
    /*---- 將變數送至樣版----*/
-   $smarty->assign("WEB", $WEB);
-   $smarty->assign("op", $op);
-   $smarty->assign("pageid", $switch_id);
-   $smarty->assign("bookpage", $switch_bookpage);
+  $smarty->assign("WEB", $WEB);
+  $smarty->assign("op", $op);
+  $smarty->assign("pageid", $switch_id);
+  $smarty->assign("bookpage", $switch_bookpage);
 
   $smarty->display('theme.tpl');
-  exit;
 
   function reg(){
     global $db;
@@ -100,7 +89,7 @@
 
     #使用者登出
     function logout(){
-        $_SESSION['admin'] = false;
+        $_SESSION['user']['kind'] = "";
         setcookie('name','',time() - 3600 * 24 * 365);
         setcookie('token','',time() - 3600 * 24 * 365);
     }    
@@ -110,21 +99,49 @@
     }
   
   function login(){
-    global $smarty;
-    $name="admin";
-    $pass="111111";
-    $token="xxxxxx";
+    global $smarty,$db;
+
+    $_POST['uname'] = db_filter($_POST['uname'], '帳號');
+    $_POST['pass'] = db_filter($_POST['pass'], '密碼');
+    
+    $sql= "SELECT * FROM `users` WHERE `uname` = '{$_POST['uname']}'";
+
+    $result = $db->query($sql) or die($db->error() . $sql);
+    $row = $result->fetch_assoc() or redirect_header("page_sw.php", "帳號輸入錯誤", 3000, 0);     
   
-    if($name == $_POST['name'] and $pass == $_POST['pass']){
-      $_SESSION['admin'] = true; 
+    $row['uname'] = htmlspecialchars($row['uname']);//字串
+    $row['uid'] = (int)$row['uid'];//整數
+    $row['kind'] = (int)$row['kind'];//整數
+    $row['name'] = htmlspecialchars($row['name']);//字串
+    $row['tel'] = htmlspecialchars($row['tel']);//字串
+    $row['email'] = htmlspecialchars($row['email']);//字串 
+    $row['pass'] = htmlspecialchars($row['pass']);//字串 
+    $row['token'] = htmlspecialchars($row['token']);//字串
+   
+
+    if(password_verify($_POST['pass'],$row['pass'])){
+      $_SESSION['user']['uid'] = $row['uid'];
+      $_SESSION['user']['uname'] = $row['uname'];
+      $_SESSION['user']['name'] = $row['name'];
+      $_SESSION['user']['tel'] = $row['tel'];
+      $_SESSION['user']['email'] = $row['email'];
+      $_SESSION['user']['kind'] = $row['kind'];
+      
       $_POST['remember'] = isset($_POST['remember']) ? $_POST['remember'] : "";
       
+      //點選記住我
       if($_POST['remember']){
-        setcookie("name", $name, time()+ 3600 * 24 * 365); 
+        setcookie("uname", $name, time()+ 3600 * 24 * 365); 
         setcookie("token", $token, time()+ 3600 * 24 * 365); 
-      }
+      }      
       return "登入成功";
-    }else{ 
+    }else{    
+      $_SESSION['user']['uid'] = "";
+      $_SESSION['user']['uname'] = "";
+      $_SESSION['user']['name'] = "";
+      $_SESSION['user']['tel'] = "";
+      $_SESSION['user']['email'] = "";
+      $_SESSION['user']['kind'] = "";   
       return "登入失敗";
     }
   }

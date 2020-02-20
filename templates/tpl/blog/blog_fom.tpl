@@ -147,37 +147,3 @@
 </div>
 
  
-
-<script src="<{$xoImgUrl}>js/jquery-3.3.1.min.js"></script>
-<script src="<{$xoImgUrl}>js/jquery-migrate-3.0.0.js"></script>
-<script src="<{$xoImgUrl}>js/popper.min.js"></script>
-<script src="<{$xoImgUrl}>js/bootstrap.min.js"></script>
-<script src="<{$xoImgUrl}>js/owl.carousel.min.js"></script>
-<script src="<{$xoImgUrl}>js/jquery.sticky.js"></script>
-<script src="<{$xoImgUrl}>js/jquery.waypoints.min.js"></script>
-<script src="<{$xoImgUrl}>js/jquery.animateNumber.min.js"></script>
-<script src="<{$xoImgUrl}>js/jquery.fancybox.min.js"></script>
-<script src="<{$xoImgUrl}>js/jquery.stellar.min.js"></script>
-<script src="<{$xoImgUrl}>js/jquery.easing.1.3.js"></script>
-<script src="<{$xoImgUrl}>js/bootstrap-datepicker.min.js"></script>
-<script src="<{$xoImgUrl}>js/isotope.pkgd.min.js"></script>
-<script src="<{$xoImgUrl}>js/aos.js"></script>
-
-
-<script src="<{$xoImgUrl}>js/typed.js"></script>
-<script>
-  !function ($) {
-    var typed = new Typed('.typed-words', {
-      strings: ["Business", " Startups", " Organization", " Company"],
-      typeSpeed: 80,
-      backSpeed: 80,
-      backDelay: 4000,
-      startDelay: 1000,
-      loop: true,
-      showCursor: true
-    })
-  };
-</script>
-
-<script src="<{$xoImgUrl}>js/main.js"></script>
-

@@ -30,8 +30,8 @@
                 </div>
               </div>
               <div class="row book-body">
-                <div class="col-sm-12">
-                  <{$tableshow}>
+                <div class="col-sm-12">  
+                  <{include file="tpl/book/front_table.tpl"}>    
                 </div>
               </div>
             <div>

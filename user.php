@@ -5,9 +5,17 @@ require_once 'head.php';
 /* 過濾變數，設定預設值 */
 $op = system_CleanVars($_REQUEST, 'op', 'op_list', 'string');
 $uid = system_CleanVars($_REQUEST, 'uid', '', 'int');
+
+if($_SESSION['user']['kind'] !== 1)redirect_header("index.php", '您沒有權限', 3000,0);
   
 /* 程式流程 */
 switch ($op){
+
+  case "op_delete" :
+    $msg = op_delete($uid);
+    redirect_header("user.php", $msg, 3000,1);
+    exit;
+
   case "op_update":
     $msg = op_update($uid);  
     redirect_header("user.php",$msg, 3000, 1);    
@@ -50,11 +58,20 @@ function op_list(){
   $smarty->assign("rows",$rows);  
 }
 
+function op_delete($uid){
+  global $db; 
+  global $db;
+  $sql="DELETE FROM `users`
+        WHERE `uid` = '{$uid}';
+  ";
+  $db->query($sql) or die($db->error() . $sql);
+  return "會員刪除成功";
+}
+
+
 function op_update($uid=""){
   global $db;
   //更新
-  global $db;
-
     #過濾變數
     $_POST['uname'] = db_filter($_POST['uname'],'帳號');
     $_POST['pass'] = db_filter($_POST['pass'],'');

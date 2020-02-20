@@ -52,11 +52,12 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="service-29191">
-                <span class="wrap-icon mb-4 d-block">
-                    <span class="icon-desktop_windows"></span>
-                </span>
-                <h3 class="mb-3">Interface Design</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti voluptatem reiciendis minus, a dolores.</p>
+                    <span class="wrap-icon mb-4 d-block">
+                        <span class="icon-desktop_windows"></span>
+                    </span>
+                    <h3 class="mb-3">Interface Design</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti voluptatem reiciendis minus, a dolores.</p>
+                </div>
             </div>
         </div>
         
@@ -79,9 +80,6 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti voluptatem reiciendis minus, a dolores.</p>
         </div>
     </div>
-</div>
-
-</div>
 </div>
 
 <div class="site-section bg-primary">
@@ -114,10 +112,13 @@
         <span class="date d-block">October 18, 2019</span>
         <h3 class="mb-4"><a href="#">Google saying pseudo-telephoto is more important</a></h3>
         <div class="d-flex vcard-91123 align-items-center">
-            <div class="img mr-3"><img src="<{$xoImgUrl}>images/person_1.jpg" alt="Image" class="img-fluid"></div>
+            <div class="img mr-3">
+                <img src="<{$xoImgUrl}>images/person_1.jpg" alt="Image" class="img-fluid">
+            </div>
             <div class="name">
-            <span class="d-block">by John Freeman</span>
-            <span>Thinker &amp; Designer</span>
+                <span class="d-block">by John Freeman</span>
+                <span>Thinker &amp; Designer</span>
+            </div>
         </div>
     </div>
 
@@ -127,37 +128,44 @@
         <span class="date d-block">October 18, 2019</span>
         <h3 class="mb-4"><a href="#">Google saying pseudo-telephoto is more important</a></h3>
         <div class="d-flex vcard-91123 align-items-center">
-            <div class="img mr-3"><img src="<{$xoImgUrl}>images/person_1.jpg" alt="Image" class="img-fluid"></div>
+            <div class="img mr-3">
+                <img src="<{$xoImgUrl}>images/person_1.jpg" alt="Image" class="img-fluid">
+            </div>
             <div class="name">
-            <span class="d-block">by John Freeman</span>
-            <span>Thinker &amp; Designer</span>
+                <span class="d-block">by John Freeman</span>
+                <span>Thinker &amp; Designer</span>
+            </div>
         </div>
     </div>
    
 
     <div class="media-29191">
-        <a href="#" class="d-block mb-4"><img src="<{$xoImgUrl}>images/img_2.jpg" alt="Image" class="img-fluid"></a>
+        <a href="#" class="d-block mb-4"><img src="<{$xoImgUrl}>images/img_3.jpg" alt="Image" class="img-fluid"></a>
         <span class="date d-block">October 18, 2019</span>
         <h3 class="mb-4"><a href="#">Google saying pseudo-telephoto is more important</a></h3>
         <div class="d-flex vcard-91123 align-items-center">
-            <div class="img mr-3"><img src="<{$xoImgUrl}>images/person_1.jpg" alt="Image" class="img-fluid"></div>
+            <div class="img mr-3">
+                <img src="<{$xoImgUrl}>images/person_1.jpg" alt="Image" class="img-fluid">
+            </div>
             <div class="name">
-            <span class="d-block">by John Freeman</span>
-            <span>Thinker &amp; Designer</span>
+                <span class="d-block">by John Freeman</span>
+                <span>Thinker &amp; Designer</span>
             </div>
         </div>
     </div>
 
 
     <div class="media-29191">
-        <a href="#" class="d-block mb-4"><img src="<{$xoImgUrl}>images/img_1.jpg" alt="Image" class="img-fluid"></a>
+        <a href="#" class="d-block mb-4"><img src="<{$xoImgUrl}>images/img_3.jpg" alt="Image" class="img-fluid"></a>
         <span class="date d-block">October 18, 2019</span>
         <h3 class="mb-4"><a href="#">Google saying pseudo-telephoto is more important</a></h3>
         <div class="d-flex vcard-91123 align-items-center">
-            <div class="img mr-3"><img src="<{$xoImgUrl}>images/person_1.jpg" alt="Image" class="img-fluid"></div>
+            <div class="img mr-3">
+                <img src="<{$xoImgUrl}>images/person_1.jpg" alt="Image" class="img-fluid">
+            </div>
             <div class="name">
-            <span class="d-block">by John Freeman</span>
-            <span>Thinker &amp; Designer</span>
+                <span class="d-block">by John Freeman</span>
+                <span>Thinker &amp; Designer</span>
             </div>
         </div>
     </div>
@@ -167,13 +175,13 @@
         <span class="date d-block">October 18, 2019</span>
         <h3 class="mb-4"><a href="#">Google saying pseudo-telephoto is more important</a></h3>
         <div class="d-flex vcard-91123 align-items-center">
-            <div class="img mr-3"><img src="<{$xoImgUrl}>images/person_1.jpg" alt="Image" class="img-fluid"></div>
+            <div class="img mr-3">
+                <img src="<{$xoImgUrl}>images/person_1.jpg" alt="Image" class="img-fluid">
+            </div>
             <div class="name">
-            <span class="d-block">by John Freeman</span>
-            <span>Thinker &amp; Designer</span>
+                <span class="d-block">by John Freeman</span>
+                <span>Thinker &amp; Designer</span>
             </div>
         </div>
     </div>
 </div>
-
-     

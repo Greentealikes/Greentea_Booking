@@ -20,11 +20,8 @@
             <li class="list-group-item"><stong>查詢表單</stong></li>
           </a>
 
-          <{if $smarty.session.admin}>
-          <a href = "page_sw.php?pageid=2&bookpage=4">
-            <li class="list-group-item"><stong>刪除表單</stong></li>
-          </a> 
-          <{/if}>
+        
+         
         </div>
       </div>  
 

@@ -42,7 +42,7 @@
       </div>  
 
       <div class = "col-9">   
-        <form action="Onbooking.php?bookpage=3" method="post" id="myForm" class="mb-20" enctype="multipart/form-data">
+        <form action="Onbooking.php?pageid=3&bookpage=3" method="post" id="myForm" class="mb-20" enctype="multipart/form-data">
           <div class="book-container alert alert-warning ">
             <div class = "title-font">  
               <div class="col-sm-12">填寫表單</div>
@@ -118,7 +118,7 @@
             <div class="col-sm-12">
               <div class="form-group">
                 <label class="control-label">備註</label>
-                <textarea class="form-control" rows="4" id="usadd" name="usadd"></textarea>
+                <textarea class="form-control" rows="4" id="usadd" value="" name="usadd"></textarea>
               </div>
             </div>
 
@@ -127,7 +127,8 @@
           </div>
 
           <div class="pb-20 amplif-gap">
-            <input type="hidden" name="bookbehavior" value="visit" id="bookbehavior">
+            <input type="hidden" name="bookbehavior" value="onlineBook" id="bookbehavior">
+           
             <button type="submit" class="btn btn-primary">確認表單</button>
           </div>
 
@@ -135,10 +136,8 @@
             <button type="reset" class="btn btn-danger">清除表單</button>
             </div>
           </div>
-
         </form>
       </div>
     </div>
   </div>
 </div>
-

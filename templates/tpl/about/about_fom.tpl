@@ -1,7 +1,28 @@
-
-<div class = "logoimage" style="margin-top:50px;">               
-  <img src="<{$xoImgUrl}>images/logoimg.jpg" alt="Image" class="img-fluid"></a>
-</div>   
+<div class = "logoimage" style="margin-top:50px;">     
+  <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+<div class="carousel-inner">
+  <div class="carousel-item active">
+    <img src="<{$xoImgUrl}>images/bn01.jpg" class="d-block w-100" alt="...">
+  </div>
+  <div class="carousel-item">
+    <img src="<{$xoImgUrl}>images/bn02.jpg" class="d-block w-100" alt="...">
+  </div>
+  <div class="carousel-item">
+    <img src="<{$xoImgUrl}>images/bn03.jpg" class="d-block w-100" alt="...">
+  </div>
+  <div class="carousel-item">
+    <img src="<{$xoImgUrl}>images/bn04.jpg" class="d-block w-100" alt="...">
+  </div>
+  <div class="carousel-item">
+    <img src="<{$xoImgUrl}>images/bn05.jpg" class="d-block w-100" alt="...">
+  </div>
+  <div class="carousel-item">
+    <img src="<{$xoImgUrl}>images/bn06.jpg" class="d-block w-100" alt="...">
+  </div>
+  <div class="carousel-item">
+    <img src="<{$xoImgUrl}>images/bn07.jpg" class="d-block w-100" alt="...">
+  </div>
+</div>
 
 <div class="Marquee-alert">
   <marquee behavior="behavior" width="100%" loop="2">
@@ -147,37 +168,3 @@
 </div>
 
  
-
-<script src="<{$xoImgUrl}>js/jquery-3.3.1.min.js"></script>
-<script src="<{$xoImgUrl}>js/jquery-migrate-3.0.0.js"></script>
-<script src="<{$xoImgUrl}>js/popper.min.js"></script>
-<script src="<{$xoImgUrl}>js/bootstrap.min.js"></script>
-<script src="<{$xoImgUrl}>js/owl.carousel.min.js"></script>
-<script src="<{$xoImgUrl}>js/jquery.sticky.js"></script>
-<script src="<{$xoImgUrl}>js/jquery.waypoints.min.js"></script>
-<script src="<{$xoImgUrl}>js/jquery.animateNumber.min.js"></script>
-<script src="<{$xoImgUrl}>js/jquery.fancybox.min.js"></script>
-<script src="<{$xoImgUrl}>js/jquery.stellar.min.js"></script>
-<script src="<{$xoImgUrl}>js/jquery.easing.1.3.js"></script>
-<script src="<{$xoImgUrl}>js/bootstrap-datepicker.min.js"></script>
-<script src="<{$xoImgUrl}>js/isotope.pkgd.min.js"></script>
-<script src="<{$xoImgUrl}>js/aos.js"></script>
-
-
-<script src="<{$xoImgUrl}>js/typed.js"></script>
-<script>
-  !function ($) {
-    var typed = new Typed('.typed-words', {
-      strings: ["Business", " Startups", " Organization", " Company"],
-      typeSpeed: 80,
-      backSpeed: 80,
-      backDelay: 4000,
-      startDelay: 1000,
-      loop: true,
-      showCursor: true
-    })
-  };
-</script>
-
-<script src="<{$xoImgUrl}>js/main.js"></script>
-

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-02-19 07:11:23
+/* Smarty version 3.1.34-dev-7, created on 2020-02-20 09:49:11
   from 'D:\xampp\htdocs\Greentea_Booking-0218\templates\head.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e4cd18b5be5e3_36112792',
+  'unifunc' => 'content_5e4e4807bb84e9_48180201',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '06fe9ddf53b128353ad90d09c114ff2ef3c9d447' => 
     array (
       0 => 'D:\\xampp\\htdocs\\Greentea_Booking-0218\\templates\\head.tpl',
-      1 => 1582092681,
+      1 => 1582179682,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e4cd18b5be5e3_36112792 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e4e4807bb84e9_48180201 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <head>
     <title>Approach &mdash; Website Template by Colorlib</title>
@@ -92,9 +92,11 @@ vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
                         <li><a href="page_sw.php?pageid=4" class="nav-link">周邊活動</a></li>
                         <li><a href="page_sw.php?pageid=5" class="nav-link">聯繫我們</a></li>
             
-                    <?php if ($_SESSION['admin']) {?>
+                    <?php if ($_SESSION['user']['kind'] === 1) {?>          
                         <li><a href="user.php" class="nav-link">管理員</a></li>
-                        <li><a href="page_sw.php?op=logout&pageid=6" class="nav-link">Logout</a></li>                     
+                        <li><a href="page_sw.php?op=logout&pageid=6" class="nav-link">Logout</a></li>   
+                    <?php } elseif ($_SESSION['user']['kind'] === 0) {?> 
+                        <li><a href="page_sw.php?op=logout&pageid=6" class="nav-link">Logout</a></li>                   
                     <?php } else { ?>
                         <li><a href="page_sw.php?op=op_list&pageid=6" id="userin" class="nav-link">Login</a></li>                     
                     <?php }?>
@@ -103,5 +105,7 @@ vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
             </div>
         </div>
     </header>
-</div><?php }
+</div>
+
+<?php }
 }

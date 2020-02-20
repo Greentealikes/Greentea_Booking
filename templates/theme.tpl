@@ -17,9 +17,9 @@
       <{include file="tpl/blog/blog_fom.tpl"}>
     <{elseif $pageid == 5}>
       <{include file="tpl/contact/contact_fom.tpl"}>
-
     <{elseif $pageid == 6}>
-      <{if $smarty.session.admin}>        
+
+      <{if $smarty.session.user.kind === 1}>          
         <{include file="tpl/admin_form.tpl"}>
       <{else}>
         <{if $op == reg_form}>
@@ -32,8 +32,7 @@
 
 
   <!-- 頁尾畫面 -->
-  <{include file="footer.tpl"}>
-  
+  <{include file="footer.tpl"}>  
 
   </body>
 </html> 
