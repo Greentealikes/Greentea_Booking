@@ -1,6 +1,30 @@
+<?php
+/* Smarty version 3.1.34-dev-7, created on 2020-02-21 08:42:11
+  from 'D:\xampp\htdocs\Greentea_Booking-0220\templates\tpl\book\bookpg2_form.tpl' */
 
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.34-dev-7',
+  'unifunc' => 'content_5e4f89d372c1d4_90929608',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '9412d59a412ccfc2688499b2f0affa511b3fd7fe' => 
+    array (
+      0 => 'D:\\xampp\\htdocs\\Greentea_Booking-0220\\templates\\tpl\\book\\bookpg2_form.tpl',
+      1 => 1582270929,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_5e4f89d372c1d4_90929608 (Smarty_Internal_Template $_smarty_tpl) {
+?>
 <head>
-  <link rel="stylesheet" href="<{$xoImgUrl}>css/bootstrap.min.css">
+  <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+css/bootstrap.min.css">
   <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 </head>
 
@@ -143,3 +167,5 @@
 
 
 
+<?php }
+}

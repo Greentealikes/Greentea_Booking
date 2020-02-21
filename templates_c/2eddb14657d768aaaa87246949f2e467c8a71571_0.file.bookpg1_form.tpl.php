@@ -1,4 +1,27 @@
-  
+<?php
+/* Smarty version 3.1.34-dev-7, created on 2020-02-21 08:14:12
+  from 'D:\xampp\htdocs\Greentea_Booking-0220\templates\tpl\book\bookpg1_form.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.34-dev-7',
+  'unifunc' => 'content_5e4f8344ca5793_68132493',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '2eddb14657d768aaaa87246949f2e467c8a71571' => 
+    array (
+      0 => 'D:\\xampp\\htdocs\\Greentea_Booking-0220\\templates\\tpl\\book\\bookpg1_form.tpl',
+      1 => 1582269248,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_5e4f8344ca5793_68132493 (Smarty_Internal_Template $_smarty_tpl) {
+?>  
 <div class="site-wrap" id="home-section">
   <div class="site-section">
     <div class="row">
@@ -25,8 +48,7 @@
         </div>
       </div>  
 
-      <{* 線上預訂畫面內容 *}>
-      <div class = "col-9">   
+            <div class = "col-9">   
         <form action="page_sw.php" method="post" id="myForm" class="mb-20" enctype="multipart/form-data">
           <div class = "row book-container text-center">
               <div class="col-sm-12 title-font">
@@ -55,3 +77,5 @@
     </div>
   </div>
 </div>
+<?php }
+}
