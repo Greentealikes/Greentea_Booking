@@ -4,8 +4,12 @@ require_once 'head.php';
 
  #登入狀態
  $op = system_CleanVars($_REQUEST, 'op', 'op_list', 'string');
-#線上預訂行為狀態 
-$bookbehavior = system_CleanVars($_REQUEST, 'bookbehavior', '', 'string');
+
+ #線上預訂行為狀態 
+ $bookbehavior = system_CleanVars($_REQUEST, 'bookbehavior', '', 'string');
+
+ #使用狀態
+ $using = system_CleanVars($_REQUEST, 'using', '', 'string');
 
 #主畫面切換變數
 $switch_id = isset($_GET['pageid'])? $_GET['pageid'] : '2';
@@ -36,9 +40,12 @@ switch ($bookbehavior){
 
     #訪客查詢資料
     case "visitbook":
+        $_POST['Inquirname'] = isset($_POST['Inquirname'])? $_POST['Inquirname'] : 'false';
+        $_POST['Inquiremail'] = isset($_POST['Inquiremail'])? $_POST['Inquiremail'] : 'false';
+
         $switch_id = 2;
         $switch_bookpage = 4;    
-        booking_result();           
+        booking_result($_POST['Inquirname'],$_POST['Inquiremail']);           
     break;  
 }
     $smarty->assign("WEB", $WEB);
@@ -46,7 +53,8 @@ switch ($bookbehavior){
     $smarty->assign("pageid", $switch_id);
     $smarty->assign("bookpage", $switch_bookpage);
     $smarty->assign("error", $error);
-
+    $smarty->assign("using", $using);
+    
     $smarty->display('theme.tpl');
 
 #線上預訂
@@ -101,10 +109,23 @@ function on_booking(){
         
         $db->query($insert_sql)or die($db->error() . $insert_sql);   
         
-        $sql= "SELECT * FROM `userdb` WHERE `usphone` = '{$_POST['usphone']}' AND `usemail` = '{$_POST['usemail']}'";   
-        $result = $db->query($sql) or die($db->error() . $sql);
+        booking_result($_POST['usname'],$_POST['usemail']);
+       
+        return "1";
+    }       
+    return "-1";   
+}
 
-        $row = $result->fetch_assoc(); 
+#訪客查詢資料   
+function booking_result($name,$email){
+    global $smarty,$db;   
+
+    $sql= "SELECT * FROM `userdb` WHERE `usname` = '{$name}' AND `usemail` = '{$email}'";   
+   
+    $result = $db->query($sql) or die($db->error() . $sql);    
+    $row = $result->fetch_assoc(); 
+
+    if($row){
         $row['usname'] = htmlspecialchars($row['usname']);//字串
         $row['usphone'] = htmlspecialchars($row['usphone']);//字串
         $row['usemail'] = htmlspecialchars($row['usemail']);//字串
@@ -114,35 +135,9 @@ function on_booking(){
         $row['usnum'] = (int)($row['usnum']);    
         $row['ustype'] = htmlspecialchars($row['ustype']);//字串    
         $row['usadd'] = htmlspecialchars($row['usadd']);//字串 
-      
-        $smarty->assign("row",$row);  
-        return "1";
-    }       
-    return "-1";   
-}
+    }
 
-#訪客查詢資料
-function booking_result(){
-    global $smarty,$db;   
-    $_POST['Inquirname'] = isset($_POST['Inquirname'])? $_POST['Inquirname'] : 'false';
-    $_POST['Inquiremail'] = isset($_POST['Inquiremail'])? $_POST['Inquiremail'] : 'false';
-
-    $sql= "SELECT * FROM `userdb` WHERE `usname` = '{$_POST['Inquirname']}' AND `usemail` = '{$_POST['Inquiremail']}'";   
-   
-    $result = $db->query($sql) or die($db->error() . $sql);
-
-    $row = $result->fetch_assoc(); 
-    $row['usname'] = htmlspecialchars($row['usname']);//字串
-    $row['usphone'] = htmlspecialchars($row['usphone']);//字串
-    $row['usemail'] = htmlspecialchars($row['usemail']);//字串
-    $row['usarea'] = htmlspecialchars($row['usarea']);//字串
-    $row['datein'] = htmlspecialchars($row['datein']);//字串   
-    $row['dateout'] = htmlspecialchars($row['dateout']);//字串    
-    $row['usnum'] = (int)($row['usnum']);    
-    $row['ustype'] = htmlspecialchars($row['ustype']);//字串    
-    $row['usadd'] = htmlspecialchars($row['usadd']);//字串 
-    $smarty->assign("row",$rows); 
-    $smarty->assign("Inquire","true"); 
+    $smarty->assign("row",$row);  
 }
 
 

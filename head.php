@@ -17,6 +17,8 @@ $switch_id = isset($_GET['pageid'])? $_GET['pageid'] : '6';
 $switch_bookpage = isset($_GET['bookpage'])? $_GET['bookpage'] : '0';
 
 
+
+
   /*---- 必須引入----*/
   #引入樣板引擎
   require_once _WEB_PATH.'/smarty.php';

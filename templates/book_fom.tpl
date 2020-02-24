@@ -26,9 +26,6 @@
   </div>
 </div>    
 
-
-
-
 <div class="Marquee-alert">
   <marquee behavior="behavior" width="100%" loop="2">
   歡迎來客訪問，如要線上預訂，可線上填單或是直接電話來電09-xxx-xx-xxx

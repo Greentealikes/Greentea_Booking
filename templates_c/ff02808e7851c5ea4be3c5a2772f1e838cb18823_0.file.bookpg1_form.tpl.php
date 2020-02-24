@@ -1,4 +1,27 @@
-  
+<?php
+/* Smarty version 3.1.34-dev-7, created on 2020-02-24 06:58:15
+  from 'D:\xampp\htdocs\Greentea_Booking-0221\templates\tpl\book\bookpg1_form.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.34-dev-7',
+  'unifunc' => 'content_5e5365f757e3c9_91350622',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    'ff02808e7851c5ea4be3c5a2772f1e838cb18823' => 
+    array (
+      0 => 'D:\\xampp\\htdocs\\Greentea_Booking-0221\\templates\\tpl\\book\\bookpg1_form.tpl',
+      1 => 1582523893,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_5e5365f757e3c9_91350622 (Smarty_Internal_Template $_smarty_tpl) {
+?>  
 <div class="site-wrap" id="home-section">
   <div class="site-section">
     <div class="row">
@@ -52,3 +75,5 @@
     </div>
   </div>
 </div>
+<?php }
+}

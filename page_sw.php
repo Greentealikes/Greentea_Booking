@@ -6,6 +6,10 @@
 
   #問題狀態
   $sn = system_CleanVars($_REQUEST, 'sn', '', 'int');
+
+  #使用狀態
+  $using = system_CleanVars($_REQUEST, 'using', '', 'string');
+
   $sn_success = 1;
   $sn_error = 0;
    
@@ -51,6 +55,7 @@
   $smarty->assign("op", $op);
   $smarty->assign("pageid", $switch_id);
   $smarty->assign("bookpage", $switch_bookpage);
+  $smarty->assign("using", $using);
 
   $smarty->display('theme.tpl');
 
@@ -67,8 +72,7 @@
     
     
     #寫入語法
-    if( $_POST['pass'] !=  $_POST['chk_pass']) 
-    {
+    if( $_POST['pass'] !=  $_POST['chk_pass']) {
       $sn = $sn_error;  
       redirect_header("page_sw.php", '密碼不一致' , 3000,$sn);
       //die("密碼不一致");

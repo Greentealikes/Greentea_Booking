@@ -1,4 +1,7 @@
 
+element.style {
+     margin-top: 0px; 
+}
 
 .title-font{
     font-size: 36px;
@@ -6,8 +9,34 @@
     font-weight: bold;
 }
 
-.header:hover{
-    
+.list-group a {
+    color: inherit; /* 移除超連結顏色 */
+    text-decoration: none;  /* 移除超連結底線 */
+}
+
+.list-group a{
+    color: #111111;
+}
+
+.list-group a:hover >li  {
+    background-color: #999;
+    color: #444444;
+}
+
+.item-title{
+    background-color: #444433;  
+    color: white;
+}
+
+.item-mark{
+    background-color: rgb(115, 115, 115);
+    color: burlywood;
+}
+
+
+
+.nav_style:hover{
+    background-color: rgb(115, 115, 115);
 }
 
 .body-font{
@@ -63,9 +92,7 @@
     padding-left: 20px;
 }
 
-.btn-hold{
-    background-color: #444433;
-}
+
 
 .book-description{
   background-color:#eedddd;
