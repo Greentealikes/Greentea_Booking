@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-02-24 04:53:29
+/* Smarty version 3.1.34-dev-7, created on 2020-02-25 07:45:28
   from 'D:\xampp\htdocs\Greentea_Booking-0221\templates\book_fom.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e5348b9ab50d4_31615037',
+  'unifunc' => 'content_5e54c2886eb5d6_30218581',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '5b697fb9c4b668ba9e416a1f1546a47bdfbdf1e1' => 
     array (
       0 => 'D:\\xampp\\htdocs\\Greentea_Booking-0221\\templates\\book_fom.tpl',
-      1 => 1582516335,
+      1 => 1582613118,
       2 => 'file',
     ),
   ),
@@ -24,42 +24,41 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:tpl/book/bookpg1_form.tpl' => 1,
   ),
 ),false)) {
-function content_5e5348b9ab50d4_31615037 (Smarty_Internal_Template $_smarty_tpl) {
-?>
-
-<div class = "logoimage" style="margin-top:50px;">     
+function content_5e54c2886eb5d6_30218581 (Smarty_Internal_Template $_smarty_tpl) {
+?><div class = "logoimage" >     
   <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
-<div class="carousel-inner">
-  <div class="carousel-item active">
-    <img src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
-images/bn01.jpg" class="d-block w-100" alt="...">
+    <div class="carousel-inner ">
+      <div class="carousel-item active branch_logoimg">
+        <img src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+images/bn01.jpg" class="d-block w-100 " alt="...">
+      </div>
+      <div class="carousel-item branch_logoimg">
+        <img src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+images/bn02.jpg" class="d-block w-100 " alt="...">
+      </div>
+      <div class="carousel-item branch_logoimg">
+        <img src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+images/bn03.jpg" class="d-block w-100 " alt="...">
+      </div>
+      <div class="carousel-item branch_logoimg">
+        <img src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+images/bn04.jpg" class="d-block w-100 " alt="...">
+      </div>
+      <div class="carousel-item branch_logoimg">
+        <img src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+images/bn05.jpg" class="d-block w-100 " alt="...">
+      </div>
+      <div class="carousel-item branch_logoimg">
+        <img src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+images/bn06.jpg" class="d-block w-100 " alt="...">
+      </div>
+      <div class="carousel-item branch_logoimg">
+        <img src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+images/bn07.jpg" class="d-block w-100 " alt="...">
+      </div>
+    </div>
   </div>
-  <div class="carousel-item">
-    <img src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
-images/bn02.jpg" class="d-block w-100" alt="...">
-  </div>
-  <div class="carousel-item">
-    <img src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
-images/bn03.jpg" class="d-block w-100" alt="...">
-  </div>
-  <div class="carousel-item">
-    <img src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
-images/bn04.jpg" class="d-block w-100" alt="...">
-  </div>
-  <div class="carousel-item">
-    <img src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
-images/bn05.jpg" class="d-block w-100" alt="...">
-  </div>
-  <div class="carousel-item">
-    <img src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
-images/bn06.jpg" class="d-block w-100" alt="...">
-  </div>
-  <div class="carousel-item">
-    <img src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
-images/bn07.jpg" class="d-block w-100" alt="...">
-  </div>
-</div>    
-
+</div>
 <div class="Marquee-alert">
   <marquee behavior="behavior" width="100%" loop="2">
   歡迎來客訪問，如要線上預訂，可線上填單或是直接電話來電09-xxx-xx-xxx

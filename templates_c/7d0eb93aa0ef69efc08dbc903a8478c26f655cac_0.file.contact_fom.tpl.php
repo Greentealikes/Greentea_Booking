@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-02-24 07:40:03
+/* Smarty version 3.1.34-dev-7, created on 2020-02-25 08:01:01
   from 'D:\xampp\htdocs\Greentea_Booking-0221\templates\tpl\contact\contact_fom.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e536fc3903709_44374349',
+  'unifunc' => 'content_5e54c62d371946_48974161',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '7d0eb93aa0ef69efc08dbc903a8478c26f655cac' => 
     array (
       0 => 'D:\\xampp\\htdocs\\Greentea_Booking-0221\\templates\\tpl\\contact\\contact_fom.tpl',
-      1 => 1582161484,
+      1 => 1582613085,
       2 => 'file',
     ),
   ),
@@ -20,12 +20,41 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e536fc3903709_44374349 (Smarty_Internal_Template $_smarty_tpl) {
-?>
-<div class = "logoimage" style="margin-top:50px;">               
-  <img src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
-images/logoimg.jpg" alt="Image" class="img-fluid"></a>
-</div>     
+function content_5e54c62d371946_48974161 (Smarty_Internal_Template $_smarty_tpl) {
+?><div class = "logoimage" >     
+  <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+    <div class="carousel-inner ">
+      <div class="carousel-item active branch_logoimg">
+        <img src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+images/bn01.jpg" class="d-block w-100 " alt="...">
+      </div>
+      <div class="carousel-item branch_logoimg">
+        <img src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+images/bn02.jpg" class="d-block w-100 " alt="...">
+      </div>
+      <div class="carousel-item branch_logoimg">
+        <img src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+images/bn03.jpg" class="d-block w-100 " alt="...">
+      </div>
+      <div class="carousel-item branch_logoimg">
+        <img src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+images/bn04.jpg" class="d-block w-100 " alt="...">
+      </div>
+      <div class="carousel-item branch_logoimg">
+        <img src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+images/bn05.jpg" class="d-block w-100 " alt="...">
+      </div>
+      <div class="carousel-item branch_logoimg">
+        <img src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+images/bn06.jpg" class="d-block w-100 " alt="...">
+      </div>
+      <div class="carousel-item branch_logoimg">
+        <img src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+images/bn07.jpg" class="d-block w-100 " alt="...">
+      </div>
+    </div>
+  </div>
+</div>    
 
 <div class="Marquee-alert">
   <marquee behavior="behavior" width="100%" loop="2">

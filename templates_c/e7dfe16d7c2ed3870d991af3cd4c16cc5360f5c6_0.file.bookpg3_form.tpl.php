@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-02-24 07:08:05
+/* Smarty version 3.1.34-dev-7, created on 2020-02-25 10:02:38
   from 'D:\xampp\htdocs\Greentea_Booking-0221\templates\tpl\book\bookpg3_form.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e5368450834f1_39431972',
+  'unifunc' => 'content_5e54e2ae8fb037_44572854',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e7dfe16d7c2ed3870d991af3cd4c16cc5360f5c6' => 
     array (
       0 => 'D:\\xampp\\htdocs\\Greentea_Booking-0221\\templates\\tpl\\book\\bookpg3_form.tpl',
-      1 => 1582521853,
+      1 => 1582621324,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:tpl/book/front_table.tpl' => 1,
   ),
 ),false)) {
-function content_5e5368450834f1_39431972 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e54e2ae8fb037_44572854 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
 <div class="site-wrap" id="home-section">
@@ -29,9 +29,9 @@ function content_5e5368450834f1_39431972 (Smarty_Internal_Template $_smarty_tpl)
     <div class="row">
       <div class = "col-3">   
         <div class="list-group" id="list-tab" role="tablist">
-         <li class="list-group-item item-title"><stong>預約定房系統</stong></li>
+         <li class="list-group-item item-title"><stong>線上預定系統</stong></li>
             <a href = "page_sw.php?pageid=2&bookpage=1">
-              <li class="list-group-item "><stong>線上系統說明</stong></li>
+              <li class="list-group-item "><stong>預定系統說明</stong></li>
             </a>
             <a href = "page_sw.php?pageid=2&bookpage=2" class="activeno">
               <li class="list-group-item "><stong>填寫表單</stong></li>
@@ -41,27 +41,26 @@ function content_5e5368450834f1_39431972 (Smarty_Internal_Template $_smarty_tpl)
             </a>
               <li class="list-group-item item-title"><stong>查詢系統</stong></li>
             <a href = "page_sw.php?pageid=2&bookpage=4&using=no">
-              <li class="list-group-item"><stong>查詢表單</stong></li>
+              <li class="list-group-item"><stong>住宿查詢</stong></li>
             </a>
         </div>
       </div>  
 
       <div class = "col-9">   
         <form action="Onbooking.php" method="post" id="myForm" class="mb-20" enctype="multipart/form-data">
-          <div class="book-container alert alert-warning ">
-            <div class = "title-font">  
-              <div class="col-sm-12">完成表單</div>
-                <div class="col-sm-12">
-                <h4>心在哪裡，就在哪裡－ 民宿等你來發掘！</h4>
-                </div>
-              </div>
-              <div class="row book-body">
-                <div class="col-sm-12">  
-                  <?php $_smarty_tpl->_subTemplateRender("file:tpl/book/front_table.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+          <div class = "row book-container text-center ">                 
+            <div class="col-sm-12 title-font book_all_title">
+              <i class="fas fa-angle-double-right"></i>
+              <span>完成表單</span>
+            </div>      
+            <div class="col-sm-12 alert alert-secondary book_all_body">   
+              <div class = "book-form-title"> 完成線上預訂</div>   
+              <div class="row container book-form_body">               
+                <?php $_smarty_tpl->_subTemplateRender("file:tpl/book/front_table.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>    
-                </div>
               </div>
-            <div>
+            </div>    
+
           </div>
         </form>
       </div>

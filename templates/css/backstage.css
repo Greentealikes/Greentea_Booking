@@ -1,0 +1,28 @@
+body{
+    background-color: #dddddd;
+}
+
+.text {
+    font-family:"微软雅黑", "Dosis", sans-serif;
+    font-size: 80px;
+    text-align: center;
+    font-weight: bold;
+    line-height:200px;
+    text-transform:uppercase;
+    position: relative;
+}
+
+.form_content{
+    background-color: #eeeeee;
+    box-shadow:3px 3px 5px 6px #cccccc;
+}
+
+.nav_content{
+   margin-left: auto;
+   margin-right: auto;
+}
+
+.title_content{
+  width: 100%;
+
+}

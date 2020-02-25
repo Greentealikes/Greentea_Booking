@@ -5,42 +5,29 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="<{$xoImgUrl}>fonts/googleapis.css" rel="stylesheet">
-    <link rel="stylesheet" href="<{$xoImgUrl}>fonts/icomoon/style.css">
+    
     <link rel="stylesheet" href="<{$xoImgUrl}>css/bootstrap.min.css">    
     <link rel="stylesheet" href="<{$xoImgUrl}>css/jquery.fancybox.min.css">
-    <link rel="stylesheet" href="<{$xoImgUrl}>css/owl.carousel.min.css">
-    <link rel="stylesheet" href="<{$xoImgUrl}>css/owl.theme.default.min.css">
+ 
     <link rel="stylesheet" href="<{$xoImgUrl}>fonts/flaticon/font/flaticon.css">
-    <link rel="stylesheet" href="<{$xoImgUrl}>css/aos.css">
-
+   
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="<{$xoImgUrl}>css/style.css">
     <link rel="stylesheet" href="<{$xoAppUrl}>class/sweetalert2/sweetalert2.min.css"> 
     <link href="<{$xoImgUrl}>vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="<{$xoImgUrl}>css/backstage.css">
   </head>
- 
- <style>
-.text {
-    font-family:"微软雅黑", "Dosis", sans-serif;
-    font-size: 80px;
-    text-align: center;
-    font-weight: bold;
-    line-height:200px;
-    text-transform:uppercase;
-    position: relative;
- </style>
       
 <body>
-  <div contenteditable="true" class="text effect01">Greentea 後台</div> 
-
+  <div contenteditable="true" class="text effect01 title_content">Greentea 後台</div> 
   <div class="container">
     <div class="row">
-      <div class="col-sm-9">
+      <div class="col-sm-9 form_content">
         <{if $WEB.file_name == "user.php"}>
           <{include file="tpl/admin_table_form.tpl"}>
         <{/if}>
       </div>
-      <div class="col-sm-3">
+      <div class="col-sm-3 nav_content">
         <div class="card text-white bg-secondary mb-3" style="width: 18rem;">
           <div class="card-header ">管理員</div>
             <div class="list-group">

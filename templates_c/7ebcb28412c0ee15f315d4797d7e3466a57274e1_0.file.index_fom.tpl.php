@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-02-24 02:05:00
+/* Smarty version 3.1.34-dev-7, created on 2020-02-25 04:25:14
   from 'D:\xampp\htdocs\Greentea_Booking-0221\templates\tpl\index\index_fom.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e53213ceba0a3_34427157',
+  'unifunc' => 'content_5e54939a702515_65600109',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '7ebcb28412c0ee15f315d4797d7e3466a57274e1' => 
     array (
       0 => 'D:\\xampp\\htdocs\\Greentea_Booking-0221\\templates\\tpl\\index\\index_fom.tpl',
-      1 => 1582161489,
+      1 => 1582600388,
       2 => 'file',
     ),
   ),
@@ -20,8 +20,57 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e53213ceba0a3_34427157 (Smarty_Internal_Template $_smarty_tpl) {
-?> <div class="site-section-cover">
+function content_5e54939a702515_65600109 (Smarty_Internal_Template $_smarty_tpl) {
+?>
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
+   
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+       <img src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+images/bn01.jpg" class="d-block w-100 " alt="...">
+    </div>
+    <div class="carousel-item">
+       <img src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+images/bn02.jpg" class="d-block w-100 " alt="...">
+    </div>
+    <div class="carousel-item">
+       <img src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+images/bn03.jpg" class="d-block w-100 " alt="...">
+    </div>
+     <div class="carousel-item">
+       <img src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+images/bn04.jpg" class="d-block w-100 " alt="...">
+    </div>
+     <div class="carousel-item">
+       <img src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+images/bn05.jpg" class="d-block w-100 " alt="...">
+    </div>
+     <div class="carousel-item">
+       <img src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+images/bn06.jpg" class="d-block w-100 " alt="...">
+    </div>   
+  </div>
+
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+ 
+ <div class="site-section-cover">
     <div class="container">
         <div class="row align-items-center text-center justify-content-center">
             <div class="col-lg-10">

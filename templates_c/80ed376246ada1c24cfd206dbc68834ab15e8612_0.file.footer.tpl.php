@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-02-24 02:05:01
+/* Smarty version 3.1.34-dev-7, created on 2020-02-24 08:42:38
   from 'D:\xampp\htdocs\Greentea_Booking-0221\templates\footer.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e53213d072935_73203223',
+  'unifunc' => 'content_5e537e6e961603_22711949',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '80ed376246ada1c24cfd206dbc68834ab15e8612' => 
     array (
       0 => 'D:\\xampp\\htdocs\\Greentea_Booking-0221\\templates\\footer.tpl',
-      1 => 1582090221,
+      1 => 1582530154,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e53213d072935_73203223 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e537e6e961603_22711949 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="site-section bg-light">
   <div class="container">
     <div class="row">
@@ -110,5 +110,6 @@ images/client_microsoft.png" alt="Image" class="img-fluid">
       </div>
     </div>
   </div>
-</div><?php }
+</div>
+</body><?php }
 }

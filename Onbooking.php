@@ -73,6 +73,12 @@ function on_booking(){
     $_POST['ustype'] =  isset( $_POST['ustype'])?  $_POST['ustype'] : "";
     $_POST['usadd'] =  isset( $_POST['usadd'])?  $_POST['usadd'] : "";
     
+    #入住日期不得大於退房日期
+    if($_POST['datein'] !="" || $_POST['dateout'] != ""){
+        if( $_POST['datein'] > $_POST['dateout'])
+        $error = 1;
+    }
+
     $_POST['usname'] = $db->real_escape_string($_POST['usname']);  
     $_POST['usphone'] = $db->real_escape_string($_POST['usphone']);      
     $_POST['usemail'] = $db->real_escape_string($_POST['usemail']);   
@@ -81,7 +87,9 @@ function on_booking(){
     $_POST['dateout'] = $db->real_escape_string($_POST['dateout']);   
     $_POST['usnum'] = $db->real_escape_string($_POST['usnum']);   
     $_POST['ustype'] = $db->real_escape_string($_POST['ustype']); 
-    $_POST['usadd'] = $db->real_escape_string($_POST['usadd']);  
+    $_POST['usadd'] = $db->real_escape_string($_POST['usadd']); 
+    
+    
     
     $sql= "SELECT * FROM `userdb` WHERE `usphone` = '{$_POST['usphone']}' AND `usemail` = '{$_POST['usemail']}'";   
     $result = $db->query($sql) or die($db->error() . $sql);

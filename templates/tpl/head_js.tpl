@@ -177,6 +177,10 @@
             };
             datepicker.setDefaults(datepicker.regional["zh-TW"]);
             return datepicker.regional["zh-TW"];
+            
+            $('#datetimepicker11,#datetimepicker1').datetimepicker({
+            daysOfWeekDisabled: [0, 6]
+    });
         }));
     });
 </script>

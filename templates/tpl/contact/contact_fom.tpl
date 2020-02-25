@@ -1,7 +1,30 @@
-
-<div class = "logoimage" style="margin-top:50px;">               
-  <img src="<{$xoImgUrl}>images/logoimg.jpg" alt="Image" class="img-fluid"></a>
-</div>     
+<div class = "logoimage" >     
+  <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+    <div class="carousel-inner ">
+      <div class="carousel-item active branch_logoimg">
+        <img src="<{$xoImgUrl}>images/bn01.jpg" class="d-block w-100 " alt="...">
+      </div>
+      <div class="carousel-item branch_logoimg">
+        <img src="<{$xoImgUrl}>images/bn02.jpg" class="d-block w-100 " alt="...">
+      </div>
+      <div class="carousel-item branch_logoimg">
+        <img src="<{$xoImgUrl}>images/bn03.jpg" class="d-block w-100 " alt="...">
+      </div>
+      <div class="carousel-item branch_logoimg">
+        <img src="<{$xoImgUrl}>images/bn04.jpg" class="d-block w-100 " alt="...">
+      </div>
+      <div class="carousel-item branch_logoimg">
+        <img src="<{$xoImgUrl}>images/bn05.jpg" class="d-block w-100 " alt="...">
+      </div>
+      <div class="carousel-item branch_logoimg">
+        <img src="<{$xoImgUrl}>images/bn06.jpg" class="d-block w-100 " alt="...">
+      </div>
+      <div class="carousel-item branch_logoimg">
+        <img src="<{$xoImgUrl}>images/bn07.jpg" class="d-block w-100 " alt="...">
+      </div>
+    </div>
+  </div>
+</div>    
 
 <div class="Marquee-alert">
   <marquee behavior="behavior" width="100%" loop="2">
