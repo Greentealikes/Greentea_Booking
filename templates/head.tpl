@@ -76,7 +76,7 @@
                             <li class="nav_style">
                             <a href="page_sw.php?pageid=4" class="nav-link">相關活動</a>
                                  <ul class="menu-nav">
-                                    <li><a href="#">手作課程a</a>
+                                    <li><a href="templates/tpl/baking/index1.html" target="_blank">自己做烘焙教室</a>
                                     </li>
                                     <li><a href="#">手作課程b</a>
                                     </li>  

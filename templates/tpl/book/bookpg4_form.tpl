@@ -48,7 +48,7 @@
                 </div>
               </div> 
 
-              <input type="hidden" name="bookbehavior" value="visitbook" id="bookbehavior">
+              <input type="hidden" name="book" value="visitbook" id="book">
               <div class="col-sm-12">
                 <{include file="tpl/book/front_table.tpl"}>   
               </div>

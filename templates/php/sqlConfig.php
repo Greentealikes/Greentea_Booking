@@ -4,7 +4,7 @@ $db_host = "localhost";
 #資料庫使用者帳號
 $db_user = "root";
 #資料庫使用者密碼
-$db_password = "csiecsie";
+$db_password = "";
 #資料庫名稱
 $db_name = "hotel_usermanage";
 #PHP 5.2.9以後

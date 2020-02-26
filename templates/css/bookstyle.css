@@ -25,6 +25,7 @@ element.style {
     font-size: 36px;
     text-align: center;
     font-weight: bold;
+    margin-top: 1.5rem;
 }
 
 .list-group a {

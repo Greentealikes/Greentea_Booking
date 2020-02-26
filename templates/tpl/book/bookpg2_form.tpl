@@ -123,7 +123,7 @@
             </div>
 
             <div class="pb-20 amplif-gap">
-              <input type="hidden" name="bookbehavior" value="onlineBook" id="bookbehavior" >
+              <input type="hidden" name="book" value="onlineBook" id="book" >
               <button type="submit" class="btn btn-primary" >確認表單</button>           
             </div>
 

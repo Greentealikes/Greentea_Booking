@@ -6,7 +6,7 @@ require_once 'head.php';
  $op = system_CleanVars($_REQUEST, 'op', 'op_list', 'string');
 
  #線上預訂行為狀態 
- $bookbehavior = system_CleanVars($_REQUEST, 'bookbehavior', '', 'string');
+ $book = system_CleanVars($_REQUEST, 'book', '', 'string');
 
  #使用狀態
  $using = system_CleanVars($_REQUEST, 'using', '', 'string');
@@ -17,18 +17,19 @@ $switch_id = isset($_GET['pageid'])? $_GET['pageid'] : '2';
 #線上預訂頁面切換變數 
 $switch_bookpage = isset($_GET['bookpage'])? $_GET['bookpage'] : '2';
 
+$usid = system_CleanVars($_REQUEST, 'usid', '', 'int');
+
 global $error; 
 $error = 0;
 
-switch ($bookbehavior){
+switch ($book){
     #訪客線上預訂
     case "onlineBook" :
         $switch_id = 2;
       
         $msg = on_booking();  
         if($msg == 1){
-            $switch_bookpage = 3;
-                    
+            $switch_bookpage = 3;                    
         }
         else{
             $switch_bookpage = 2;  
@@ -42,20 +43,22 @@ switch ($bookbehavior){
     case "visitbook":
         $_POST['Inquirname'] = isset($_POST['Inquirname'])? $_POST['Inquirname'] : 'false';
         $_POST['Inquiremail'] = isset($_POST['Inquiremail'])? $_POST['Inquiremail'] : 'false';
-
+        
         $switch_id = 2;
         $switch_bookpage = 4;    
         booking_result($_POST['Inquirname'],$_POST['Inquiremail']);           
-    break;  
+    break; 
 }
-    $smarty->assign("WEB", $WEB);
-    $smarty->assign("op", $op);
-    $smarty->assign("pageid", $switch_id);
-    $smarty->assign("bookpage", $switch_bookpage);
-    $smarty->assign("error", $error);
-    $smarty->assign("using", $using);
-    
-    $smarty->display('theme.tpl');
+
+$smarty->assign("WEB", $WEB);
+$smarty->assign("op", $op);
+$smarty->assign("pageid", $switch_id);
+$smarty->assign("bookpage", $switch_bookpage);
+$smarty->assign("error", $error);
+$smarty->assign("using", $using);   
+
+$smarty->display('theme.tpl');
+
 
 #線上預訂
 function on_booking(){
@@ -124,6 +127,8 @@ function on_booking(){
     return "-1";   
 }
 
+
+
 #訪客查詢資料   
 function booking_result($name,$email){
     global $smarty,$db;   
@@ -144,7 +149,6 @@ function booking_result($name,$email){
         $row['ustype'] = htmlspecialchars($row['ustype']);//字串    
         $row['usadd'] = htmlspecialchars($row['usadd']);//字串 
     }
-
     $smarty->assign("row",$row);  
 }
 

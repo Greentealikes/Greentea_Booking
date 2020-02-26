@@ -35,7 +35,7 @@ switch ($op){
 $smarty->assign("WEB", $WEB);
 $smarty->assign("op", $op);
 
-$smarty->display('user.tpl');
+$smarty->display('admin.tpl');
 
 function op_list(){
   global $smarty,$db;
@@ -78,7 +78,7 @@ function op_update($uid=""){
     $_POST['name'] = db_filter($_POST['name'],'姓名');
     $_POST['tel'] = db_filter($_POST['tel'],'電話');
     $_POST['email'] = db_filter($_POST['email'],'email',FILTER_SANITIZE_EMAIL);
-    $_POSTp['kind'] = db_filter($_POST['kind'],'會員狀態');
+    $_POST['kind'] = db_filter($_POST['kind'],'會員狀態');
 
     $and_col = "";
     if($_POST['pass']){

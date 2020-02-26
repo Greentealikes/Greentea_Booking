@@ -1,5 +1,7 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
 body{
     background-color: #dddddd;
+    font-family: 'Noto Sans TC', sans-serif;
 }
 
 .text {
@@ -10,6 +12,25 @@ body{
     line-height:200px;
     text-transform:uppercase;
     position: relative;
+}
+
+@media (min-width: 992px){
+.container {
+     max-width: 990px; 
+}}
+
+@media (min-width: 1300px){
+.container {
+     max-width: 1240px; 
+}}
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom:100px;
 }
 
 .form_content{

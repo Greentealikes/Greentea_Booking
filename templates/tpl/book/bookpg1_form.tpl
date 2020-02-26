@@ -60,13 +60,14 @@
                   </div> 
 
                   <div class="form-check alert alert alert-info ">
-                      <input class="form-check-input" type="checkbox" id="Checknorm" >
+                      <input class="form-check-input" type="checkbox" id="Checknorm" onclick="normok()">
                       <label class="form-check-label" for="exampleCheck1">我已明確了解規範</label>
                   </div>                
               </div>
+              
               <div class = "col-sm-12 book_description_btn">
                   <button type="button" class="btn btn-primary" id ="normbtn" 
-                    onclick="location.href='page_sw.php?pageid=2&bookpage=2' ">開始線上填單</button>
+                    onclick="location.href='page_sw.php?pageid=2&bookpage=2'" disabled>開始線上填單</button>
               </div>
           </div>
         </form>
@@ -74,3 +75,17 @@
     </div>
   </div>
 </div>
+
+<script>
+  function normok() {
+    var Checknorm = document.getElementById("Checknorm");
+    var normbtn = document.getElementById("normbtn");
+    if (Checknorm.checked == true){
+      normbtn.disabled = false;
+    } else {
+      normbtn.disabled = true;
+    }
+  }
+</script>
+
+
