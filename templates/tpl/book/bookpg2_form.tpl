@@ -99,17 +99,17 @@
               </div>                                 
             </div> 
 
-            <div class="col-sm-6">
-              <label>房型<span class="text-danger">*</span"></label>                                  
-              <div class="form-group">   
-                <select class="form-control" name="ustype" id="ustype">
-                  <option>單人套房-(1人)</option>
-                  <option>經典雙人-(2人)</option>
-                  <option>古典雙人-(2人)</option>
-                  <option>家庭四人-(4人)</option>                 
-                </select>
-              </div>
-            </div> 
+
+            <div class="col-sm-6 form-group">
+              <label>訂房類型</label><span class="text-danger">*</span">
+              <select name="ustypes" id="ustypes" class="form-control">
+                <{foreach $kind_rows as $kind_row}>
+                  <{if $kind_row.enable==1}>
+                    <option value=<{$kind_row.kind_sn}>><{$kind_row.title}></option>
+                  <{/if}>
+                <{/foreach}>
+              </select>
+            </div>  
 
             <div class="col-sm-12">
               <div class="form-group">

@@ -73,8 +73,9 @@ function on_booking(){
     $_POST['datein'] =  isset( $_POST['datein'])?  $_POST['datein'] : "";
     $_POST['dateout'] =  isset( $_POST['dateout'])?  $_POST['dateout'] : "";
     $_POST['usnum'] =  isset( $_POST['usnum'])?  $_POST['usnum'] : "";
-    $_POST['ustype'] =  isset( $_POST['ustype'])?  $_POST['ustype'] : "";
+    $_POST['ustypes'] =  isset( $_POST['ustypes'])?  $_POST['ustypes'] : "";
     $_POST['usadd'] =  isset( $_POST['usadd'])?  $_POST['usadd'] : "";
+
     
     #入住日期不得大於退房日期
     if($_POST['datein'] !="" || $_POST['dateout'] != ""){
@@ -89,7 +90,7 @@ function on_booking(){
     $_POST['datein'] = $db->real_escape_string($_POST['datein']);    
     $_POST['dateout'] = $db->real_escape_string($_POST['dateout']);   
     $_POST['usnum'] = $db->real_escape_string($_POST['usnum']);   
-    $_POST['ustype'] = $db->real_escape_string($_POST['ustype']); 
+    $_POST['ustypes'] = $db->real_escape_string($_POST['ustypes']); 
     $_POST['usadd'] = $db->real_escape_string($_POST['usadd']);     
     
     
@@ -104,7 +105,7 @@ function on_booking(){
         $row['datein'] = htmlspecialchars($row['datein']);   
         $row['dateout'] = htmlspecialchars($row['dateout']);    
         $row['usnum'] = (int)($row['usnum']);    
-        $row['ustype'] = htmlspecialchars($row['ustype']);    
+        $row['ustypes'] = htmlspecialchars($row['ustypes']);    
         $row['usadd'] = htmlspecialchars($row['usadd']); 
         if($_POST['usemail'] == $row['usemail'] && $_POST['usemail'] == $row['usemail']){
             $error = 1;
@@ -115,7 +116,7 @@ function on_booking(){
         $insert_sql = "INSERT INTO userdb
         (`usname`,`usphone`,`usemail`,`usarea`,`datein`,`dateout`,`usnum`,`ustype`,`usadd`) 
         VALUES ('{$_POST['usname']}','{$_POST['usphone']}','{$_POST['usemail']}','{$_POST['usarea']}',
-        '{$_POST['datein']}','{$_POST['dateout']}','{$_POST['usnum']}','{$_POST['ustype']}','{$_POST['usadd']}')";
+        '{$_POST['datein']}','{$_POST['dateout']}','{$_POST['usnum']}','{$_POST['ustypes']}','{$_POST['usadd']}')";
         
         $db->query($insert_sql)or die($db->error() . $insert_sql);   
         

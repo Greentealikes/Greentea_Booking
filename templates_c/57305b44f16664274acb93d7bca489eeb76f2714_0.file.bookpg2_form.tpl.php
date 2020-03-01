@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-03-01 15:49:09
+/* Smarty version 3.1.34-dev-7, created on 2020-03-01 16:03:59
   from 'D:\xampp\htdocs\Greentea_Booking-teaing_v0227\templates\tpl\book\bookpg2_form.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e5bcb653a57d4_69000872',
+  'unifunc' => 'content_5e5bcedfbb0488_73122096',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '57305b44f16664274acb93d7bca489eeb76f2714' => 
     array (
       0 => 'D:\\xampp\\htdocs\\Greentea_Booking-teaing_v0227\\templates\\tpl\\book\\bookpg2_form.tpl',
-      1 => 1582794304,
+      1 => 1583075025,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e5bcb653a57d4_69000872 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e5bcedfbb0488_73122096 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <head>
   <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
@@ -122,17 +122,26 @@ function content_5e5bcb653a57d4_69000872 (Smarty_Internal_Template $_smarty_tpl)
               </div>                                 
             </div> 
 
-            <div class="col-sm-6">
-              <label>房型<span class="text-danger">*</span"></label>                                  
-              <div class="form-group">   
-                <select class="form-control" name="ustype" id="ustype">
-                  <option>單人套房-(1人)</option>
-                  <option>經典雙人-(2人)</option>
-                  <option>古典雙人-(2人)</option>
-                  <option>家庭四人-(4人)</option>                 
-                </select>
-              </div>
-            </div> 
+
+            <div class="col-sm-6 form-group">
+              <label>訂房類型</label><span class="text-danger">*</span">
+              <select name="ustypes" id="ustypes" class="form-control">
+                <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['kind_rows']->value, 'kind_row');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['kind_row']->value) {
+?>
+                  <?php if ($_smarty_tpl->tpl_vars['kind_row']->value['enable'] == 1) {?>
+                    <option value=<?php echo $_smarty_tpl->tpl_vars['kind_row']->value['kind_sn'];?>
+><?php echo $_smarty_tpl->tpl_vars['kind_row']->value['title'];?>
+</option>
+                  <?php }?>
+                <?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+              </select>
+            </div>  
 
             <div class="col-sm-12">
               <div class="form-group">

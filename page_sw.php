@@ -50,6 +50,22 @@
       break;  
     }
 
+    if($switch_bookpage == 2){
+      $kinds_sql="SELECT * FROM `prods`";
+       
+      $kind_result = $db->query($kinds_sql) or die($db->error() . $kinds_sql);  
+      $kind_rows=[];
+
+      while($kind_row = $kind_result->fetch_assoc()){
+          $kind_row['kind_sn'] = htmlspecialchars($kind_row['kind_sn']);  
+          $kind_row['sn'] = htmlspecialchars($kind_row['sn']);      
+          $kind_row['title'] = htmlspecialchars($kind_row['title']);  
+          $kind_row['enable'] = htmlspecialchars($kind_row['enable']);             
+          $kind_rows[] = $kind_row;
+      }
+      $smarty->assign("kind_rows",$kind_rows);  
+    }
+
    /*---- 將變數送至樣版----*/
   $smarty->assign("WEB", $WEB);
   $smarty->assign("op", $op);
