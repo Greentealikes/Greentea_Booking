@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-03-02 07:55:50
+/* Smarty version 3.1.34-dev-7, created on 2020-03-02 09:05:10
   from 'D:\xampp\htdocs\booking-web_v0301\templates\admin.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e5cadf64bcc81_10233453',
+  'unifunc' => 'content_5e5cbe36860073_31802702',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a833dc29ffb4e090f9d948a89e18a608372da2c1' => 
     array (
       0 => 'D:\\xampp\\htdocs\\booking-web_v0301\\templates\\admin.tpl',
-      1 => 1583112175,
+      1 => 1583136304,
       2 => 'file',
     ),
   ),
@@ -24,7 +24,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:tpl/head_js.tpl' => 1,
   ),
 ),false)) {
-function content_5e5cadf64bcc81_10233453 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e5cbe36860073_31802702 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!doctype html>
 <html lang="en">
   <head>
@@ -53,7 +53,8 @@ vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
 css/backstage.css">
    
-    <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+css/jquery-ui-1-11-4.css">
   </head>
       
 <body>

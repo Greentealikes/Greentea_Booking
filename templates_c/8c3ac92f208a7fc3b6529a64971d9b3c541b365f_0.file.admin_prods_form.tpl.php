@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-03-02 07:55:52
+/* Smarty version 3.1.34-dev-7, created on 2020-03-02 09:33:18
   from 'D:\xampp\htdocs\booking-web_v0301\templates\tpl\admin_prods_form.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e5cadf835a3a8_49838694',
+  'unifunc' => 'content_5e5cc4ce7df892_82112438',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8c3ac92f208a7fc3b6529a64971d9b3c541b365f' => 
     array (
       0 => 'D:\\xampp\\htdocs\\booking-web_v0301\\templates\\tpl\\admin_prods_form.tpl',
-      1 => 1582982213,
+      1 => 1583137997,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e5cadf835a3a8_49838694 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e5cc4ce7df892_82112438 (Smarty_Internal_Template $_smarty_tpl) {
 if ($_smarty_tpl->tpl_vars['book']->value == "prods_update_form") {?>
  <div class="container mt-5" >
     <h1 class="text-center">房型資料表</h1>
@@ -53,21 +53,38 @@ if ($_smarty_tpl->tpl_vars['book']->value == "prods_update_form") {?>
           </div>
         </div>  
 
-        <div class="col-sm-6">
+        <div class="col-sm-4">
           <div class="form-group">
           <label>建立時間</label>
           <input type="text" class="form-control" name="date" id="date" value="<?php echo $_smarty_tpl->tpl_vars['row']->value['date'];?>
 " readonly>
           </div>
         </div> 
-
-        <div class="col-sm-6">
+        
+        <div class="col-sm-12">
           <div class="form-group">
-          <label>內容</label>
-          <input type="text" class="form-control" name="content" id="content" value="<?php echo $_smarty_tpl->tpl_vars['row']->value['content'];?>
-">
+          <label>房型內容</label>
+          <textarea class="form-control" name="content" id="content"  placeholder="No more than 100 words."
+            rows="4" cols="40" value=""><?php echo $_smarty_tpl->tpl_vars['row']->value['content'];?>
+</textarea>        
           </div>
         </div> 
+
+        <!-- ckeditor -->
+        <?php echo '<script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['xoAppUrl']->value;?>
+class/ckeditor/ckeditor.js"><?php echo '</script'; ?>
+>
+        <?php echo '<script'; ?>
+>
+              CKEDITOR.replace('content',{
+                    height:200,
+                    contentsCss: ['<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+css/creative.css'] //引入前台樣板css
+                });
+        <?php echo '</script'; ?>
+>
+         
        
         <div class="col-sm-12 text-left ">
           <input type="hidden" name="sn" value="<?php echo $_smarty_tpl->tpl_vars['row']->value['sn'];?>

@@ -28,19 +28,30 @@
           </div>
         </div>  
 
-        <div class="col-sm-6">
+        <div class="col-sm-4">
           <div class="form-group">
           <label>建立時間</label>
           <input type="text" class="form-control" name="date" id="date" value="<{$row.date}>" readonly>
           </div>
         </div> 
-
-        <div class="col-sm-6">
+        
+        <div class="col-sm-12">
           <div class="form-group">
-          <label>內容</label>
-          <input type="text" class="form-control" name="content" id="content" value="<{$row.content}>">
+          <label>房型內容</label>
+          <textarea class="form-control" name="content" id="content"  placeholder="No more than 100 words."
+            rows="4" cols="40" value=""><{$row.content}></textarea>        
           </div>
         </div> 
+
+        <!-- ckeditor -->
+        <script src="<{$xoAppUrl}>class/ckeditor/ckeditor.js"></script>
+        <script>
+              CKEDITOR.replace('content',{
+                    height:200,
+                    contentsCss: ['<{$xoImgUrl}>css/creative.css'] //引入前台樣板css
+                });
+        </script>
+         
        
         <div class="col-sm-12 text-left ">
           <input type="hidden" name="sn" value="<{$row.sn}>">

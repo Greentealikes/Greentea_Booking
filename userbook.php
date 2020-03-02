@@ -71,7 +71,6 @@ function book_update($usid=""){
     return '資料密碼更改成功';
 }
 
-
 function book_form($usid=""){
     global $smarty,$db;
     if($usid){

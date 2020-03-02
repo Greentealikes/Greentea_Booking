@@ -146,11 +146,9 @@
         <tr>
           <td colspan=4>查無此資料</td>
         </tr>
-      <{/if}> 
-           
+      <{/if}>
     </tbody>
   </table>
-
 <{/if}>
 
   

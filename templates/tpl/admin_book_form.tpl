@@ -135,6 +135,8 @@
             rows="4" cols="40" value=""><{$row.usadd}></textarea>        
           </div>
         </div> 
+
+        
        
         <div class="col-sm-12 text-left ">
           <input type="hidden" name="book" value="book_update">
@@ -180,7 +182,7 @@
     });
   </script>
 
-  <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <script src="<{$xoImgUrl}>js/jquery-ui-1-11-4.js"></script>
   <script>
     $(function () {
         $("#datein,#dateout").datepicker({

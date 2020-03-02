@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-03-02 08:02:40
+/* Smarty version 3.1.34-dev-7, created on 2020-03-02 09:01:54
   from 'D:\xampp\htdocs\booking-web_v0301\templates\tpl\book\front_table.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e5caf90a44dd1_15381006',
+  'unifunc' => 'content_5e5cbd72240896_76060097',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '4cf3a1d40340834d253fda7f7d993ef2fa0bcba7' => 
     array (
       0 => 'D:\\xampp\\htdocs\\booking-web_v0301\\templates\\tpl\\book\\front_table.tpl',
-      1 => 1583130001,
+      1 => 1583135679,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e5caf90a44dd1_15381006 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e5cbd72240896_76060097 (Smarty_Internal_Template $_smarty_tpl) {
 if ($_smarty_tpl->tpl_vars['bookpage']->value == 3) {?>
   <table class="table table-striped table-bordered table-hover table-sm">
       <thead>
@@ -189,11 +189,9 @@ if ($_smarty_tpl->tpl_vars['bookpage']->value == 3) {?>
         <tr>
           <td colspan=4>查無此資料</td>
         </tr>
-      <?php }?> 
-           
+      <?php }?>
     </tbody>
   </table>
-
 <?php }?>
 
   <?php }

@@ -17,7 +17,7 @@
     <link href="<{$xoImgUrl}>vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="<{$xoImgUrl}>css/backstage.css">
    
-    <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="<{$xoImgUrl}>css/jquery-ui-1-11-4.css">
   </head>
       
 <body>

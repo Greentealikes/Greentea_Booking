@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-03-02 08:14:17
+/* Smarty version 3.1.34-dev-7, created on 2020-03-02 09:50:28
   from 'D:\xampp\htdocs\booking-web_v0301\templates\tpl\book\bookpg1_form.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e5cb249314874_31158096',
+  'unifunc' => 'content_5e5cc8d4dc0861_94583178',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9571fa493c28b4ac9d787f6ab5c93661c2915f96' => 
     array (
       0 => 'D:\\xampp\\htdocs\\booking-web_v0301\\templates\\tpl\\book\\bookpg1_form.tpl',
-      1 => 1582794304,
+      1 => 1583139024,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e5cb249314874_31158096 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e5cc8d4dc0861_94583178 (Smarty_Internal_Template $_smarty_tpl) {
 ?>  
 <div class="site-wrap" id="home-section">
   <div class="site-section">
@@ -49,7 +49,17 @@ function content_5e5cb249314874_31158096 (Smarty_Internal_Template $_smarty_tpl)
           <div class = "row book-container text-center ">
               <div class="col-sm-12 title-font book_all_title">
                   <i class="fas fa-angle-double-right"></i>
-                  <span>訂房說明</span>
+                  <span>訂房說明</span>                  
+              </div>
+
+              <div class = "col-sm-12
+                <nav aria-label="breadcrumb">
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.php">首頁</a></li>
+                    <li class="breadcrumb-item"><a href="page_sw.php?pageid=2&bookpage=1">線上預訂</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">預定系統說明</li>
+                  </ol>
+                </nav>
               </div>
 
               <div class = "col-sm-12 alert alert-secondary book_all_body">

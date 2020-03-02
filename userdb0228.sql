@@ -8,15 +8,15 @@ use Hotel_Usermanage;
 
 CREATE TABLE Userdb (
     usid mediumint(8) unsigned NOT NULL AUTO_INCREMENT,
-    usname varchar(25) NOT NULL,
-    usphone varchar(25) NOT NULL,
-    usemail varchar(25) NOT NULL,
-    usarea varchar(25) NOT NULL,
-    datein varchar(25) NOT NULL,
-    dateout varchar(25) NOT NULL,
-    usnum VARCHAR(25) NOT NULL,
-    ustype VARCHAR(25) NOT NULL,
-    usadd VARCHAR(25) NOT NULL,
+    usname varchar(25) NOT NULL COMMENT '顧客姓名',
+    usphone varchar(25) NOT NULL COMMENT '聯繫電話',
+    usemail varchar(25) NOT NULL COMMENT '聯繫信箱',
+    usarea varchar(25) NOT NULL COMMENT '聯繫地址',
+    datein varchar(25) NOT NULL COMMENT '入房時間',
+    dateout varchar(25) NOT NULL COMMENT '退房時間',
+    usnum VARCHAR(25) NOT NULL COMMENT '顧客人數',
+    ustype VARCHAR(25) NOT NULL COMMENT '訂房類型',
+    usadd VARCHAR(25) NOT NULL COMMENT '備註欄',
     PRIMARY KEY (usid)
 );
 

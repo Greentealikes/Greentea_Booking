@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-03-02 07:55:51
+/* Smarty version 3.1.34-dev-7, created on 2020-03-02 09:28:17
   from 'D:\xampp\htdocs\booking-web_v0301\templates\tpl\admin_book_form.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e5cadf7482b83_30730819',
+  'unifunc' => 'content_5e5cc3a1d148e2_54500543',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'fbe48b298136b42767eb79831ada9fa4bf4c238d' => 
     array (
       0 => 'D:\\xampp\\htdocs\\booking-web_v0301\\templates\\tpl\\admin_book_form.tpl',
-      1 => 1583131269,
+      1 => 1583137695,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e5cadf7482b83_30730819 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e5cc3a1d148e2_54500543 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
 <?php if ($_smarty_tpl->tpl_vars['book']->value == "book_list") {?>
@@ -199,6 +199,8 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 </textarea>        
           </div>
         </div> 
+
+        
        
         <div class="col-sm-12 text-left ">
           <input type="hidden" name="book" value="book_update">
@@ -259,7 +261,8 @@ js/jquery.validate.min.js"><?php echo '</script'; ?>
 >
 
   <?php echo '<script'; ?>
- src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"><?php echo '</script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['xoImgUrl']->value;?>
+js/jquery-ui-1-11-4.js"><?php echo '</script'; ?>
 >
   <?php echo '<script'; ?>
 >

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-03-02 08:04:19
+/* Smarty version 3.1.34-dev-7, created on 2020-03-02 09:53:56
   from 'D:\xampp\htdocs\booking-web_v0301\templates\tpl\book\bookpg4_form.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e5caff3d5e229_12687663',
+  'unifunc' => 'content_5e5cc9a409c094_27248099',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '57e72bcbc3be75939b844d2d710e63d6973200c4' => 
     array (
       0 => 'D:\\xampp\\htdocs\\booking-web_v0301\\templates\\tpl\\book\\bookpg4_form.tpl',
-      1 => 1583132657,
+      1 => 1583139233,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:tpl/book/front_table.tpl' => 1,
   ),
 ),false)) {
-function content_5e5caff3d5e229_12687663 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e5cc9a409c094_27248099 (Smarty_Internal_Template $_smarty_tpl) {
 ?> 
 <div class="site-section">
   <div class="row">
@@ -54,6 +54,15 @@ function content_5e5caff3d5e229_12687663 (Smarty_Internal_Template $_smarty_tpl)
             <span>住宿查詢</span>
           </div>
 
+          <div class = "col-sm-12
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.php">首頁</a></li>
+                <li class="breadcrumb-item"><a href="page_sw.php?pageid=2&bookpage=1">線上預訂</a></li>
+                <li class="breadcrumb-item active" aria-current="page">住宿查詢</li>
+              </ol>
+            </nav>
+          </div>    
           <div class="col-sm-12 alert alert-secondary book_all_body">       
             <div class = "book-form-title">住宿查詢</div> 
 
