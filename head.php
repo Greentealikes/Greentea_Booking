@@ -30,21 +30,21 @@ else{
   $WEB['web_title'] = '';
 }
   
-  #頁面轉換使用
-  $switch_id = isset($_GET['pageid'])? $_GET['pageid'] : '6';
-  $switch_bookpage = isset($_GET['bookpage'])? $_GET['bookpage'] : '0';
+#頁面轉換使用
+$switch_id = isset($_GET['pageid'])? $_GET['pageid'] : '6';
+$switch_bookpage = isset($_GET['bookpage'])? $_GET['bookpage'] : '0';
 
-  /*---- 必須引入----*/
-  #引入樣板引擎
-  require_once _WEB_PATH.'/smarty.php';
-  #引入資料庫設定
-  require_once _WEB_PATH . '/templates/php/sqlConfig.php';
-  #引入設定檔
-  require_once _WEB_PATH . '/templates/php/function.php';
-  #視窗畫面設定檔
-  require_once _WEB_PATH . '/templates/php/redirect.php';
+/*---- 必須引入----*/
+#引入樣板引擎
+require_once _WEB_PATH.'/smarty.php';
+#引入資料庫設定
+require_once _WEB_PATH . '/templates/php/sqlConfig.php';
+#引入設定檔
+require_once _WEB_PATH . '/templates/php/function.php';
+#視窗畫面設定檔
+require_once _WEB_PATH . '/templates/php/redirect.php';
 
-  $_SESSION['user']['kind'] = isset($_SESSION['user']['kind']) ? $_SESSION['user']['kind'] : "";
+$_SESSION['user']['kind'] = isset($_SESSION['user']['kind']) ? $_SESSION['user']['kind'] : "";
 
 # 為了cookie使用
 if($_SESSION['user']['kind'] === ""){

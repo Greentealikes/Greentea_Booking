@@ -9,7 +9,6 @@ $sn = system_CleanVars($_REQUEST, 'sn', '', 'int');
 
 if($_SESSION['user']['kind'] !== 1)redirect_header("index.php", '您沒有權限', 3000,0);
 
-
 switch ($book){
     case 'book_form':
         book_form($usid);    
@@ -28,14 +27,11 @@ switch ($book){
     case "book_list":
         book_list();
     break;
-
 }
 
 $smarty->assign("WEB", $WEB);  
 $smarty->assign("book",$book);     
 $smarty->display('admin.tpl');
-
-
 
 function book_delete($usid){
     global $db; 
@@ -48,6 +44,16 @@ function book_delete($usid){
 
 function book_update($usid=""){
     global $db;
+
+    $_POST['usname'] = $db->real_escape_string($_POST['usname']);
+    $_POST['usphone'] = $db->real_escape_string($_POST['usphone']);
+    $_POST['usemail'] = $db->real_escape_string($_POST['usemail']);
+    $_POST['usarea'] = $db->real_escape_string($_POST['usarea']);
+    $_POST['datein'] = $db->real_escape_string($_POST['datein']);
+    $_POST['dateout'] = $db->real_escape_string($_POST['dateout']);
+    $_POST['usnum'] = $db->real_escape_string($_POST['usnum']);
+    $_POST['ustypes'] = $db->real_escape_string($_POST['ustypes']);
+    $_POST['usadd'] = $db->real_escape_string($_POST['usadd']);
 
     $sql = "UPDATE `userdb` SET 
             `usname` = '{$_POST['usname']}',                  
@@ -65,7 +71,6 @@ function book_update($usid=""){
     return '資料密碼更改成功';
 }
 
-
 function book_form($usid=""){
     global $smarty,$db;
     if($usid){
@@ -77,9 +82,7 @@ function book_form($usid=""){
         $row = $result->fetch_assoc();       
     }
 
-
     $kinds_sql="SELECT * FROM `prods`";
-       
     $kind_result = $db->query($kinds_sql) or die($db->error() . $kinds_sql);  
     $kind_rows=[];
 
@@ -91,16 +94,16 @@ function book_form($usid=""){
         $kind_rows[] = $kind_row;
     }
   
-    $row['usid'] = isset($row['usid']) ? $row['usid'] : "";
-    $row['usname'] = isset($row['usname']) ? $row['usname'] : "";
-    $row['usphone'] = isset($row['usphone']) ? $row['usphone'] : "";
-    $row['usemail'] = isset($row['usemail']) ? $row['usemail'] : "";
-    $row['usarea'] = isset($row['usarea']) ? $row['usarea'] : "";
-    $row['datein'] = isset($row['datein']) ? $row['datein'] : "";
-    $row['dateout'] = isset($row['dateout']) ? $row['dateout'] : ""; 
-    $row['usnum'] = isset($row['usnum']) ? $row['usnum'] : ""; 
-    $row['ustype'] = isset($row['ustype']) ? $row['ustype'] : ""; 
-    $row['usadd'] = isset($row['usadd']) ? $row['usadd'] : ""; 
+    $row['usid'] = isset($row['usid']) ? htmlspecialchars($row['usid']) : "";
+    $row['usname'] = isset($row['usname']) ? htmlspecialchars($row['usname']) : "";
+    $row['usphone'] = isset($row['usphone']) ? htmlspecialchars($row['usphone']) : "";
+    $row['usemail'] = isset($row['usemail']) ? htmlspecialchars($row['usemail']) : "";
+    $row['usarea'] = isset($row['usarea']) ? htmlspecialchars($row['usarea']) : "";
+    $row['datein'] = isset($row['datein']) ? htmlspecialchars($row['datein']) : "";
+    $row['dateout'] = isset($row['dateout']) ? htmlspecialchars($row['dateout']) : ""; 
+    $row['usnum'] = isset($row['usnum']) ? htmlspecialchars($row['usnum']) : ""; 
+    $row['ustype'] = isset($row['ustype']) ? htmlspecialchars($row['ustype']) : ""; 
+    $row['usadd'] = isset($row['usadd']) ? htmlspecialchars($row['usadd']) : ""; 
     
     $smarty->assign("row",$row);
     $smarty->assign("kind_rows",$kind_rows);  

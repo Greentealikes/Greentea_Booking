@@ -17,11 +17,11 @@
     <link href="<{$xoImgUrl}>vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="<{$xoImgUrl}>css/backstage.css">
    
-    <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="<{$xoImgUrl}>css/jquery-ui-1-11-4.css">
   </head>
       
 <body>
-  <div contenteditable="true" class="text effect01 title_content">Greentea 後台</div> 
+  <div contenteditable="true" class="text effect01 title_content">後台-管理系統</div> 
   <div class="container">
     <div class="row">
       <nav class="navbar navbar-expand-lg navbar-light bg-light ">
