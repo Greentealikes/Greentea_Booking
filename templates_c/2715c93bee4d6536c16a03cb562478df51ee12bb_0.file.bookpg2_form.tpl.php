@@ -1,4 +1,27 @@
+<?php
+/* Smarty version 3.1.34-dev-7, created on 2020-03-02 08:14:19
+  from 'D:\xampp\htdocs\booking-web_v0301\templates\tpl\book\bookpg2_form.tpl' */
 
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.34-dev-7',
+  'unifunc' => 'content_5e5cb24beb7ed0_14353593',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '2715c93bee4d6536c16a03cb562478df51ee12bb' => 
+    array (
+      0 => 'D:\\xampp\\htdocs\\booking-web_v0301\\templates\\tpl\\book\\bookpg2_form.tpl',
+      1 => 1583129536,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_5e5cb24beb7ed0_14353593 (Smarty_Internal_Template $_smarty_tpl) {
+?>
 <head>
   <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 </head>
@@ -95,11 +118,20 @@
             <div class="col-sm-6 form-group">
               <label>訂房類型</label><span class="text-danger">*</span">
               <select name="ustypes" id="ustypes" class="form-control">
-                <{foreach $kind_rows as $kind_row}>
-                  <{if $kind_row.enable==1}>
-                    <option value=<{$kind_row.kind_sn}>><{$kind_row.title}></option>
-                  <{/if}>
-                <{/foreach}>
+                <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['kind_rows']->value, 'kind_row');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['kind_row']->value) {
+?>
+                  <?php if ($_smarty_tpl->tpl_vars['kind_row']->value['enable'] == 1) {?>
+                    <option value=<?php echo $_smarty_tpl->tpl_vars['kind_row']->value['kind_sn'];?>
+><?php echo $_smarty_tpl->tpl_vars['kind_row']->value['title'];?>
+</option>
+                  <?php }?>
+                <?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
               </select>
             </div>  
 
@@ -131,3 +163,5 @@
 
 
 
+<?php }
+}

@@ -21,7 +21,7 @@
   </head>
       
 <body>
-  <div contenteditable="true" class="text effect01 title_content">Greentea 後台</div> 
+  <div contenteditable="true" class="text effect01 title_content">後台-管理系統</div> 
   <div class="container">
     <div class="row">
       <nav class="navbar navbar-expand-lg navbar-light bg-light ">

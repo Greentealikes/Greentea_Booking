@@ -2,10 +2,10 @@
   <table class="table table-striped table-bordered table-hover table-sm">
       <thead>
       <tr>
-          <th scope="col">姓名</th>
-          <th scope="col">電話</th>
-          <th scope="col">信箱</th>
-          <th scope="col">區域</th>
+          <th scope="col">預訂者姓名</th>
+          <th scope="col">聯繫電話</th>
+          <th scope="col">聯繫信箱</th>
+          <th scope="col">聯繫地址</th>
       </tr>
       </thead>
       <tbody>    
@@ -37,8 +37,8 @@
       <tr> 
         <th scope="col">入住日期</th>
         <th scope="col">退房日期</th>
-        <th scope="col">人數</th>
-        <th scope="col">種類</th>
+        <th scope="col">預約訂房總人數</th>
+        <th scope="col">訂房類型</th>
       </tr>      
     </thead>    
     <tbody>   
@@ -47,7 +47,7 @@
             <td><{$row.datein}></td>
             <td><{$row.dateout}></td>
             <td><{$row.usnum}></td>
-            <td><{$row.ustype}></td>
+            <td><{$kind_row.title}></td>
         </tr>
         <{else}>
         <tr>
@@ -65,9 +65,9 @@
       <{if $row}> 
         <tr>
           <{if $row.usadd !==""}>
-            <{$row.usadd}>
+            <td colspan=4><{$row.usadd}></td>
           <{else}>
-            無備註
+            <td colspan=4>無備註</td>
           <{/if}>
         </tr>
       <{else}>
@@ -75,7 +75,6 @@
           <td colspan=4>查無此資料</td>
         </tr>
       <{/if}> 
-           
     </tbody>
   </table>
 <{/if}>
@@ -84,10 +83,10 @@
   <table class="table table-striped table-bordered table-hover table-sm">
       <thead>
       <tr>
-          <th scope="col">姓名</th>
-          <th scope="col">電話</th>
-          <th scope="col">信箱</th>
-          <th scope="col">區域</th>
+          <th scope="col">預訂者姓名</th>
+          <th scope="col">聯繫電話</th>
+          <th scope="col">聯繫信箱</th>
+          <th scope="col">聯繫地址</th>
       </tr>
       </thead>
       <tbody>    
@@ -108,8 +107,8 @@
       <tr> 
         <th scope="col">入住日期</th>
         <th scope="col">退房日期</th>
-        <th scope="col">人數</th>
-        <th scope="col">種類</th>
+        <th scope="col">預約訂房人數</th>
+        <th scope="col">訂房類型</th>
       </tr>      
     </thead>    
     <tbody>   
@@ -118,7 +117,7 @@
             <td><{$row.datein}></td>
             <td><{$row.dateout}></td>
             <td><{$row.usnum}></td>
-            <td><{$row.ustype}></td>
+            <td><{$kind_row.title}></td>
         </tr>
         <{else}>
         <tr>
@@ -129,7 +128,7 @@
 
     <thead>
       <tr> 
-        <th scope="col" colspan=4>備註</th>  
+        <th scope="col" colspan=4>備註欄</th>  
       </tr> 
     </thead>    
     <tbody>   

@@ -1,4 +1,28 @@
+<?php
+/* Smarty version 3.1.34-dev-7, created on 2020-03-02 08:14:46
+  from 'D:\xampp\htdocs\booking-web_v0301\templates\tpl\book\bookpg3_form.tpl' */
 
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.34-dev-7',
+  'unifunc' => 'content_5e5cb26668a2b4_53931202',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '7df9e1bb6cc54a46ef7b48f0fea21e48df0393c8' => 
+    array (
+      0 => 'D:\\xampp\\htdocs\\booking-web_v0301\\templates\\tpl\\book\\bookpg3_form.tpl',
+      1 => 1583130698,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+    'file:tpl/book/front_table.tpl' => 1,
+  ),
+),false)) {
+function content_5e5cb26668a2b4_53931202 (Smarty_Internal_Template $_smarty_tpl) {
+?>
 
 <div class="site-wrap" id="home-section">
   <div class="site-section">
@@ -32,7 +56,8 @@
             <div class="col-sm-12 alert alert-secondary book_all_body">   
               <div class = "book-form-title"> 完成線上預訂</div>   
               <div class="row container book-form_body">               
-                <{include file="tpl/book/front_table.tpl"}>    
+                <?php $_smarty_tpl->_subTemplateRender("file:tpl/book/front_table.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>    
               </div>
             </div>    
 
@@ -43,4 +68,5 @@
   </div>
 </div>
 
- 
+ <?php }
+}

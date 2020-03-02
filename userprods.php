@@ -52,6 +52,11 @@ function prods_delete($sn){
 
 function prods_update($sn=""){
     global $db;
+
+    $_POST['kind_sn'] = $db->real_escape_string($_POST['kind_sn']);
+    $_POST['title'] = $db->real_escape_string($_POST['title']);
+    $_POST['content'] = $db->real_escape_string($_POST['content']);
+    $_POST['enable'] = $db->real_escape_string($_POST['enable']);
         
     $sql = "UPDATE `prods` SET 
             `kind_sn` = '{$_POST['kind_sn']}',                  
@@ -128,17 +133,11 @@ function prods_insert_form(){
 function prods_insert(){
     global $smarty,$db;    
     
-    $_POST['title'] =  isset( $_POST['title'])?  $_POST['title'] : "";
-    $_POST['kind_sn'] =  isset( $_POST['kind_sn'])?  $_POST['kind_sn'] : "";
-    $_POST['enable'] =  isset( $_POST['enable'])?  $_POST['enable'] : "";   
-    $_POST['content'] =  isset( $_POST['content'])?  $_POST['content'] : "";
+    $_POST['title'] =  isset( $_POST['title'])?  $db->real_escape_string($_POST['title']) : "";
+    $_POST['kind_sn'] =  isset( $_POST['kind_sn'])?  $db->real_escape_string($_POST['kind_sn']) : "";
+    $_POST['enable'] =  isset( $_POST['enable'])?  $db->real_escape_string($_POST['enable']) : "";   
+    $_POST['content'] =  isset( $_POST['content'])?  $db->real_escape_string($_POST['content']) : "";
     $datenow = strtotime('now');
-
-    #過濾
-    $_POST['title'] = $db->real_escape_string($_POST['title']);  
-    $_POST['kind_sn'] = $db->real_escape_string($_POST['kind_sn']);      
-    $_POST['enable'] = $db->real_escape_string($_POST['enable']);   
-    $_POST['content'] = $db->real_escape_string($_POST['content']);
     $datenow = (int)$datenow;
     
     $insert_sql = "INSERT INTO prods
