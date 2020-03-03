@@ -1,30 +1,30 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-03-02 09:05:10
+/* Smarty version 3.1.34-dev-7, created on 2020-03-03 02:14:54
   from 'D:\xampp\htdocs\booking-web_v0301\templates\admin.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e5cbe36860073_31802702',
+  'unifunc' => 'content_5e5daf8e700a89_12963217',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a833dc29ffb4e090f9d948a89e18a608372da2c1' => 
     array (
       0 => 'D:\\xampp\\htdocs\\booking-web_v0301\\templates\\admin.tpl',
-      1 => 1583136304,
+      1 => 1583198048,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
-    'file:tpl/admin_member_form.tpl' => 1,
-    'file:tpl/admin_book_form.tpl' => 1,
-    'file:tpl/admin_prods_form.tpl' => 1,
+    'file:tpl/table_form/admin_member_form.tpl' => 1,
+    'file:tpl/table_form/admin_book_form.tpl' => 1,
+    'file:tpl/table_form/admin_prods_form.tpl' => 1,
     'file:tpl/head_js.tpl' => 1,
   ),
 ),false)) {
-function content_5e5cbe36860073_31802702 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e5daf8e700a89_12963217 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!doctype html>
 <html lang="en">
   <head>
@@ -104,13 +104,13 @@ css/jquery-ui-1-11-4.css">
 
       <div class="col-sm-12 form_content">
         <?php if ($_smarty_tpl->tpl_vars['WEB']->value['file_name'] == "user.php") {?>
-            <?php $_smarty_tpl->_subTemplateRender("file:tpl/admin_member_form.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+            <?php $_smarty_tpl->_subTemplateRender("file:tpl/table_form/admin_member_form.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
         <?php } elseif ($_smarty_tpl->tpl_vars['WEB']->value['file_name'] == "userbook.php") {?>
-           <?php $_smarty_tpl->_subTemplateRender("file:tpl/admin_book_form.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+           <?php $_smarty_tpl->_subTemplateRender("file:tpl/table_form/admin_book_form.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
         <?php } elseif ($_smarty_tpl->tpl_vars['WEB']->value['file_name'] == "userprods.php") {?>
-           <?php $_smarty_tpl->_subTemplateRender("file:tpl/admin_prods_form.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+           <?php $_smarty_tpl->_subTemplateRender("file:tpl/table_form/admin_prods_form.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
         <?php }?>
       </div>

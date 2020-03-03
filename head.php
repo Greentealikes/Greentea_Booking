@@ -23,8 +23,14 @@ else if($WEB['file_name'] == "Onbooking.php"){
 else if($WEB['file_name'] == 'user.php'){
   $WEB['web_title'] = '會員管理';
 }
-else if($WEB['file_name'] == 'user.php'){
+else if($WEB['file_name'] == 'userbook.php'){
   $WEB['web_title'] = '訂房管理';
+}
+else if($WEB['file_name'] == 'userprods.php'){
+  $WEB['web_title'] = '房型管理';
+}
+else if($WEB['file_name'] == 'parch.php'){
+  $WEB['web_title'] = 'Creative - Start Bootstrap Theme';
 }
 else{
   $WEB['web_title'] = '';

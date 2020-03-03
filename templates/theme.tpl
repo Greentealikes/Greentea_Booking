@@ -3,7 +3,7 @@
 
     <!--  導覽頁面&css  -->
     <{include file="head.tpl"}>
-    
+   
     <!-- 點選導覽頁面切換內容 -->
     <{if $pageid == 0 }>
       <{include file="tpl/index/index_fom.tpl"}>
@@ -17,8 +17,9 @@
       <{include file="tpl/blog/blog_fom.tpl"}>
     <{elseif $pageid == 5}>
       <{include file="tpl/contact/contact_fom.tpl"}>
+    <{elseif $pageid == 7}>
+      <{include file="parch_fom.tpl"}>
     <{elseif $pageid == 6}>
-
       <{if $smarty.session.user.kind === 1}>          
         <{include file="tpl/admin_form.tpl"}>
       <{else}>
@@ -30,6 +31,10 @@
       <{/if}>
     <{/if}>
 
+
+
+   
+ 
 
   <!-- 頁尾畫面 -->
   <{include file="footer.tpl"}>  

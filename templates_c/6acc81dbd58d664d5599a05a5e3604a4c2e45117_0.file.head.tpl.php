@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-03-02 07:56:00
+/* Smarty version 3.1.34-dev-7, created on 2020-03-03 07:36:48
   from 'D:\xampp\htdocs\booking-web_v0301\templates\head.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e5cae00617b17_14795051',
+  'unifunc' => 'content_5e5dfb00587573_50808314',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '6acc81dbd58d664d5599a05a5e3604a4c2e45117' => 
     array (
       0 => 'D:\\xampp\\htdocs\\booking-web_v0301\\templates\\head.tpl',
-      1 => 1582794304,
+      1 => 1583217321,
       2 => 'file',
     ),
   ),
@@ -20,10 +20,9 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e5cae00617b17_14795051 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e5dfb00587573_50808314 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
-<head>
-    
+<head>    
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,900|Source+Serif+Pro&display=swap" rel="stylesheet">
@@ -111,12 +110,10 @@ css/menu_style.css">
                             <li class="nav_style">
                             <a href="page_sw.php?pageid=4" class="nav-link">相關活動</a>
                                  <ul class="menu-nav">
-                                    <li><a href="templates/tpl/baking/index.html" target="_blank">自己做烘焙教室</a>
-                                    </li>
-                                    <li><a href="#">手作課程b</a>
+                                    <li><a href="page_sw.php?pageid=7">親子手作體驗</a>
                                     </li>  
-                                     <li><a href="#">手作課程c</a>
-                                    </li>                                   
+                                    <li><a href="templates/tpl/baking/index.html" target="_blank">關於自己做工作室</a>
+                                    </li>            
                                 </ul>
                             </li>
                             <li class="nav_style">

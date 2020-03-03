@@ -1,6 +1,5 @@
 
-<head>
-    
+<head>    
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,900|Source+Serif+Pro&display=swap" rel="stylesheet">
@@ -76,12 +75,10 @@
                             <li class="nav_style">
                             <a href="page_sw.php?pageid=4" class="nav-link">相關活動</a>
                                  <ul class="menu-nav">
-                                    <li><a href="templates/tpl/baking/index.html" target="_blank">自己做烘焙教室</a>
-                                    </li>
-                                    <li><a href="#">手作課程b</a>
+                                    <li><a href="page_sw.php?pageid=7">親子手作體驗</a>
                                     </li>  
-                                     <li><a href="#">手作課程c</a>
-                                    </li>                                   
+                                    <li><a href="templates/tpl/baking/index.html" target="_blank">關於自己做工作室</a>
+                                    </li>            
                                 </ul>
                             </li>
                             <li class="nav_style">

@@ -67,11 +67,11 @@
 
       <div class="col-sm-12 form_content">
         <{if $WEB.file_name == "user.php"}>
-            <{include file="tpl/admin_member_form.tpl"}>
+            <{include file="tpl/table_form/admin_member_form.tpl"}>
         <{elseif  $WEB.file_name == "userbook.php"}>
-           <{include file="tpl/admin_book_form.tpl"}>
+           <{include file="tpl/table_form/admin_book_form.tpl"}>
         <{elseif $WEB.file_name == "userprods.php"}>
-           <{include file="tpl/admin_prods_form.tpl"}>
+           <{include file="tpl/table_form/admin_prods_form.tpl"}>
         <{/if}>
       </div>
     </div>
