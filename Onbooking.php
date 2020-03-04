@@ -6,7 +6,7 @@ require_once 'head.php';
 $op = system_CleanVars($_REQUEST, 'op', 'op_list', 'string');
 
 #線上預訂行為狀態 
-$book = system_CleanVars($_REQUEST, 'book', 'on_booking_form', 'string');
+$book = system_CleanVars($_REQUEST, 'book', 'booking_form', 'string');
 
 #使用狀態
 $using = system_CleanVars($_REQUEST, 'using', '', 'string');
@@ -23,9 +23,28 @@ global $error;
 $error = 0;
 
 switch ($book){
-    case "on_booking_form":
-        on_booking_form();
+    case "book_descrn_form":
+        $switch_bookpage = 1;
+        $book = "book_descrn_form";
     break;
+
+    case "booking_form":
+        $switch_bookpage = 2;
+        $msg =  booking_form();
+        $book = "booking_form";       
+
+    break;
+
+    case "booking_result_form":
+        $switch_bookpage = 3;       
+        $book = "booking_result_form";
+    break;
+
+    case "booking_query_form":
+        $switch_bookpage = 4;       
+        $book = "booking_query_form";
+      
+    break;    
 
     #訪客線上預訂
     case "onlineBook" :
@@ -52,6 +71,7 @@ switch ($book){
     break; 
 }
 
+
 $smarty->assign("WEB", $WEB);
 $smarty->assign("op", $op);
 $smarty->assign("pageid", $switch_id);
@@ -60,6 +80,25 @@ $smarty->assign("error", $error);
 $smarty->assign("using", $using);   
 
 $smarty->display('theme.tpl');
+
+
+function booking_form(){
+    global $db,$smarty;
+    $kinds_sql="SELECT * FROM `prods`";
+       
+    $kind_result = $db->query($kinds_sql) or die($db->error() . $kinds_sql);  
+    $kind_rows=[];
+
+    while($kind_row = $kind_result->fetch_assoc()){
+        $kind_row['kind_sn'] = htmlspecialchars($kind_row['kind_sn']);  
+        $kind_row['sn'] = htmlspecialchars($kind_row['sn']);      
+        $kind_row['title'] = htmlspecialchars($kind_row['title']);  
+        $kind_row['enable'] = htmlspecialchars($kind_row['enable']);             
+        $kind_rows[] = $kind_row;
+    }
+    $smarty->assign("kind_rows",$kind_rows); 
+    return "預定表單內容"; 
+}
 
  function on_booking_form(){
     global $smarty,$db;

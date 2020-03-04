@@ -6,7 +6,7 @@
 
 <div class="container mt-5">
   <h1 class="text-center">註冊表單</h1>
-  <form action="page_sw.php" method="post" id="myreg" class="mb-20" enctype="multipart/form-data">
+  <form action="login.php" method="post" id="myreg" class="mb-20" enctype="multipart/form-data">
   <div class="row"> 
     <div class="col-sm-4">
       <div class="form-group">

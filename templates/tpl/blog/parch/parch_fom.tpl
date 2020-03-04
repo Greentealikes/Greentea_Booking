@@ -1,5 +1,4 @@
 <head>
-<title>Creative - Start Bootstrap Theme</title>
 <!-- Font Awesome Icons -->
 <link href="<{$xoImgUrl}>vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
 
@@ -11,21 +10,21 @@
 <link href="<{$xoImgUrl}>vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
 
 <link href="<{$xoImgUrl}>css/creative.min.css" rel="stylesheet">
-
-<{include file="tpl/head_js.tpl"}>
 </head>
 
+<{include file="tpl/head_js.tpl"}>
+
 <{if  $op == "wreawool"}> 
-    <{include file="tpl/parch/parch_wreawool.tpl"}>
+    <{include file="tpl/blog/parch/parch_wreawool.tpl"}>
 
 <{elseif  $op == "gourmets"}> 
-    <{include file="tpl/parch/parch_gourmets.tpl"}>  
+    <{include file="tpl/blog/parch/parch_gourmets.tpl"}>  
 
 <{elseif $op == "contact_form"}> 
-    <{include file="tpl/parch/parch_contact.tpl"}>  
+    <{include file="tpl/blog/parch/parch_contact.tpl"}>  
 
 <{else}> 
-    <{include file="tpl/parch/parch_index.tpl"}>
+    <{include file="tpl/blog/parch/parch_index.tpl"}>
 
 <{/if}> 
 

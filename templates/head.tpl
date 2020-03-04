@@ -54,51 +54,51 @@
                     <nav class="text-right xl-auto d-none d-xl-block" role="navigation">
                         <ul class="site-menu main-menu js-clone-nav ml-auto drop-down-menu site-menu-nav">                        
                             <li class="nav_active nav_style "> 
-                                <a href="page_sw.php?pageid=1" class="nav-link">關於我們</a>
+                                <a href="about.php" class="nav-link">關於我們</a>
                                  <ul class="menu-nav">
-                                    <li><a href="#">品牌經營</a>
+                                    <li><a href="about.php?op=about_brand">品牌經營</a>
                                     </li>
-                                    <li><a href="#">最新消息</a>
+                                    <li><a href="about.php?op=about_news">最新消息</a>
                                     </li>                                    
                                 </ul>
                             </li>                           
                             <li class="nav_style">
-                                <a href="page_sw.php?pageid=3" class="nav-link">民宿服務</a>
+                                <a href="services.php" class="nav-link">民宿服務</a>
                                 <ul class="menu-nav">
-                                    <li><a href="#">房型介紹</a>
+                                    <li><a href="services.php?op=about_brand">房型介紹</a>
                                     </li>
-                                    <li><a href="#">入住資訊</a>
+                                    <li><a href="services.php?op=about_brand">入住資訊</a>
                                     </li>                                    
                                 </ul>
                             </li>
 
                             <li class="nav_style">
-                            <a href="page_sw.php?pageid=4" class="nav-link">相關活動</a>
+                            <a href="blog.php" class="nav-link">相關活動</a>
                                  <ul class="menu-nav">
-                                    <li><a href="page_sw.php?pageid=7">親子手作體驗</a>
+                                    <li><a href="parch.php">親子手作體驗</a>
                                     </li>  
-                                    <li><a href="templates/tpl/baking/index.html" target="_blank">關於自己做工作室</a>
+                                    <li><a href="templates/tpl/blog/baking/index.html" target="_blank">關於自己做工作室</a>
                                     </li>            
                                 </ul>
                             </li>
                             <li class="nav_style">
-                                <a href="page_sw.php?pageid=2&bookpage=1" class="nav-link">線上預訂</a>
+                                <a href="Onbooking.php?book=book_descrn_form" class="nav-link">線上預訂</a>
                                  <ul class="menu-nav">
-                                    <li><a href="page_sw.php?pageid=2&bookpage=1">住宿預定</a>
+                                    <li><a href="Onbooking.php?book=book_descrn_form">住宿預定</a>
                                     </li>
-                                    <li><a href="page_sw.php?pageid=2&bookpage=4&using=no">住宿查詢</a>
+                                    <li><a href="Onbooking.php?book=booking_query_form&using=no">住宿查詢</a>
                                     </li>                                    
                                 </ul>
                             </li>
-                            <li class="nav_style"><a href="page_sw.php?pageid=5" class="nav-link">聯繫我們</a></li>
+                            <li class="nav_style"><a href="contact.php" class="nav-link">聯繫我們</a></li>
                 
                         <{if $smarty.session.user.kind === 1}>          
                             <li class="nav_style"><a href="user.php" class="nav-link ">管理員</a></li>
-                            <li class="nav_style"><a href="page_sw.php?op=logout&pageid=6" class="nav-link">Logout</a></li>   
+                            <li class="nav_style"><a href="login.php?op=logout&pageid=6" class="nav-link">Logout</a></li>   
                         <{elseif  $smarty.session.user.kind === 0}> 
-                            <li class="nav_style"><a href="page_sw.php?op=logout&pageid=6" class="nav-link">Logout</a></li>                   
+                            <li class="nav_style"><a href="login.php?op=logout&pageid=6" class="nav-link">Logout</a></li>                   
                         <{else}>
-                            <li class="nav_style"><a href="page_sw.php?op=op_list&pageid=6" id="userin" class="nav-link">Login</a></li>                     
+                            <li class="nav_style"><a href="login.php?op=op_list&pageid=6" id="userin" class="nav-link">Login</a></li>                     
                         <{/if}>
                         </ul>
                     </nav>

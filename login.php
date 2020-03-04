@@ -12,7 +12,7 @@
 
   $sn_success = 1;
   $sn_error = 0;
-   
+
   #op判斷
   switch ($op){
     case "login" :   
@@ -23,14 +23,14 @@
       }
       else{     
         $sn = $sn_error;              
-        redirect_header("page_sw.php", $msg, 3000, $sn);     
+        redirect_header("login.php", $msg, 3000, $sn);     
       }
       exit;
 
     case "logout":
         logout();  
         $sn = $sn_success;     
-        redirect_header("page_sw.php", '成功登出' , 3000, $sn);
+        redirect_header("login.php", '成功登出' , 3000, $sn);
         exit;
 
     #註冊動作
@@ -48,22 +48,6 @@
     default:
       $op = "op_list";
       break;  
-    }
-
-    if($switch_bookpage == 2){
-      $kinds_sql="SELECT * FROM `prods`";
-       
-      $kind_result = $db->query($kinds_sql) or die($db->error() . $kinds_sql);  
-      $kind_rows=[];
-
-      while($kind_row = $kind_result->fetch_assoc()){
-          $kind_row['kind_sn'] = htmlspecialchars($kind_row['kind_sn']);  
-          $kind_row['sn'] = htmlspecialchars($kind_row['sn']);      
-          $kind_row['title'] = htmlspecialchars($kind_row['title']);  
-          $kind_row['enable'] = htmlspecialchars($kind_row['enable']);             
-          $kind_rows[] = $kind_row;
-      }
-      $smarty->assign("kind_rows",$kind_rows);  
     }
 
    /*---- 將變數送至樣版----*/
@@ -90,7 +74,7 @@
     #寫入語法
     if( $_POST['pass'] !=  $_POST['chk_pass']) {
       $sn = $sn_error;  
-      redirect_header("page_sw.php", '密碼不一致' , 3000,$sn);
+      redirect_header("login.php", '密碼不一致' , 3000,$sn);
       //die("密碼不一致");
     }
     else{
@@ -127,16 +111,16 @@
     $sql= "SELECT * FROM `users` WHERE `uname` = '{$_POST['uname']}'";
 
     $result = $db->query($sql) or die($db->error() . $sql);
-    $row = $result->fetch_assoc() or redirect_header("page_sw.php", "帳號輸入錯誤", 3000, 0);     
+    $row = $result->fetch_assoc() or redirect_header("login.php", "帳號輸入錯誤", 3000, 0);     
   
-    $row['uname'] = htmlspecialchars($row['uname']);//字串
-    $row['uid'] = (int)$row['uid'];//整數
-    $row['kind'] = (int)$row['kind'];//整數
-    $row['name'] = htmlspecialchars($row['name']);//字串
-    $row['tel'] = htmlspecialchars($row['tel']);//字串
-    $row['email'] = htmlspecialchars($row['email']);//字串 
-    $row['pass'] = htmlspecialchars($row['pass']);//字串 
-    $row['token'] = htmlspecialchars($row['token']);//字串
+    $row['uname'] = htmlspecialchars($row['uname']);
+    $row['uid'] = (int)$row['uid'];
+    $row['kind'] = (int)$row['kind'];
+    $row['name'] = htmlspecialchars($row['name']);
+    $row['tel'] = htmlspecialchars($row['tel']);
+    $row['email'] = htmlspecialchars($row['email']);
+    $row['pass'] = htmlspecialchars($row['pass']);
+    $row['token'] = htmlspecialchars($row['token']);
    
 
     if(password_verify($_POST['pass'],$row['pass'])){
