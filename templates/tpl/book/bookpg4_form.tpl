@@ -1,27 +1,8 @@
  
 <div class="site-section">
   <div class="row">
-    <div class = "col-3">   
-      <div class="list-group" id="list-tab" role="tablist">
-       <li class="list-group-item item-title"><stong>線上預定系統</stong></li>
-        <a href = "page_sw.php?pageid=2&bookpage=1">
-        <li class="list-group-item "><stong>預定系統說明</stong></li>
-        </a>
-                  
-        <a href = "page_sw.php?pageid=2&bookpage=2" class="activeno">
-        <li class="list-group-item"><stong>填寫表單</stong></li>
-        </a>
+    <{include file="tpl/book/book_nav.tpl"}>      
 
-        <a href = "page_sw.php?pageid=2&bookpage=3" class="activeno">
-        <li class="list-group-item"><stong>完成表單</stong></li>
-        </a>
-        <li class="list-group-item item-title"><stong>查詢系統</stong></li>
-        <a href = "page_sw.php?pageid=2&bookpage=4&using=no">
-        <li class="list-group-item item-mark"><stong>住宿查詢</stong></li>
-        </a>
-      </div>
-    </div>  
-              
     <div class = "col-9">   
       <form action="Onbooking.php?bookpage=4&#myForm" method="post" id="myForm" class="mb-20" enctype="multipart/form-data">
         <div class="row book-container text-center ">
@@ -38,7 +19,8 @@
                 <li class="breadcrumb-item active" aria-current="page">住宿查詢</li>
               </ol>
             </nav>
-          </div>    
+          </div>   
+           
           <div class="col-sm-12 alert alert-secondary book_all_body">       
             <div class = "book-form-title">住宿查詢</div> 
 

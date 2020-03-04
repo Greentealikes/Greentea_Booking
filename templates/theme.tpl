@@ -3,22 +3,30 @@
 
     <!--  導覽頁面&css  -->
     <{include file="head.tpl"}>
-    
-    <!-- 點選導覽頁面切換內容 -->
-    <{if $pageid == 0 }>
+   
+    <!-- 點選導覽頁面切換內容 -->    
+    <{if $WEB.file_name == "index.php"}>
       <{include file="tpl/index/index_fom.tpl"}>
-    <{elseif $pageid == 1}>
-      <{include file="tpl/about/about_fom.tpl"}>
-    <{elseif $pageid == 2}>
-      <{include file="book_fom.tpl"}>
-    <{elseif $pageid == 3}>
-      <{include file="tpl/services/services_fom.tpl"}>
-    <{elseif $pageid == 4}>
-      <{include file="tpl/blog/blog_fom.tpl"}>
-    <{elseif $pageid == 5}>
-      <{include file="tpl/contact/contact_fom.tpl"}>
-    <{elseif $pageid == 6}>
 
+    <{elseif $WEB.file_name == "about.php"}>
+      <{include file="tpl/about/about_fom.tpl"}>
+
+     <{elseif $WEB.file_name == "Onbooking.php"}>
+      <{include file="tpl/book/book_fom.tpl"}>
+
+    <{elseif $WEB.file_name == "services.php"}>
+      <{include file="tpl/services/services_fom.tpl"}>
+
+    <{elseif $WEB.file_name == "blog.php"}>
+      <{include file="tpl/blog/blog_fom.tpl"}>
+
+    <{elseif $WEB.file_name == "parch.php"}>
+      <{include file="tpl/blog/parch/parch_fom.tpl"}>
+
+    <{elseif $WEB.file_name == "contact.php"}>
+      <{include file="tpl/contact/contact_fom.tpl"}>
+   
+    <{elseif $WEB.file_name == "login.php"}>
       <{if $smarty.session.user.kind === 1}>          
         <{include file="tpl/admin_form.tpl"}>
       <{else}>
@@ -29,7 +37,7 @@
         <{/if}>
       <{/if}>
     <{/if}>
-
+ 
 
   <!-- 頁尾畫面 -->
   <{include file="footer.tpl"}>  
