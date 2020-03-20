@@ -49,11 +49,13 @@ switch ($op){
     break;  
 }
 /*---- 將變數送至樣版----*/
-$mainMenus = getMenus("mainMenu");
-$secMenus = getMenus("secMenu");
 
+$mainMenus = getMenus("mainMenu");
 $smarty->assign("mainMenus", $mainMenus);
+
+$secMenus = getMenus("secMenu");
 $smarty->assign("secMenus", $secMenus);
+
 
 $smarty->assign("WEB", $WEB);
 $smarty->assign("op", $op);
@@ -76,14 +78,14 @@ function op_delete($kind,$sn){
 function op_insert($kind,$sn=""){
   global $db;						 
  
-  $_POST['sn'] = isset($_POST['sn'])? $db->real_escape_string($_POST['sn']): '';
-  $_POST['ofsn'] = isset($_POST['ofsn'])? $db->real_escape_string($_POST['ofsn']): '';
-  $_POST['title'] = isset($_POST['title'])? $db->real_escape_string($_POST['title']): '';
-  $_POST['kind'] = isset($_POST['kind'])? $db->real_escape_string($_POST['kind']): '';
-  $_POST['enable'] = isset($_POST['enable'])? $db->real_escape_string($_POST['enable']): '';
-  $_POST['sort'] = isset($_POST['sort'])? $db->real_escape_string($_POST['sort']): '';
-  $_POST['url'] = isset($_POST['url'])? $db->real_escape_string($_POST['url']): '';
-  $_POST['target'] = isset($_POST['target'])? $db->real_escape_string($_POST['target']): '';
+  $_POST['sn'] = $db->real_escape_string($_POST['sn']);
+  $_POST['ofsn'] =$db->real_escape_string($_POST['ofsn']);
+  $_POST['title'] = $db->real_escape_string($_POST['title']);
+  $_POST['kind'] = $db->real_escape_string($_POST['kind']);
+  $_POST['enable'] = $db->real_escape_string($_POST['enable']);
+  $_POST['sort'] = $db->real_escape_string($_POST['sort']);
+  $_POST['url'] = $db->real_escape_string($_POST['url']);
+  $_POST['target'] = $db->real_escape_string($_POST['target']);
 
   if($sn){
     $sql="UPDATE  `kinds` SET
@@ -103,7 +105,7 @@ function op_insert($kind,$sn=""){
     (`title`,`ofsn`, `enable`, `sort`, `kind`, `url`, `target`)
     VALUES 
     ( '{$_POST['title']}','{$_POST['ofsn']}', '{$_POST['enable']}', '{$_POST['sort']}', '{$_POST['kind']}', '{$_POST['url']}', '{$_POST['target']}')    
-    "; //die($sql);
+    "; //die($sql);  
     $db->query($sql) or die($db->error() . $sql);
     $sn = $db->insert_id;
     $msg = "選單資料新增成功"; 
@@ -138,8 +140,11 @@ function getKindMaxSortByKind($kind){
           WHERE `kind`='{$kind}'
   ";//die($sql);
 
-  $result = $db->query($sql) or die($db->error() . $sql);
-  $row = $result->fetch_assoc();
+  $result = $db->query($sql);
+  if($result)
+    $row = $result->fetch_assoc();
+  else
+    $row = [];
   return $row['count'];
 }
 
@@ -174,17 +179,20 @@ function op_list($kind){
           ORDER BY `sort`
   ";
 
-  $result = $db->query($sql) or die($db->error() . $sql);
-  $rows=[];
+  $result = $db->query($sql) ;
+  $rows=[];  
+
   while($row = $result->fetch_assoc()){ 
-    $row['sn'] = (int)$row['sn'];
+    $row['sn'] = (int)$row['sn'];    
     $row['ofsn'] = (int)$row['ofsn'];
     $row['title'] = htmlspecialchars($row['title']);
     $row['enable'] = (int)$row['enable'];
     $row['url'] = htmlspecialchars($row['url']);
-    $row['target'] = (int)$row['target']; 
+    $row['target'] = (int)$row['target'];
+    
     $rows[] = $row;
   }
+  
   $smarty->assign("rows",$rows);
   $smarty->assign("kind",$kind);  
 

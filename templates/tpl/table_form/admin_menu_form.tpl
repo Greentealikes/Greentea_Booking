@@ -1,4 +1,3 @@
-
 <{if $op == "op_list"}>
     <div class="row mb-2">
         <div class="cols-sm-4">
@@ -36,7 +35,7 @@
         </tr>
       <{foreachelse}>
         <tr>
-          <td colspan=5>目前沒有資料</td>
+          <td colspan=6>目前沒有資料</td>
         </tr>
       <{/foreach}>
     </tbody>

@@ -13,7 +13,12 @@ $smarty->assign("pageid", 0);
 $smarty->assign("WEB", $WEB);
 $smarty->display('theme.tpl');
 
-?>
+
+
+
+
+
+
 
 
  

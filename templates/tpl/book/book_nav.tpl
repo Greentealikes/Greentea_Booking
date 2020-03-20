@@ -8,12 +8,8 @@
 
 <div class = "col-sm-3 col-12">   
     <div class="list-group" id="list-tab" role="tablist">
-        <li class="list-group-item item-title"><stong>線上預定系統</stong></li>
-        <a href = "Onbooking.php?book=book_descrn_form">
-            <li class="list-group-item <{if $bookpage==1}>item-mark  <{/if}>">            
-            <stong>預定系統說明</stong></li>
-        </a>
-        <a href = "Onbooking.php?book=booking_form" class="activeno">
+        <li class="list-group-item item-title"><stong>線上預定系統</stong></li>       
+        <a href = "Onbooking.php?book=booking_form">
             <li class="list-group-item <{if $bookpage==2}>item-mark  <{/if}>"><stong>填寫表單</stong></li>
         </a>
         <a href = "Onbooking.php?book=booking_result_form" class="activeno">

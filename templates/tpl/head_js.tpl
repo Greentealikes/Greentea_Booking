@@ -200,3 +200,15 @@
         }));
     });
 </script>
+
+<script>
+  $(function(){
+    $("#gotop").click(function(){
+      $("html,body").animate({scrolTop:0},900);
+      return false;
+    });
+  });
+</script>
+
+
+

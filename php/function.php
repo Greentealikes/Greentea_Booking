@@ -113,23 +113,25 @@ function getMenus($kind,$pic=false){
           FROM `kinds`
           WHERE `kind`='{$kind}' and `enable`='1'
           ORDER BY `sort`
-  ";//die($sql);
-
+  ";
+  
   $result = $db->query($sql) or die($db->error() . $sql);
   $rows=[];//array();
+  
   while($row = $result->fetch_assoc()){ 
-    $row['sn'] = (int)$row['sn'];//分類
-    $row['ofsn'] = (int)$row['ofsn'];//分類
-    $row['title'] = htmlspecialchars($row['title']);//標題
-    $row['enable'] = (int)$row['enable'];//狀態 
-    $row['url'] = htmlspecialchars($row['url']);//網址
-    $row['target'] = (int)$row['target'];//外連  
-    $row['pic'] = ($pic == true) ? getFilesByKindColsnSort($kind,$row['sn']) :"";//圖片連結
+    $row['sn'] = (int)$row['sn'];
+    $row['ofsn'] = (int)$row['ofsn'];
+    $row['title'] = htmlspecialchars($row['title']);
+    $row['enable'] = (int)$row['enable'];
+    $row['url'] = htmlspecialchars($row['url']);
+    $row['target'] = (int)$row['target']; 
+    $row['pic'] = ($pic == true) ? getFilesByKindColsnSort($kind,$row['sn']) :"";
     $rows[] = $row;
   }
   return $rows; 
-
 }
+
+
 
 
 /*############################################
@@ -144,6 +146,48 @@ function redirect_header($url, $message, $time,$sn) {
   header("location:{$url}");
   exit;
 }
+
+
+function getFilesByKindColsnSort($kind,$col_sn,$sort=1,$url=true){
+  global $db; 
+  $sql="SELECT *
+               FROM `files`
+               WHERE `kind` = '{$kind}' AND `col_sn` = '{$col_sn}' AND `sort` = '{$sort}'
+  ";//ddie($sql);     
+  $result = $db->query($sql) or die($db->error() . $sql);
+  $row = $result->fetch_assoc();
+  $file_name = "";
+  
+  if($row){
+    if($url){
+        $file_name = _WEB_URL . "/uploads" . $row['sub_dir'] . "/" . $row['name'];
+    }else{
+        $file_name = _WEB_PATH . "/uploads" . $row['sub_dir'] . "/" . $row['name'];
+    }
+  }
+  return $file_name;
+}
+
+/*==========================
+  用$kind,$col_sn,$sort
+  刪除 圖片資料
+==========================*/
+function delFilesByKindColsnSort($kind,$col_sn,$sort){
+  global $db;		
+  # 1.刪除實體檔案
+  $file_name = getFilesByKindColsnSort($kind,$col_sn,$sort,false);
+  if($file_name){
+    unlink($file_name);
+  }
+  # 2.刪除files資料表	
+  $sql="DELETE FROM `files`
+        WHERE `kind` = '{$kind}' AND `col_sn` = '{$col_sn}' AND `sort` = '{$sort}'
+  ";
+  $db->query($sql) or die($db->error() . $sql);	
+  return;	 
+}
+
+
 
 
 

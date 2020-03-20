@@ -1,5 +1,4 @@
 <?php
-/* 引入檔頭，每支程都會引入 */
 require_once 'head.php';
 
 /* 過濾變數，設定預設值 */
@@ -32,6 +31,17 @@ switch ($op){
 }
 
 /*---- 將變數送至樣版----*/
+
+if(getMenus("mainMenu")){
+  $mainMenus = getMenus("mainMenu");
+  $smarty->assign("mainMenus", $mainMenus);
+}
+
+if(getMenus("secMenu")){
+  $secMenus = getMenus("secMenu");
+  $smarty->assign("secMenus", $secMenus);
+}
+
 $smarty->assign("WEB", $WEB);
 $smarty->assign("op", $op);
 

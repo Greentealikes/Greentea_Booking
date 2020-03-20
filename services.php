@@ -12,19 +12,22 @@ switch ($op){
         $op = "room_type";
     break;
 
-    case "check_in_information":
-        $op = "check_in_info";
+    case "checkin_info":
+        $op = "checkin_info";
     break;
 
     default:
         $op = "service_list";
     break;
 }
+
 $mainMenus = getMenus("mainMenu");
 $secMenus = getMenus("secMenu");
 
 $smarty->assign("mainMenus", $mainMenus);
 $smarty->assign("secMenus", $secMenus);
+
+
 $smarty->assign("WEB", $WEB);
 $smarty->assign("op", $op);
 $smarty->assign("pageid", $switch_id);

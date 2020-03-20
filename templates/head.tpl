@@ -1,4 +1,3 @@
-
 <head>    
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -13,7 +12,7 @@
     
     <link rel="stylesheet" href="<{$xoImgUrl}>css/aos.css">   
     
-    <link rel="stylesheet" href="<{$xoImgUrl}>css/bookstyle.css">
+    <link rel="stylesheet" href="<{$xoImgUrl}>css/selfstyle.css">
     <link href="<{$xoImgUrl}>vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="<{$xoImgUrl}>css/menu_style.css">
       
@@ -50,40 +49,36 @@
                     <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
                         <ul class="nav navbar-nav menu_nav ml-auto">
 
-                        <{foreach $mainMenus as $mainMenu}>
-                        <li class="nav-item submenu dropdown">
-                            <a href="<{$mainMenu.url}>" <{if $mainMenu.target == 1}> target ="_blank"<{/if}> class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><{$mainMenu.title}></a>
-                            <ul class="dropdown-menu">
-                                <{foreach $secMenus as $secMenu}>
-                                    <{if $mainMenu.ofsn ==  $secMenu.ofsn}>
-                                        <li class="nav-item"><a class="nav-link" href="<{$secMenu.url}>" <{if $secMenu.target == 1}> target ="_blank"<{/if}> ><{$secMenu.title}></a></li>       
-                                    <{/if}>
-                                <{/foreach}>
-                            </ul>
-                        </li> 
-                        <{/foreach}>
-
+                        <{if $mainMenus}>
+                            <{foreach $mainMenus as $mainMenu}>
                             <li class="nav-item submenu dropdown">
-                                <a href="about.php" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">關於我們</a>
+                                <a href="<{$mainMenu.url}>" <{if $mainMenu.target == 1}> target ="_blank"<{/if}> class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><{$mainMenu.title}></a>
                                 <ul class="dropdown-menu">
-                                <li class="nav-item"><a class="nav-link" href="about.php?op=about_brand">品牌經營</a></li>                           
-                                <li class="nav-item"><a class="nav-link" href="about.php?op=about_news">最新消息</a></li> 
+                                    <{foreach $secMenus as $secMenu}>
+                                        <{if $mainMenu.ofsn ==  $secMenu.ofsn}>
+                                            <li class="nav-item"><a class="nav-link" href="<{$mainMenu.url}>?<{$secMenu.url}>" <{if $secMenu.target == 1}> target ="_blank"<{/if}> ><{$secMenu.title}></a></li>       
+                                        <{/if}>
+                                    <{/foreach}>
                                 </ul>
-                            </li>      
+                            </li> 
+                            <{/foreach}>
+                        <{/if}>
+
+                        <!-- about.php?op=about_into -->  
 
                              <li class="nav-item submenu dropdown">
                                 <a href="services.php" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">民宿服務</a>
                                 <ul class="dropdown-menu">
                                 <li class="nav-item"><a class="nav-link" href="services.php">房型介紹</a></li>                           
-                                <li class="nav-item"><a class="nav-link" href="services.php">入住資訊</a></li> 
+                                <li class="nav-item"><a class="nav-link" href="services.php?op=checkin_info">入住資訊</a></li> 
                                 </ul>
                             </li>        
                           
                             
                             <li class="nav-item submenu dropdown">
-                                <a href="Onbooking.php?book=book_descrn_form" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">線上預訂</a>
+                                <a href="Onbooking.php?book=booking_form" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">線上預訂</a>
                                 <ul class="dropdown-menu">                                  
-                                    <li class="nav-item"><a class="nav-link" href="Onbooking.php?book=book_descrn_form">住宿預定</a></li>                               
+                                    <li class="nav-item"><a class="nav-link" href="Onbooking.php?book=booking_form">住宿預定</a></li>                               
                                     <li class="nav-item"><a class="nav-link" href="Onbooking.php?book=booking_query_form&using=no">住宿查詢</a></li>
                                 </ul>
                             </li>
@@ -102,6 +97,22 @@
             </div>  
         </header>
 
+<section class="banner_area">
+    <div class="booking_table d_flex align-items-center">
+        <div class="overlay bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background=""></div>
+        <div class="container">
+            <div class="banner_content text-center">
+                <h6>Away from monotonous life in Redtea Hotel</h6>
+                <h2>Your best choice</h2>
+                <p>If you are looking at blank cassettes on the web, you may be very confused at the<br> difference in price. You may see some for as low as $.17 each.</p>
+                <a href="Onbooking.php" class="btn theme_btn button_hover">Book Now</a>
+            </div>
+        </div>
+    </div>    
+</section>
+
+        
+ 
      
   
 

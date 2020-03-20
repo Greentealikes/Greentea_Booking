@@ -73,37 +73,36 @@ function book_update($usid=""){
 
 function book_form($usid=""){
     global $smarty,$db;
-    if($usid){
-        $sql="SELECT *
-            FROM `userdb`
-            WHERE `usid` = '{$usid}'
-        ";
-        $result = $db->query($sql) or die($db->error() . $sql);
-        $row = $result->fetch_assoc();       
-    }
-
+    
+    $sql="SELECT *
+        FROM `userdb`
+        WHERE `usid` = '{$usid}'
+    ";
+    $result = $db->query($sql) or die($db->error() . $sql);
+    $row = $result->fetch_assoc();   
+    
     $kinds_sql="SELECT * FROM `prods`";
     $kind_result = $db->query($kinds_sql) or die($db->error() . $kinds_sql);  
     $kind_rows=[];
 
     while($kind_row = $kind_result->fetch_assoc()){
-        $kind_row['kind_sn'] = htmlspecialchars($kind_row['kind_sn']);  
-        $kind_row['sn'] = htmlspecialchars($kind_row['sn']);      
-        $kind_row['title'] = htmlspecialchars($kind_row['title']);  
-        $kind_row['enable'] = htmlspecialchars($kind_row['enable']);             
+        $kind_row['kind_sn'] = ($kind_row['kind_sn']);  
+        $kind_row['sn'] = ($kind_row['sn']);      
+        $kind_row['title'] = ($kind_row['title']);  
+        $kind_row['enable'] = ($kind_row['enable']);             
         $kind_rows[] = $kind_row;
     }
   
-    $row['usid'] = isset($row['usid']) ? htmlspecialchars($row['usid']) : "";
-    $row['usname'] = isset($row['usname']) ? htmlspecialchars($row['usname']) : "";
-    $row['usphone'] = isset($row['usphone']) ? htmlspecialchars($row['usphone']) : "";
-    $row['usemail'] = isset($row['usemail']) ? htmlspecialchars($row['usemail']) : "";
-    $row['usarea'] = isset($row['usarea']) ? htmlspecialchars($row['usarea']) : "";
-    $row['datein'] = isset($row['datein']) ? htmlspecialchars($row['datein']) : "";
-    $row['dateout'] = isset($row['dateout']) ? htmlspecialchars($row['dateout']) : ""; 
-    $row['usnum'] = isset($row['usnum']) ? htmlspecialchars($row['usnum']) : ""; 
-    $row['ustype'] = isset($row['ustype']) ? htmlspecialchars($row['ustype']) : ""; 
-    $row['usadd'] = isset($row['usadd']) ? htmlspecialchars($row['usadd']) : ""; 
+    $row['usid'] = isset($row['usid']) ? ($row['usid']) : "";
+    $row['usname'] = isset($row['usname']) ? ($row['usname']) : "";
+    $row['usphone'] = isset($row['usphone']) ? ($row['usphone']) : "";
+    $row['usemail'] = isset($row['usemail']) ? ($row['usemail']) : "";
+    $row['usarea'] = isset($row['usarea']) ? ($row['usarea']) : "";
+    $row['datein'] = isset($row['datein']) ? ($row['datein']) : "";
+    $row['dateout'] = isset($row['dateout']) ? ($row['dateout']) : ""; 
+    $row['usnum'] = isset($row['usnum']) ? ($row['usnum']) : ""; 
+    $row['ustype'] = isset($row['ustype']) ? ($row['ustype']) : ""; 
+    $row['usadd'] = isset($row['usadd']) ? ($row['usadd']) : ""; 
     
     $smarty->assign("row",$row);
     $smarty->assign("kind_rows",$kind_rows);  
@@ -111,20 +110,21 @@ function book_form($usid=""){
 
 function book_list(){
     global $smarty,$db;   
-   
-    $sql = "SELECT * FROM `userdb`";
-    $result = $db->query($sql) or die($db->error() . $sql);    
+    
+    $sql = "SELECT * FROM `userdb` ";
+    $result = $db->query($sql) or die($db->error() . $sql);  
+    
     $rows=[];
     while($row = $result->fetch_assoc()){   
-        $row['usname'] = htmlspecialchars($row['usname']);//字串
-        $row['usphone'] = htmlspecialchars($row['usphone']);//字串
-        $row['usemail'] = htmlspecialchars($row['usemail']);//字串
-        $row['usarea'] = htmlspecialchars($row['usarea']);//字串
-        $row['datein'] = htmlspecialchars($row['datein']);//字串   
-        $row['dateout'] = htmlspecialchars($row['dateout']);//字串    
+        $row['usname'] = htmlspecialchars($row['usname']);
+        $row['usphone'] = htmlspecialchars($row['usphone']);
+        $row['usemail'] = htmlspecialchars($row['usemail']);
+        $row['usarea'] = htmlspecialchars($row['usarea']);
+        $row['datein'] = htmlspecialchars($row['datein']);
+        $row['dateout'] = htmlspecialchars($row['dateout']);   
         $row['usnum'] = (int)($row['usnum']);    
-        $row['ustype'] = htmlspecialchars($row['ustype']);//字串    
-        $row['usadd'] = htmlspecialchars($row['usadd']);//字串 
+        $row['ustype'] = htmlspecialchars($row['ustype']);
+        $row['usadd'] = htmlspecialchars($row['usadd']);
         $rows[] = $row;
     }  
     

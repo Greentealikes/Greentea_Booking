@@ -33,11 +33,12 @@ $switch_bookpage = isset($_GET['bookpage'])? $_GET['bookpage'] : '0';
 #引入樣板引擎
 require_once _WEB_PATH.'/smarty.php';
 #引入資料庫設定
-require_once _WEB_PATH . '/templates/php/sqlConfig.php';
+require_once _WEB_PATH . '/php/sqlConfig.php';
 #引入設定檔
-require_once _WEB_PATH . '/templates/php/function.php';
+require_once _WEB_PATH . '/php/function.php';
 #視窗畫面設定檔
-require_once _WEB_PATH . '/templates/php/redirect.php';
+require_once _WEB_PATH . '/php/redirect.php';
+
 
 $_SESSION['user']['kind'] = isset($_SESSION['user']['kind']) ? $_SESSION['user']['kind'] : "";
 

@@ -12,6 +12,7 @@ switch ($op){
         $op = "contact_list";
     break;
 }
+
 $mainMenus = getMenus("mainMenu");
 $secMenus = getMenus("secMenu");
 
